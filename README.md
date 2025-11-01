@@ -6,10 +6,12 @@
 - spdlog (日志库, 头文件已包含)
 
 ## 编译
+```bash
 windows + mingw + cmake
 mkdir build && cd build
 cmake -G "MinGW Makefiles" ..
 make
+```
 
 ## 参考
 [OpenGL 教程](https://learnopengl.com)
