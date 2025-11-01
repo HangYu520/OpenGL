@@ -1,54 +1,48 @@
-#include <iostream>
-#include "preheader.h"
+#include <spdlog/spdlog.h>
+#include "maincallback.h"
 
-void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
-    glViewport(0, 0, width, height);
-}
-
-void processInput(GLFWwindow* window) {
-    if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-        glfwSetWindowShouldClose(window, true);
-}
-
-int main() {
-    // 初始化 GLFW
-    if(!glfwInit()) {
-        std::cout << "Failed to initialize GLFW" << std::endl;
-        return -1;
-    }
-    
+/*
+* ---------------------
+* 主函数入口，窗口渲染循环
+* ---------------------
+*/
+int main() 
+{
     // 配置 GLFW
+    glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    // 创建窗口
-    GLFWwindow* window = glfwCreateWindow(800, 600, "OpenGL with GLFW", NULL, NULL);
-    if(!window) {
-        std::cout << "Failed to create GLFW window" << std::endl;
+    // * 创建窗口
+    GLFWwindow* window = glfwCreateWindow(800, 600, "LearnOpenGL", NULL, NULL);
+    if(!window) 
+    {
+        spdlog::error("Failed to create GLFW window");
         glfwTerminate();
         return -1;
     }
-    
-    glfwMakeContextCurrent(window);
-    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+    glfwMakeContextCurrent(window); // 绑定窗口
+    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback); // 绑定窗口大小回调函数
 
     // 初始化 Glad
-    if(!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-        std::cout << "Failed to initialize GLAD" << std::endl;
+    if(!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) 
+    {
+        spdlog::error("Failed to initialize GLAD");
         return -1;
     }
 
-    // 主循环
-    while(!glfwWindowShouldClose(window)) {
-        processInput(window);
+    // * 主循环
+    while(!glfwWindowShouldClose(window)) 
+    {
+        processInput(window); // 处理键盘输入
         
-        // 渲染
-        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
+        // TODO 渲染
+        glClearColor(0.2f, 0.3f, 0.3f, 1.0f); // 指定清屏颜色
+        glClear(GL_COLOR_BUFFER_BIT); // 清屏, 否则一直绘制的上一帧
         
-        glfwSwapBuffers(window);
-        glfwPollEvents();
+        glfwSwapBuffers(window); // 交换缓冲
+        glfwPollEvents(); // 检查事件
     }
 
     glfwTerminate();
