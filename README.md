@@ -6,8 +6,8 @@
 - spdlog (日志库, 头文件已包含)
 
 ## 编译
+环境: windows + mingw + cmake
 ```bash
-windows + mingw + cmake
 mkdir build && cd build
 cmake -G "MinGW Makefiles" ..
 make
