@@ -1,0 +1,51 @@
+#pragma once
+#include <glad/glad.h>
+#include <GLFW/glfw3.h>
+#include <spdlog/spdlog.h>
+#include <fstream>
+#include <string>
+#include <sstream>
+
+class Shader
+{
+private:
+    unsigned int m_shaderProgramID; // shader id
+
+public:
+    /*
+    * -----------------------------------
+    *  从文件构建着色器对象
+    * -----------------------------------
+    * @param vertexShaderFile   顶点着色器文件名
+    * @param fragmentShaderFile 片段着色器文件名
+    * -----------------------------------
+    */
+    Shader(const char* vertexShaderFile, const char* fragmentShaderFile);
+    ~Shader()
+    {
+        glDeleteProgram(m_shaderProgramID);
+    }
+
+    void use() const
+    {
+        glUseProgram(m_shaderProgramID);
+    }
+
+    // 设置着色器的全局变量
+    void setBool(const std::string &name, bool value) const
+    {         
+        glUniform1i(glGetUniformLocation(m_shaderProgramID, name.c_str()), (int)value); 
+    }
+    void setInt(const std::string &name, int value) const
+    { 
+        glUniform1i(glGetUniformLocation(m_shaderProgramID, name.c_str()), value); 
+    }
+    void setFloat(const std::string &name, float value) const
+    { 
+        glUniform1f(glGetUniformLocation(m_shaderProgramID, name.c_str()), value); 
+    } 
+    void setVec4(const std::string &name, float x, float y, float z, float w) const
+    {
+        glUniform4f(glGetUniformLocation(m_shaderProgramID, name.c_str()), x, y, z, w);
+    }
+};

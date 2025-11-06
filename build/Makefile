@@ -128,36 +128,6 @@ renderer/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/build
 .PHONY : renderer/fast
 
-# target to build an object file
-cmake_pch.h.gch:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/cmake_pch.h.gch
-.PHONY : cmake_pch.h.gch
-
-# target to preprocess a source file
-cmake_pch.h.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/cmake_pch.h.i
-.PHONY : cmake_pch.h.i
-
-# target to generate assembly for a file
-cmake_pch.h.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/cmake_pch.h.s
-.PHONY : cmake_pch.h.s
-
-# target to build an object file
-cmake_pch.hxx.gch:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/cmake_pch.hxx.gch
-.PHONY : cmake_pch.hxx.gch
-
-# target to preprocess a source file
-cmake_pch.hxx.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/cmake_pch.hxx.i
-.PHONY : cmake_pch.hxx.i
-
-# target to generate assembly for a file
-cmake_pch.hxx.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/cmake_pch.hxx.s
-.PHONY : cmake_pch.hxx.s
-
 external/glad/src/glad.obj: external/glad/src/glad.c.obj
 .PHONY : external/glad/src/glad.obj
 
@@ -206,6 +176,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/shader.obj: src/shader.cpp.obj
+.PHONY : src/shader.obj
+
+# target to build an object file
+src/shader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/shader.cpp.obj
+.PHONY : src/shader.cpp.obj
+
+src/shader.i: src/shader.cpp.i
+.PHONY : src/shader.i
+
+# target to preprocess a source file
+src/shader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/shader.cpp.i
+.PHONY : src/shader.cpp.i
+
+src/shader.s: src/shader.cpp.s
+.PHONY : src/shader.s
+
+# target to generate assembly for a file
+src/shader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/shader.cpp.s
+.PHONY : src/shader.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -215,18 +209,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... renderer
-	@echo ... cmake_pch.h.gch
-	@echo ... cmake_pch.h.i
-	@echo ... cmake_pch.h.s
-	@echo ... cmake_pch.hxx.gch
-	@echo ... cmake_pch.hxx.i
-	@echo ... cmake_pch.hxx.s
 	@echo ... external/glad/src/glad.obj
 	@echo ... external/glad/src/glad.i
 	@echo ... external/glad/src/glad.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... src/shader.obj
+	@echo ... src/shader.i
+	@echo ... src/shader.s
 .PHONY : help
 
 

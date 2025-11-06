@@ -68,90 +68,69 @@ include CMakeFiles/renderer.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/renderer.dir/flags.make
 
-CMakeFiles/renderer.dir/cmake_pch.hxx.gch: CMakeFiles/renderer.dir/flags.make
-CMakeFiles/renderer.dir/cmake_pch.hxx.gch: CMakeFiles/renderer.dir/includes_CXX.rsp
-CMakeFiles/renderer.dir/cmake_pch.hxx.gch: CMakeFiles/renderer.dir/cmake_pch.hxx.cxx
-CMakeFiles/renderer.dir/cmake_pch.hxx.gch: CMakeFiles/renderer.dir/cmake_pch.hxx
-CMakeFiles/renderer.dir/cmake_pch.hxx.gch: CMakeFiles/renderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/renderer.dir/cmake_pch.hxx.gch"
-	"D:\Program Files\MinGW\w64devkit\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -x c++-header -include C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/build/CMakeFiles/renderer.dir/cmake_pch.hxx -MD -MT CMakeFiles/renderer.dir/cmake_pch.hxx.gch -MF CMakeFiles\renderer.dir\cmake_pch.hxx.gch.d -o CMakeFiles\renderer.dir\cmake_pch.hxx.gch -c C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\build\CMakeFiles\renderer.dir\cmake_pch.hxx.cxx
-
-CMakeFiles/renderer.dir/cmake_pch.hxx.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/renderer.dir/cmake_pch.hxx.i"
-	"D:\Program Files\MinGW\w64devkit\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -x c++-header -include C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/build/CMakeFiles/renderer.dir/cmake_pch.hxx -E C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\build\CMakeFiles\renderer.dir\cmake_pch.hxx.cxx > CMakeFiles\renderer.dir\cmake_pch.hxx.i
-
-CMakeFiles/renderer.dir/cmake_pch.hxx.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/renderer.dir/cmake_pch.hxx.s"
-	"D:\Program Files\MinGW\w64devkit\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -x c++-header -include C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/build/CMakeFiles/renderer.dir/cmake_pch.hxx -S C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\build\CMakeFiles\renderer.dir\cmake_pch.hxx.cxx -o CMakeFiles\renderer.dir\cmake_pch.hxx.s
-
-CMakeFiles/renderer.dir/cmake_pch.h.gch: CMakeFiles/renderer.dir/flags.make
-CMakeFiles/renderer.dir/cmake_pch.h.gch: CMakeFiles/renderer.dir/includes_C.rsp
-CMakeFiles/renderer.dir/cmake_pch.h.gch: CMakeFiles/renderer.dir/cmake_pch.h.c
-CMakeFiles/renderer.dir/cmake_pch.h.gch: CMakeFiles/renderer.dir/cmake_pch.h
-CMakeFiles/renderer.dir/cmake_pch.h.gch: CMakeFiles/renderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/renderer.dir/cmake_pch.h.gch"
-	"D:\Program Files\MinGW\w64devkit\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -Winvalid-pch -x c-header -include C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/build/CMakeFiles/renderer.dir/cmake_pch.h -MD -MT CMakeFiles/renderer.dir/cmake_pch.h.gch -MF CMakeFiles\renderer.dir\cmake_pch.h.gch.d -o CMakeFiles\renderer.dir\cmake_pch.h.gch -c C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\build\CMakeFiles\renderer.dir\cmake_pch.h.c
-
-CMakeFiles/renderer.dir/cmake_pch.h.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/renderer.dir/cmake_pch.h.i"
-	"D:\Program Files\MinGW\w64devkit\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -Winvalid-pch -x c-header -include C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/build/CMakeFiles/renderer.dir/cmake_pch.h -E C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\build\CMakeFiles\renderer.dir\cmake_pch.h.c > CMakeFiles\renderer.dir\cmake_pch.h.i
-
-CMakeFiles/renderer.dir/cmake_pch.h.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/renderer.dir/cmake_pch.h.s"
-	"D:\Program Files\MinGW\w64devkit\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -Winvalid-pch -x c-header -include C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/build/CMakeFiles/renderer.dir/cmake_pch.h -S C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\build\CMakeFiles\renderer.dir\cmake_pch.h.c -o CMakeFiles\renderer.dir\cmake_pch.h.s
-
 CMakeFiles/renderer.dir/main.cpp.obj: CMakeFiles/renderer.dir/flags.make
 CMakeFiles/renderer.dir/main.cpp.obj: CMakeFiles/renderer.dir/includes_CXX.rsp
 CMakeFiles/renderer.dir/main.cpp.obj: ../main.cpp
-CMakeFiles/renderer.dir/main.cpp.obj: CMakeFiles/renderer.dir/cmake_pch.hxx
-CMakeFiles/renderer.dir/main.cpp.obj: CMakeFiles/renderer.dir/cmake_pch.hxx.gch
 CMakeFiles/renderer.dir/main.cpp.obj: CMakeFiles/renderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/renderer.dir/main.cpp.obj"
-	"D:\Program Files\MinGW\w64devkit\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/build/CMakeFiles/renderer.dir/cmake_pch.hxx -MD -MT CMakeFiles/renderer.dir/main.cpp.obj -MF CMakeFiles\renderer.dir\main.cpp.obj.d -o CMakeFiles\renderer.dir\main.cpp.obj -c C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/renderer.dir/main.cpp.obj"
+	"D:\Program Files\MinGW\w64devkit\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/renderer.dir/main.cpp.obj -MF CMakeFiles\renderer.dir\main.cpp.obj.d -o CMakeFiles\renderer.dir\main.cpp.obj -c C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\main.cpp
 
 CMakeFiles/renderer.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/renderer.dir/main.cpp.i"
-	"D:\Program Files\MinGW\w64devkit\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/build/CMakeFiles/renderer.dir/cmake_pch.hxx -E C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\main.cpp > CMakeFiles\renderer.dir\main.cpp.i
+	"D:\Program Files\MinGW\w64devkit\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\main.cpp > CMakeFiles\renderer.dir\main.cpp.i
 
 CMakeFiles/renderer.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/renderer.dir/main.cpp.s"
-	"D:\Program Files\MinGW\w64devkit\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/build/CMakeFiles/renderer.dir/cmake_pch.hxx -S C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\main.cpp -o CMakeFiles\renderer.dir\main.cpp.s
+	"D:\Program Files\MinGW\w64devkit\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\main.cpp -o CMakeFiles\renderer.dir\main.cpp.s
+
+CMakeFiles/renderer.dir/src/shader.cpp.obj: CMakeFiles/renderer.dir/flags.make
+CMakeFiles/renderer.dir/src/shader.cpp.obj: CMakeFiles/renderer.dir/includes_CXX.rsp
+CMakeFiles/renderer.dir/src/shader.cpp.obj: ../src/shader.cpp
+CMakeFiles/renderer.dir/src/shader.cpp.obj: CMakeFiles/renderer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/renderer.dir/src/shader.cpp.obj"
+	"D:\Program Files\MinGW\w64devkit\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/renderer.dir/src/shader.cpp.obj -MF CMakeFiles\renderer.dir\src\shader.cpp.obj.d -o CMakeFiles\renderer.dir\src\shader.cpp.obj -c C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\src\shader.cpp
+
+CMakeFiles/renderer.dir/src/shader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/renderer.dir/src/shader.cpp.i"
+	"D:\Program Files\MinGW\w64devkit\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\src\shader.cpp > CMakeFiles\renderer.dir\src\shader.cpp.i
+
+CMakeFiles/renderer.dir/src/shader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/renderer.dir/src/shader.cpp.s"
+	"D:\Program Files\MinGW\w64devkit\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\src\shader.cpp -o CMakeFiles\renderer.dir\src\shader.cpp.s
 
 CMakeFiles/renderer.dir/external/glad/src/glad.c.obj: CMakeFiles/renderer.dir/flags.make
 CMakeFiles/renderer.dir/external/glad/src/glad.c.obj: CMakeFiles/renderer.dir/includes_C.rsp
 CMakeFiles/renderer.dir/external/glad/src/glad.c.obj: ../external/glad/src/glad.c
-CMakeFiles/renderer.dir/external/glad/src/glad.c.obj: CMakeFiles/renderer.dir/cmake_pch.h
-CMakeFiles/renderer.dir/external/glad/src/glad.c.obj: CMakeFiles/renderer.dir/cmake_pch.h.gch
 CMakeFiles/renderer.dir/external/glad/src/glad.c.obj: CMakeFiles/renderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/renderer.dir/external/glad/src/glad.c.obj"
-	"D:\Program Files\MinGW\w64devkit\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -Winvalid-pch -include C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/build/CMakeFiles/renderer.dir/cmake_pch.h -MD -MT CMakeFiles/renderer.dir/external/glad/src/glad.c.obj -MF CMakeFiles\renderer.dir\external\glad\src\glad.c.obj.d -o CMakeFiles\renderer.dir\external\glad\src\glad.c.obj -c C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\external\glad\src\glad.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/renderer.dir/external/glad/src/glad.c.obj"
+	"D:\Program Files\MinGW\w64devkit\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/renderer.dir/external/glad/src/glad.c.obj -MF CMakeFiles\renderer.dir\external\glad\src\glad.c.obj.d -o CMakeFiles\renderer.dir\external\glad\src\glad.c.obj -c C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\external\glad\src\glad.c
 
 CMakeFiles/renderer.dir/external/glad/src/glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/renderer.dir/external/glad/src/glad.c.i"
-	"D:\Program Files\MinGW\w64devkit\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -Winvalid-pch -include C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/build/CMakeFiles/renderer.dir/cmake_pch.h -E C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\external\glad\src\glad.c > CMakeFiles\renderer.dir\external\glad\src\glad.c.i
+	"D:\Program Files\MinGW\w64devkit\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\external\glad\src\glad.c > CMakeFiles\renderer.dir\external\glad\src\glad.c.i
 
 CMakeFiles/renderer.dir/external/glad/src/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/renderer.dir/external/glad/src/glad.c.s"
-	"D:\Program Files\MinGW\w64devkit\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -Winvalid-pch -include C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/build/CMakeFiles/renderer.dir/cmake_pch.h -S C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\external\glad\src\glad.c -o CMakeFiles\renderer.dir\external\glad\src\glad.c.s
+	"D:\Program Files\MinGW\w64devkit\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\external\glad\src\glad.c -o CMakeFiles\renderer.dir\external\glad\src\glad.c.s
 
 # Object files for target renderer
 renderer_OBJECTS = \
 "CMakeFiles/renderer.dir/main.cpp.obj" \
+"CMakeFiles/renderer.dir/src/shader.cpp.obj" \
 "CMakeFiles/renderer.dir/external/glad/src/glad.c.obj"
 
 # External object files for target renderer
 renderer_EXTERNAL_OBJECTS =
 
-../bin/renderer.exe: CMakeFiles/renderer.dir/cmake_pch.hxx.gch
-../bin/renderer.exe: CMakeFiles/renderer.dir/cmake_pch.h.gch
 ../bin/renderer.exe: CMakeFiles/renderer.dir/main.cpp.obj
+../bin/renderer.exe: CMakeFiles/renderer.dir/src/shader.cpp.obj
 ../bin/renderer.exe: CMakeFiles/renderer.dir/external/glad/src/glad.c.obj
 ../bin/renderer.exe: CMakeFiles/renderer.dir/build.make
 ../bin/renderer.exe: ../lib/libglfw3.a
 ../bin/renderer.exe: CMakeFiles/renderer.dir/linklibs.rsp
 ../bin/renderer.exe: CMakeFiles/renderer.dir/objects1.rsp
 ../bin/renderer.exe: CMakeFiles/renderer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ..\bin\renderer.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ..\bin\renderer.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\renderer.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

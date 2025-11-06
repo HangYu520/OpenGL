@@ -23,5 +23,5 @@ aux_source_directory(${PROJECT_SOURCE_DIR}/src SRC_LIST)
 
 add_executable(renderer main.cpp ${SRC_LIST} ${SRC_GLAD})
 
-target_precompile_headers(renderer PRIVATE ${PROJECT_SOURCE_DIR}/include/preheader.h)
+#target_precompile_headers(renderer PRIVATE ${PROJECT_SOURCE_DIR}/include/preheader.h)
 target_link_libraries(renderer ${glfw})

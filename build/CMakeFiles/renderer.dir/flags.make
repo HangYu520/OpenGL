@@ -15,11 +15,3 @@ CXX_INCLUDES = @CMakeFiles/renderer.dir/includes_CXX.rsp
 
 CXX_FLAGS = -g -std=gnu++17
 
-# PCH options: CMakeFiles/renderer.dir/cmake_pch.hxx.gch_OPTIONS = -Winvalid-pch;-x;c++-header;-include;C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/build/CMakeFiles/renderer.dir/cmake_pch.hxx
-
-# PCH options: CMakeFiles/renderer.dir/cmake_pch.h.gch_OPTIONS = -Winvalid-pch;-x;c-header;-include;C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/build/CMakeFiles/renderer.dir/cmake_pch.h
-
-# PCH options: CMakeFiles/renderer.dir/main.cpp.obj_OPTIONS = -Winvalid-pch;-include;C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/build/CMakeFiles/renderer.dir/cmake_pch.hxx
-
-# PCH options: CMakeFiles/renderer.dir/external/glad/src/glad.c.obj_OPTIONS = -Winvalid-pch;-include;C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/build/CMakeFiles/renderer.dir/cmake_pch.h
-

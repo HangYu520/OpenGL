@@ -1,5 +1,21 @@
 CMakeFiles/renderer.dir/main.cpp.obj: \
  C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\main.cpp \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/include/maincallback.h \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/include/shader.h \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glad/include/glad/glad.h \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glad/include/KHR/khrplatform.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stdint.h \
+ D:/Program\ Files/MinGW/w64devkit/include/stdint.h \
+ D:/Program\ Files/MinGW/w64devkit/include/crtdefs.h \
+ D:/Program\ Files/MinGW/w64devkit/include/corecrt.h \
+ D:/Program\ Files/MinGW/w64devkit/include/_mingw.h \
+ D:/Program\ Files/MinGW/w64devkit/include/_mingw_mac.h \
+ D:/Program\ Files/MinGW/w64devkit/include/_mingw_secapi.h \
+ D:/Program\ Files/MinGW/w64devkit/include/vadefs.h \
+ D:/Program\ Files/MinGW/w64devkit/include/sdks/_mingw_ddk.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stddef.h \
+ D:/Program\ Files/MinGW/w64devkit/include/stddef.h \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/GLFW/glfw3.h \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/spdlog.h \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/common.h \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/details/null_mutex.h \
@@ -16,7 +32,6 @@ CMakeFiles/renderer.dir/main.cpp.obj: \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/move.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/type_traits \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/cstdint \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stdint.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/utility \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_relops.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_pair.h \
@@ -29,7 +44,6 @@ CMakeFiles/renderer.dir/main.cpp.obj: \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/limits \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/ctime \
  D:/Program\ Files/MinGW/w64devkit/include/time.h \
- D:/Program\ Files/MinGW/w64devkit/include/crtdefs.h \
  D:/Program\ Files/MinGW/w64devkit/include/sys/timeb.h \
  D:/Program\ Files/MinGW/w64devkit/include/sec_api/sys/timeb_s.h \
  D:/Program\ Files/MinGW/w64devkit/include/_timeval.h \
@@ -41,17 +55,13 @@ CMakeFiles/renderer.dir/main.cpp.obj: \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/cstdio \
  D:/Program\ Files/MinGW/w64devkit/include/stdio.h \
  D:/Program\ Files/MinGW/w64devkit/include/corecrt_stdio_config.h \
- D:/Program\ Files/MinGW/w64devkit/include/corecrt.h \
  D:/Program\ Files/MinGW/w64devkit/include/_mingw_off_t.h \
  D:/Program\ Files/MinGW/w64devkit/include/swprintf.inl \
- D:/Program\ Files/MinGW/w64devkit/include/vadefs.h \
  D:/Program\ Files/MinGW/w64devkit/include/sec_api/stdio_s.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/exception \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/exception_ptr.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/exception_defines.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/cxxabi_init_exception.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stddef.h \
- D:/Program\ Files/MinGW/w64devkit/include/stddef.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/typeinfo \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/hash_bytes.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/nested_exception.h \
@@ -244,7 +254,6 @@ CMakeFiles/renderer.dir/main.cpp.obj: \
  D:/Program\ Files/MinGW/w64devkit/include/sys/stat.h \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/details/windows_include.h \
  D:/Program\ Files/MinGW/w64devkit/include/windows.h \
- D:/Program\ Files/MinGW/w64devkit/include/_mingw.h \
  D:/Program\ Files/MinGW/w64devkit/include/sdkddkver.h \
  D:/Program\ Files/MinGW/w64devkit/include/excpt.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stdarg.h \
@@ -464,4 +473,17 @@ CMakeFiles/renderer.dir/main.cpp.obj: \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/details/synchronous_factory.h \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/version.h \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/spdlog-inl.h \
- C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/include/maincallback.h
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/fstream \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/istream \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/ios \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/basic_ios.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/basic_ios.tcc \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/ostream \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/ostream.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/ostream.tcc \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/istream.tcc \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/fstream.tcc \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/sstream \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/sstream.tcc

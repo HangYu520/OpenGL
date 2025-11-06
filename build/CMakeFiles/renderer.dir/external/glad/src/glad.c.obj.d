@@ -3,9 +3,13 @@ CMakeFiles/renderer.dir/external/glad/src/glad.c.obj: \
  D:/Program\ Files/MinGW/w64devkit/include/stdio.h \
  D:/Program\ Files/MinGW/w64devkit/include/corecrt_stdio_config.h \
  D:/Program\ Files/MinGW/w64devkit/include/corecrt.h \
+ D:/Program\ Files/MinGW/w64devkit/include/_mingw.h \
+ D:/Program\ Files/MinGW/w64devkit/include/_mingw_mac.h \
+ D:/Program\ Files/MinGW/w64devkit/include/_mingw_secapi.h \
+ D:/Program\ Files/MinGW/w64devkit/include/vadefs.h \
+ D:/Program\ Files/MinGW/w64devkit/include/sdks/_mingw_ddk.h \
  D:/Program\ Files/MinGW/w64devkit/include/_mingw_off_t.h \
  D:/Program\ Files/MinGW/w64devkit/include/swprintf.inl \
- D:/Program\ Files/MinGW/w64devkit/include/vadefs.h \
  D:/Program\ Files/MinGW/w64devkit/include/sec_api/stdio_s.h \
  D:/Program\ Files/MinGW/w64devkit/include/stdlib.h \
  D:/Program\ Files/MinGW/w64devkit/include/corecrt_wstdlib.h \
@@ -20,8 +24,12 @@ CMakeFiles/renderer.dir/external/glad/src/glad.c.obj: \
  D:/Program\ Files/MinGW/w64devkit/include/string.h \
  D:/Program\ Files/MinGW/w64devkit/include/sec_api/string_s.h \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glad/include/glad/glad.h \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glad/include/KHR/khrplatform.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stdint.h \
+ D:/Program\ Files/MinGW/w64devkit/include/stdint.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stddef.h \
+ D:/Program\ Files/MinGW/w64devkit/include/stddef.h \
  D:/Program\ Files/MinGW/w64devkit/include/windows.h \
- D:/Program\ Files/MinGW/w64devkit/include/_mingw.h \
  D:/Program\ Files/MinGW/w64devkit/include/sdkddkver.h \
  D:/Program\ Files/MinGW/w64devkit/include/excpt.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stdarg.h \
@@ -44,8 +52,6 @@ CMakeFiles/renderer.dir/external/glad/src/glad.c.obj: \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/x86intrin.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/x86gprintrin.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/ia32intrin.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stddef.h \
- D:/Program\ Files/MinGW/w64devkit/include/stddef.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/adxintrin.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/bmiintrin.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/bmi2intrin.h \
