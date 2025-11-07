@@ -7,8 +7,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/renderer.dir/external/glad/src/glad.c.obj.d"
   "CMakeFiles/renderer.dir/main.cpp.obj"
   "CMakeFiles/renderer.dir/main.cpp.obj.d"
+  "CMakeFiles/renderer.dir/src/external_impl.cpp.obj"
+  "CMakeFiles/renderer.dir/src/external_impl.cpp.obj.d"
   "CMakeFiles/renderer.dir/src/shader.cpp.obj"
   "CMakeFiles/renderer.dir/src/shader.cpp.obj.d"
+  "CMakeFiles/renderer.dir/src/typedef.cpp.obj"
+  "CMakeFiles/renderer.dir/src/typedef.cpp.obj.d"
 )
 
 # Per-language clean rules from dependency scanning.

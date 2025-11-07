@@ -176,6 +176,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/external_impl.obj: src/external_impl.cpp.obj
+.PHONY : src/external_impl.obj
+
+# target to build an object file
+src/external_impl.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/external_impl.cpp.obj
+.PHONY : src/external_impl.cpp.obj
+
+src/external_impl.i: src/external_impl.cpp.i
+.PHONY : src/external_impl.i
+
+# target to preprocess a source file
+src/external_impl.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/external_impl.cpp.i
+.PHONY : src/external_impl.cpp.i
+
+src/external_impl.s: src/external_impl.cpp.s
+.PHONY : src/external_impl.s
+
+# target to generate assembly for a file
+src/external_impl.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/external_impl.cpp.s
+.PHONY : src/external_impl.cpp.s
+
 src/shader.obj: src/shader.cpp.obj
 .PHONY : src/shader.obj
 
@@ -200,6 +224,30 @@ src/shader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/shader.cpp.s
 .PHONY : src/shader.cpp.s
 
+src/typedef.obj: src/typedef.cpp.obj
+.PHONY : src/typedef.obj
+
+# target to build an object file
+src/typedef.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/typedef.cpp.obj
+.PHONY : src/typedef.cpp.obj
+
+src/typedef.i: src/typedef.cpp.i
+.PHONY : src/typedef.i
+
+# target to preprocess a source file
+src/typedef.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/typedef.cpp.i
+.PHONY : src/typedef.cpp.i
+
+src/typedef.s: src/typedef.cpp.s
+.PHONY : src/typedef.s
+
+# target to generate assembly for a file
+src/typedef.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/typedef.cpp.s
+.PHONY : src/typedef.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -215,9 +263,15 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... src/external_impl.obj
+	@echo ... src/external_impl.i
+	@echo ... src/external_impl.s
 	@echo ... src/shader.obj
 	@echo ... src/shader.i
 	@echo ... src/shader.s
+	@echo ... src/typedef.obj
+	@echo ... src/typedef.i
+	@echo ... src/typedef.s
 .PHONY : help
 
 
