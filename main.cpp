@@ -36,13 +36,15 @@ int main()
     Shader shader("shader/Shader.vs", "shader/Shader.fs");
 
     float vertices[] = {
-    //  positions      // colors         // texCoord
-     0.0f,  0.5f, 0.0f, 1.0f, 0.0f, 0.0f, 0.5f, 1.0f,
-    -0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f,
-     0.5f, -0.5f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f
+        //  positions      // colors         // texCoord
+        -0.5f,  0.5f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f,  // 左上角
+        -0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f,  // 左下角
+        0.5f, -0.5f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f,  // 右下角
+        0.5f,  0.5f, 0.0f, 1.0f, 1.0f, 0.0f, 1.0f, 1.0f   // 右上角
     }; // ! 自定义的顶点数据
     unsigned int indices[] = {  // note that we start from 0!
         0, 1, 2,   // first triangle
+        0, 2, 3    // second triangle
     }; // ! 自定义的索引数据
 
     // 创建顶点属性和索引缓冲 VAO VBO EBO (GPU 缓存的数据内存)
@@ -62,18 +64,35 @@ int main()
     glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8*sizeof(float), (void*)(6*sizeof(float))); // 创建顶点纹理属性指针
     glEnableVertexAttribArray(2);   // 启用顶点纹理属性
 
-    // 创建纹理
-    unsigned int texture;
-    glGenTextures(1, &texture); // 创建纹理对象
-    glBindTexture(GL_TEXTURE_2D, texture); // 绑定纹理对象
+    // 创建第一个纹理
+    unsigned int texture0;
+    glGenTextures(1, &texture0); // 创建纹理对象
+    glBindTexture(GL_TEXTURE_2D, texture0); // 绑定纹理对象
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT); // 设置纹理坐标的S轴的纹理模式	
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT); // 设置纹理坐标的T轴的纹理模式
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR); // 设置纹理的放大缩小模式
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); // 设置纹理的放大缩小模式
 
-    Image image; image.load("asset/wall.jpg"); // 加载纹理图片
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, image.width, image.height, 0, GL_RGB, GL_UNSIGNED_BYTE, image.image_buffer); // 纹理图片数据
+    Image image0; image0.load("asset/wall.jpg"); // 加载纹理图片
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, image0.width, image0.height, 0, GL_RGB, GL_UNSIGNED_BYTE, image0.image_buffer); // 纹理图片数据
     glGenerateMipmap(GL_TEXTURE_2D); // 生成MipMap
+
+    // 创建第二个纹理
+    unsigned int texture1;
+    glGenTextures(1, &texture1); // 创建纹理对象
+    glBindTexture(GL_TEXTURE_2D, texture1); // 绑定纹理对象
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT); // 设置纹理坐标的S轴的纹理模式	
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT); // 设置纹理坐标的T轴的纹理模式
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR); // 设置纹理的放大缩小模式
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); // 设置纹理的放大缩小模式
+
+    Image image1; image1.load("asset/awesomeface.png"); image1.flipVertical(); // 加载纹理图片
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, image1.width, image1.height, 0, GL_RGBA, GL_UNSIGNED_BYTE, image1.image_buffer); // 纹理图片数据
+    glGenerateMipmap(GL_TEXTURE_2D); // 生成MipMap
+
+    shader.use();
+    shader.setInt("texture0", 0); // 设置纹理单元
+    shader.setInt("texture1", 1);
 
     // * 主循环
     while(!glfwWindowShouldClose(window)) 
@@ -81,14 +100,17 @@ int main()
         processInput(window); // 处理键盘输入
         
         // TODO 渲染
-        glClearColor(0.2f, 0.3f, 0.3f, 1.0f); // 指定清屏颜色
+        glClearColor(0.2f, 0.3f, 0.3f, 1.0f); // 指定清屏颜色 
         glClear(GL_COLOR_BUFFER_BIT); // 清屏, 否则一直绘制的上一帧
         
         // 设置着色器全局变量
         shader.use(); // 使用着色器程序
-        glBindTexture(GL_TEXTURE_2D, texture);
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, texture0);
+        glActiveTexture(GL_TEXTURE1);
+        glBindTexture(GL_TEXTURE_2D, texture1);
         glBindVertexArray(VAO); // 绑定顶点数组对象
-        glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, 0); // 绘制
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0); // 绘制
         
         glfwSwapBuffers(window); // 交换缓冲
         glfwPollEvents(); // 检查事件
