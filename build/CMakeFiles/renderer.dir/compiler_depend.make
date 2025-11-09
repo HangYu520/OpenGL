@@ -784,6 +784,194 @@ CMakeFiles/renderer.dir/main.cpp.obj: ../main.cpp \
   D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/fstream.tcc \
   D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/sstream \
   D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/sstream.tcc \
+  ../external/glm/glm.hpp \
+  ../external/glm/detail/_fixes.hpp \
+  ../external/glm/detail/setup.hpp \
+  ../external/glm/simd/platform.h \
+  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/cfloat \
+  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/float.h \
+  D:/Program\ Files/MinGW/w64devkit/include/float.h \
+  ../external/glm/fwd.hpp \
+  ../external/glm/detail/qualifier.hpp \
+  ../external/glm/detail/setup.hpp \
+  ../external/glm/vec2.hpp \
+  ../external/glm/ext/vector_bool2.hpp \
+  ../external/glm/detail/type_vec2.hpp \
+  ../external/glm/detail/type_vec2.inl \
+  ../external/glm/detail/compute_vector_relational.hpp \
+  ../external/glm/ext/vector_bool2_precision.hpp \
+  ../external/glm/ext/vector_float2.hpp \
+  ../external/glm/ext/vector_float2_precision.hpp \
+  ../external/glm/ext/vector_double2.hpp \
+  ../external/glm/ext/vector_double2_precision.hpp \
+  ../external/glm/ext/vector_int2.hpp \
+  ../external/glm/ext/vector_int2_sized.hpp \
+  ../external/glm/ext/scalar_int_sized.hpp \
+  ../external/glm/detail/setup.hpp \
+  ../external/glm/ext/vector_uint2.hpp \
+  ../external/glm/ext/vector_uint2_sized.hpp \
+  ../external/glm/ext/scalar_uint_sized.hpp \
+  ../external/glm/vec3.hpp \
+  ../external/glm/ext/vector_bool3.hpp \
+  ../external/glm/detail/type_vec3.hpp \
+  ../external/glm/detail/type_vec3.inl \
+  ../external/glm/detail/compute_vector_decl.hpp \
+  ../external/glm/detail/_vectorize.hpp \
+  ../external/glm/ext/vector_bool3_precision.hpp \
+  ../external/glm/ext/vector_float3.hpp \
+  ../external/glm/ext/vector_float3_precision.hpp \
+  ../external/glm/ext/vector_double3.hpp \
+  ../external/glm/ext/vector_double3_precision.hpp \
+  ../external/glm/ext/vector_int3.hpp \
+  ../external/glm/ext/vector_int3_sized.hpp \
+  ../external/glm/ext/vector_uint3.hpp \
+  ../external/glm/ext/vector_uint3_sized.hpp \
+  ../external/glm/vec4.hpp \
+  ../external/glm/ext/vector_bool4.hpp \
+  ../external/glm/detail/type_vec4.hpp \
+  ../external/glm/detail/type_vec4.inl \
+  ../external/glm/ext/vector_bool4_precision.hpp \
+  ../external/glm/ext/vector_float4.hpp \
+  ../external/glm/ext/vector_float4_precision.hpp \
+  ../external/glm/ext/vector_double4.hpp \
+  ../external/glm/ext/vector_double4_precision.hpp \
+  ../external/glm/ext/vector_int4.hpp \
+  ../external/glm/ext/vector_int4_sized.hpp \
+  ../external/glm/ext/vector_uint4.hpp \
+  ../external/glm/ext/vector_uint4_sized.hpp \
+  ../external/glm/mat2x2.hpp \
+  ../external/glm/ext/matrix_double2x2.hpp \
+  ../external/glm/detail/type_mat2x2.hpp \
+  ../external/glm/detail/type_mat2x2.inl \
+  ../external/glm/matrix.hpp \
+  ../external/glm/mat2x3.hpp \
+  ../external/glm/ext/matrix_double2x3.hpp \
+  ../external/glm/detail/type_mat2x3.hpp \
+  ../external/glm/detail/type_mat2x3.inl \
+  ../external/glm/ext/matrix_double2x3_precision.hpp \
+  ../external/glm/ext/matrix_float2x3.hpp \
+  ../external/glm/ext/matrix_float2x3_precision.hpp \
+  ../external/glm/mat2x4.hpp \
+  ../external/glm/ext/matrix_double2x4.hpp \
+  ../external/glm/detail/type_mat2x4.hpp \
+  ../external/glm/detail/type_mat2x4.inl \
+  ../external/glm/ext/matrix_double2x4_precision.hpp \
+  ../external/glm/ext/matrix_float2x4.hpp \
+  ../external/glm/ext/matrix_float2x4_precision.hpp \
+  ../external/glm/mat3x2.hpp \
+  ../external/glm/ext/matrix_double3x2.hpp \
+  ../external/glm/detail/type_mat3x2.hpp \
+  ../external/glm/detail/type_mat3x2.inl \
+  ../external/glm/ext/matrix_double3x2_precision.hpp \
+  ../external/glm/ext/matrix_float3x2.hpp \
+  ../external/glm/ext/matrix_float3x2_precision.hpp \
+  ../external/glm/mat3x3.hpp \
+  ../external/glm/ext/matrix_double3x3.hpp \
+  ../external/glm/detail/type_mat3x3.hpp \
+  ../external/glm/detail/type_mat3x3.inl \
+  ../external/glm/common.hpp \
+  ../external/glm/detail/func_common.inl \
+  ../external/glm/vector_relational.hpp \
+  ../external/glm/detail/func_vector_relational.inl \
+  ../external/glm/detail/compute_common.hpp \
+  ../external/glm/detail/type_vec1.hpp \
+  ../external/glm/detail/type_vec1.inl \
+  ../external/glm/ext/matrix_double3x3_precision.hpp \
+  ../external/glm/ext/matrix_float3x3.hpp \
+  ../external/glm/ext/matrix_float3x3_precision.hpp \
+  ../external/glm/mat3x4.hpp \
+  ../external/glm/ext/matrix_double3x4.hpp \
+  ../external/glm/detail/type_mat3x4.hpp \
+  ../external/glm/detail/type_mat3x4.inl \
+  ../external/glm/ext/matrix_double3x4_precision.hpp \
+  ../external/glm/ext/matrix_float3x4.hpp \
+  ../external/glm/ext/matrix_float3x4_precision.hpp \
+  ../external/glm/mat4x2.hpp \
+  ../external/glm/ext/matrix_double4x2.hpp \
+  ../external/glm/detail/type_mat4x2.hpp \
+  ../external/glm/detail/type_mat4x2.inl \
+  ../external/glm/ext/matrix_double4x2_precision.hpp \
+  ../external/glm/ext/matrix_float4x2.hpp \
+  ../external/glm/ext/matrix_float4x2_precision.hpp \
+  ../external/glm/mat4x3.hpp \
+  ../external/glm/ext/matrix_double4x3.hpp \
+  ../external/glm/detail/type_mat4x3.hpp \
+  ../external/glm/detail/type_mat4x3.inl \
+  ../external/glm/ext/matrix_double4x3_precision.hpp \
+  ../external/glm/ext/matrix_float4x3.hpp \
+  ../external/glm/ext/matrix_float4x3_precision.hpp \
+  ../external/glm/mat4x4.hpp \
+  ../external/glm/ext/matrix_double4x4.hpp \
+  ../external/glm/detail/type_mat4x4.hpp \
+  ../external/glm/detail/type_mat4x4.inl \
+  ../external/glm/geometric.hpp \
+  ../external/glm/detail/func_geometric.inl \
+  ../external/glm/exponential.hpp \
+  ../external/glm/detail/func_exponential.inl \
+  ../external/glm/ext/matrix_double4x4_precision.hpp \
+  ../external/glm/ext/matrix_float4x4.hpp \
+  ../external/glm/ext/matrix_float4x4_precision.hpp \
+  ../external/glm/detail/func_matrix.inl \
+  ../external/glm/ext/matrix_double2x2_precision.hpp \
+  ../external/glm/ext/matrix_float2x2.hpp \
+  ../external/glm/ext/matrix_float2x2_precision.hpp \
+  ../external/glm/trigonometric.hpp \
+  ../external/glm/detail/func_trigonometric.inl \
+  ../external/glm/packing.hpp \
+  ../external/glm/detail/func_packing.inl \
+  ../external/glm/detail/type_half.hpp \
+  ../external/glm/detail/type_half.inl \
+  ../external/glm/integer.hpp \
+  ../external/glm/detail/func_integer.inl \
+  ../external/glm/gtc/matrix_transform.hpp \
+  ../external/glm/ext/matrix_projection.hpp \
+  ../external/glm/gtc/constants.hpp \
+  ../external/glm/ext/scalar_constants.hpp \
+  ../external/glm/ext/scalar_constants.inl \
+  ../external/glm/gtc/constants.inl \
+  ../external/glm/ext/matrix_projection.inl \
+  ../external/glm/ext/matrix_clip_space.hpp \
+  ../external/glm/ext/matrix_clip_space.inl \
+  ../external/glm/ext/matrix_transform.hpp \
+  ../external/glm/ext/matrix_transform.inl \
+  ../external/glm/gtc/matrix_transform.inl \
+  ../external/glm/gtc/type_ptr.hpp \
+  ../external/glm/gtc/quaternion.hpp \
+  ../external/glm/ext/vector_relational.hpp \
+  ../external/glm/ext/vector_relational.inl \
+  ../external/glm/detail/type_float.hpp \
+  ../external/glm/ext/quaternion_common.hpp \
+  ../external/glm/ext/quaternion_geometric.hpp \
+  ../external/glm/ext/quaternion_geometric.inl \
+  ../external/glm/ext/quaternion_common.inl \
+  ../external/glm/ext/quaternion_float.hpp \
+  ../external/glm/detail/type_quat.hpp \
+  ../external/glm/ext/quaternion_relational.hpp \
+  ../external/glm/ext/quaternion_relational.inl \
+  ../external/glm/detail/type_quat.inl \
+  ../external/glm/ext/quaternion_float_precision.hpp \
+  ../external/glm/ext/quaternion_double.hpp \
+  ../external/glm/ext/quaternion_double_precision.hpp \
+  ../external/glm/ext/quaternion_trigonometric.hpp \
+  ../external/glm/ext/quaternion_trigonometric.inl \
+  ../external/glm/ext/quaternion_transform.hpp \
+  ../external/glm/ext/quaternion_transform.inl \
+  ../external/glm/gtc/quaternion.inl \
+  ../external/glm/gtc/epsilon.hpp \
+  ../external/glm/detail/setup.hpp \
+  ../external/glm/gtc/epsilon.inl \
+  ../external/glm/gtc/vec1.hpp \
+  ../external/glm/ext/vector_bool1.hpp \
+  ../external/glm/ext/vector_bool1_precision.hpp \
+  ../external/glm/ext/vector_float1.hpp \
+  ../external/glm/ext/vector_float1_precision.hpp \
+  ../external/glm/ext/vector_double1.hpp \
+  ../external/glm/ext/vector_double1_precision.hpp \
+  ../external/glm/ext/vector_int1.hpp \
+  ../external/glm/ext/vector_int1_sized.hpp \
+  ../external/glm/ext/vector_uint1.hpp \
+  ../external/glm/ext/vector_uint1_sized.hpp \
+  ../external/glm/gtc/type_ptr.inl \
   ../include/typedef.h \
   ../external/stb/stb_image.h \
   ../external/stb/stb_image_write.h \
@@ -1365,7 +1553,195 @@ CMakeFiles/renderer.dir/src/shader.cpp.obj: ../src/shader.cpp \
   D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
   D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/fstream.tcc \
   D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/sstream \
-  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/sstream.tcc
+  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/sstream.tcc \
+  ../external/glm/glm.hpp \
+  ../external/glm/detail/_fixes.hpp \
+  ../external/glm/detail/setup.hpp \
+  ../external/glm/simd/platform.h \
+  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/cfloat \
+  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/float.h \
+  D:/Program\ Files/MinGW/w64devkit/include/float.h \
+  ../external/glm/fwd.hpp \
+  ../external/glm/detail/qualifier.hpp \
+  ../external/glm/detail/setup.hpp \
+  ../external/glm/vec2.hpp \
+  ../external/glm/ext/vector_bool2.hpp \
+  ../external/glm/detail/type_vec2.hpp \
+  ../external/glm/detail/type_vec2.inl \
+  ../external/glm/detail/compute_vector_relational.hpp \
+  ../external/glm/ext/vector_bool2_precision.hpp \
+  ../external/glm/ext/vector_float2.hpp \
+  ../external/glm/ext/vector_float2_precision.hpp \
+  ../external/glm/ext/vector_double2.hpp \
+  ../external/glm/ext/vector_double2_precision.hpp \
+  ../external/glm/ext/vector_int2.hpp \
+  ../external/glm/ext/vector_int2_sized.hpp \
+  ../external/glm/ext/scalar_int_sized.hpp \
+  ../external/glm/detail/setup.hpp \
+  ../external/glm/ext/vector_uint2.hpp \
+  ../external/glm/ext/vector_uint2_sized.hpp \
+  ../external/glm/ext/scalar_uint_sized.hpp \
+  ../external/glm/vec3.hpp \
+  ../external/glm/ext/vector_bool3.hpp \
+  ../external/glm/detail/type_vec3.hpp \
+  ../external/glm/detail/type_vec3.inl \
+  ../external/glm/detail/compute_vector_decl.hpp \
+  ../external/glm/detail/_vectorize.hpp \
+  ../external/glm/ext/vector_bool3_precision.hpp \
+  ../external/glm/ext/vector_float3.hpp \
+  ../external/glm/ext/vector_float3_precision.hpp \
+  ../external/glm/ext/vector_double3.hpp \
+  ../external/glm/ext/vector_double3_precision.hpp \
+  ../external/glm/ext/vector_int3.hpp \
+  ../external/glm/ext/vector_int3_sized.hpp \
+  ../external/glm/ext/vector_uint3.hpp \
+  ../external/glm/ext/vector_uint3_sized.hpp \
+  ../external/glm/vec4.hpp \
+  ../external/glm/ext/vector_bool4.hpp \
+  ../external/glm/detail/type_vec4.hpp \
+  ../external/glm/detail/type_vec4.inl \
+  ../external/glm/ext/vector_bool4_precision.hpp \
+  ../external/glm/ext/vector_float4.hpp \
+  ../external/glm/ext/vector_float4_precision.hpp \
+  ../external/glm/ext/vector_double4.hpp \
+  ../external/glm/ext/vector_double4_precision.hpp \
+  ../external/glm/ext/vector_int4.hpp \
+  ../external/glm/ext/vector_int4_sized.hpp \
+  ../external/glm/ext/vector_uint4.hpp \
+  ../external/glm/ext/vector_uint4_sized.hpp \
+  ../external/glm/mat2x2.hpp \
+  ../external/glm/ext/matrix_double2x2.hpp \
+  ../external/glm/detail/type_mat2x2.hpp \
+  ../external/glm/detail/type_mat2x2.inl \
+  ../external/glm/matrix.hpp \
+  ../external/glm/mat2x3.hpp \
+  ../external/glm/ext/matrix_double2x3.hpp \
+  ../external/glm/detail/type_mat2x3.hpp \
+  ../external/glm/detail/type_mat2x3.inl \
+  ../external/glm/ext/matrix_double2x3_precision.hpp \
+  ../external/glm/ext/matrix_float2x3.hpp \
+  ../external/glm/ext/matrix_float2x3_precision.hpp \
+  ../external/glm/mat2x4.hpp \
+  ../external/glm/ext/matrix_double2x4.hpp \
+  ../external/glm/detail/type_mat2x4.hpp \
+  ../external/glm/detail/type_mat2x4.inl \
+  ../external/glm/ext/matrix_double2x4_precision.hpp \
+  ../external/glm/ext/matrix_float2x4.hpp \
+  ../external/glm/ext/matrix_float2x4_precision.hpp \
+  ../external/glm/mat3x2.hpp \
+  ../external/glm/ext/matrix_double3x2.hpp \
+  ../external/glm/detail/type_mat3x2.hpp \
+  ../external/glm/detail/type_mat3x2.inl \
+  ../external/glm/ext/matrix_double3x2_precision.hpp \
+  ../external/glm/ext/matrix_float3x2.hpp \
+  ../external/glm/ext/matrix_float3x2_precision.hpp \
+  ../external/glm/mat3x3.hpp \
+  ../external/glm/ext/matrix_double3x3.hpp \
+  ../external/glm/detail/type_mat3x3.hpp \
+  ../external/glm/detail/type_mat3x3.inl \
+  ../external/glm/common.hpp \
+  ../external/glm/detail/func_common.inl \
+  ../external/glm/vector_relational.hpp \
+  ../external/glm/detail/func_vector_relational.inl \
+  ../external/glm/detail/compute_common.hpp \
+  ../external/glm/detail/type_vec1.hpp \
+  ../external/glm/detail/type_vec1.inl \
+  ../external/glm/ext/matrix_double3x3_precision.hpp \
+  ../external/glm/ext/matrix_float3x3.hpp \
+  ../external/glm/ext/matrix_float3x3_precision.hpp \
+  ../external/glm/mat3x4.hpp \
+  ../external/glm/ext/matrix_double3x4.hpp \
+  ../external/glm/detail/type_mat3x4.hpp \
+  ../external/glm/detail/type_mat3x4.inl \
+  ../external/glm/ext/matrix_double3x4_precision.hpp \
+  ../external/glm/ext/matrix_float3x4.hpp \
+  ../external/glm/ext/matrix_float3x4_precision.hpp \
+  ../external/glm/mat4x2.hpp \
+  ../external/glm/ext/matrix_double4x2.hpp \
+  ../external/glm/detail/type_mat4x2.hpp \
+  ../external/glm/detail/type_mat4x2.inl \
+  ../external/glm/ext/matrix_double4x2_precision.hpp \
+  ../external/glm/ext/matrix_float4x2.hpp \
+  ../external/glm/ext/matrix_float4x2_precision.hpp \
+  ../external/glm/mat4x3.hpp \
+  ../external/glm/ext/matrix_double4x3.hpp \
+  ../external/glm/detail/type_mat4x3.hpp \
+  ../external/glm/detail/type_mat4x3.inl \
+  ../external/glm/ext/matrix_double4x3_precision.hpp \
+  ../external/glm/ext/matrix_float4x3.hpp \
+  ../external/glm/ext/matrix_float4x3_precision.hpp \
+  ../external/glm/mat4x4.hpp \
+  ../external/glm/ext/matrix_double4x4.hpp \
+  ../external/glm/detail/type_mat4x4.hpp \
+  ../external/glm/detail/type_mat4x4.inl \
+  ../external/glm/geometric.hpp \
+  ../external/glm/detail/func_geometric.inl \
+  ../external/glm/exponential.hpp \
+  ../external/glm/detail/func_exponential.inl \
+  ../external/glm/ext/matrix_double4x4_precision.hpp \
+  ../external/glm/ext/matrix_float4x4.hpp \
+  ../external/glm/ext/matrix_float4x4_precision.hpp \
+  ../external/glm/detail/func_matrix.inl \
+  ../external/glm/ext/matrix_double2x2_precision.hpp \
+  ../external/glm/ext/matrix_float2x2.hpp \
+  ../external/glm/ext/matrix_float2x2_precision.hpp \
+  ../external/glm/trigonometric.hpp \
+  ../external/glm/detail/func_trigonometric.inl \
+  ../external/glm/packing.hpp \
+  ../external/glm/detail/func_packing.inl \
+  ../external/glm/detail/type_half.hpp \
+  ../external/glm/detail/type_half.inl \
+  ../external/glm/integer.hpp \
+  ../external/glm/detail/func_integer.inl \
+  ../external/glm/gtc/matrix_transform.hpp \
+  ../external/glm/ext/matrix_projection.hpp \
+  ../external/glm/gtc/constants.hpp \
+  ../external/glm/ext/scalar_constants.hpp \
+  ../external/glm/ext/scalar_constants.inl \
+  ../external/glm/gtc/constants.inl \
+  ../external/glm/ext/matrix_projection.inl \
+  ../external/glm/ext/matrix_clip_space.hpp \
+  ../external/glm/ext/matrix_clip_space.inl \
+  ../external/glm/ext/matrix_transform.hpp \
+  ../external/glm/ext/matrix_transform.inl \
+  ../external/glm/gtc/matrix_transform.inl \
+  ../external/glm/gtc/type_ptr.hpp \
+  ../external/glm/gtc/quaternion.hpp \
+  ../external/glm/ext/vector_relational.hpp \
+  ../external/glm/ext/vector_relational.inl \
+  ../external/glm/detail/type_float.hpp \
+  ../external/glm/ext/quaternion_common.hpp \
+  ../external/glm/ext/quaternion_geometric.hpp \
+  ../external/glm/ext/quaternion_geometric.inl \
+  ../external/glm/ext/quaternion_common.inl \
+  ../external/glm/ext/quaternion_float.hpp \
+  ../external/glm/detail/type_quat.hpp \
+  ../external/glm/ext/quaternion_relational.hpp \
+  ../external/glm/ext/quaternion_relational.inl \
+  ../external/glm/detail/type_quat.inl \
+  ../external/glm/ext/quaternion_float_precision.hpp \
+  ../external/glm/ext/quaternion_double.hpp \
+  ../external/glm/ext/quaternion_double_precision.hpp \
+  ../external/glm/ext/quaternion_trigonometric.hpp \
+  ../external/glm/ext/quaternion_trigonometric.inl \
+  ../external/glm/ext/quaternion_transform.hpp \
+  ../external/glm/ext/quaternion_transform.inl \
+  ../external/glm/gtc/quaternion.inl \
+  ../external/glm/gtc/epsilon.hpp \
+  ../external/glm/detail/setup.hpp \
+  ../external/glm/gtc/epsilon.inl \
+  ../external/glm/gtc/vec1.hpp \
+  ../external/glm/ext/vector_bool1.hpp \
+  ../external/glm/ext/vector_bool1_precision.hpp \
+  ../external/glm/ext/vector_float1.hpp \
+  ../external/glm/ext/vector_float1_precision.hpp \
+  ../external/glm/ext/vector_double1.hpp \
+  ../external/glm/ext/vector_double1_precision.hpp \
+  ../external/glm/ext/vector_int1.hpp \
+  ../external/glm/ext/vector_int1_sized.hpp \
+  ../external/glm/ext/vector_uint1.hpp \
+  ../external/glm/ext/vector_uint1_sized.hpp \
+  ../external/glm/gtc/type_ptr.inl
 
 CMakeFiles/renderer.dir/src/typedef.cpp.obj: ../src/typedef.cpp \
   ../include/typedef.h \
@@ -1852,11 +2228,15 @@ CMakeFiles/renderer.dir/src/typedef.cpp.obj: ../src/typedef.cpp \
 
 D:/Program\ Files/MinGW/w64devkit/include/swprintf.inl:
 
+../external/glm/ext/scalar_constants.inl:
+
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/movdirintrin.h:
 
 D:/Program\ Files/MinGW/w64devkit/include/ktmtypes.h:
 
 D:/Program\ Files/MinGW/w64devkit/include/stdio.h:
+
+../external/glm/ext/matrix_transform.inl:
 
 D:/Program\ Files/MinGW/w64devkit/include/sysinfoapi.h:
 
@@ -1888,6 +2268,8 @@ D:/Program\ Files/MinGW/w64devkit/include/winnls.h:
 
 D:/Program\ Files/MinGW/w64devkit/include/prsht.h:
 
+../external/glm/detail/func_matrix.inl:
+
 D:/Program\ Files/MinGW/w64devkit/include/_mingw.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/xsaveintrin.h:
@@ -1914,6 +2296,8 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/
 
 D:/Program\ Files/MinGW/w64devkit/include/imm.h:
 
+../external/glm/ext/quaternion_common.inl:
+
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stdarg.h:
 
 D:/Program\ Files/MinGW/w64devkit/include/sdks/_mingw_ddk.h:
@@ -1928,11 +2312,21 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stddef.h:
 
+../external/glm/ext/matrix_float4x3_precision.hpp:
+
 D:/Program\ Files/MinGW/w64devkit/include/sec_api/stdio_s.h:
+
+../external/glm/ext/matrix_double4x3.hpp:
+
+../external/glm/vec2.hpp:
 
 D:/Program\ Files/MinGW/w64devkit/include/stdlib.h:
 
+../external/glm/detail/func_integer.inl:
+
 D:/Program\ Files/MinGW/w64devkit/include/winapifamily.h:
+
+../external/glm/ext/vector_relational.inl:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stdint.h:
 
@@ -1948,6 +2342,8 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/amxc
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/limits.h:
 
+../external/glm/ext/vector_float4_precision.hpp:
+
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/clzerointrin.h:
 
 D:/Program\ Files/MinGW/w64devkit/include/psdk_inc/intrin-impl.h:
@@ -1959,6 +2355,8 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/sysl
 D:/Program\ Files/MinGW/w64devkit/include/limits.h:
 
 D:/Program\ Files/MinGW/w64devkit/include/securityappcontainer.h:
+
+../external/glm/glm.hpp:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/c++io.h:
 
@@ -2016,6 +2414,8 @@ D:/Program\ Files/MinGW/w64devkit/include/stdint.h:
 
 D:/Program\ Files/MinGW/w64devkit/include/wchar.h:
 
+../external/glm/detail/type_vec2.hpp:
+
 D:/Program\ Files/MinGW/w64devkit/include/stdarg.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/shared_ptr.h:
@@ -2034,7 +2434,11 @@ D:/Program\ Files/MinGW/w64devkit/include/sdkddkver.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/amxfp16intrin.h:
 
+../external/glm/detail/setup.hpp:
+
 D:/Program\ Files/MinGW/w64devkit/include/minwindef.h:
+
+../external/glm/ext/matrix_double2x2.hpp:
 
 D:/Program\ Files/MinGW/w64devkit/include/specstrings.h:
 
@@ -2064,7 +2468,11 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/avx5
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/backward/binders.h:
 
+../external/glm/mat4x3.hpp:
+
 D:/Program\ Files/MinGW/w64devkit/include/msxml.h:
+
+../external/glm/gtc/type_ptr.hpp:
 
 D:/Program\ Files/MinGW/w64devkit/include/apiset.h:
 
@@ -2086,6 +2494,8 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/adxintrin.h:
 
+../external/glm/detail/func_trigonometric.inl:
+
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/cetintrin.h:
 
 D:/Program\ Files/MinGW/w64devkit/include/processenv.h:
@@ -2098,11 +2508,15 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/fxsr
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/lzcntintrin.h:
 
+../external/glm/ext/matrix_clip_space.hpp:
+
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/lwpintrin.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/exception_ptr.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/pstl/execution_defs.h:
+
+../external/glm/ext/vector_bool3_precision.hpp:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/avx512ifmavlintrin.h:
 
@@ -2110,11 +2524,15 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/mwai
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/avx512dqintrin.h:
 
+../external/glm/detail/type_vec4.inl:
+
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/f16cintrin.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/mwaitxintrin.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/backward/auto_ptr.h:
+
+../external/glm/ext/vector_bool2.hpp:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/pconfigintrin.h:
 
@@ -2136,6 +2554,8 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/raoi
 
 D:/Program\ Files/MinGW/w64devkit/include/mmiscapi.h:
 
+../external/glm/detail/type_quat.inl:
+
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/unordered_map:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/tr1/beta_function.tcc:
@@ -2148,13 +2568,19 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/rtmi
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/serializeintrin.h:
 
+../external/glm/ext/quaternion_float_precision.hpp:
+
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/sgxintrin.h:
+
+../external/glm/detail/type_mat4x3.inl:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/tbmintrin.h:
 
 D:/Program\ Files/MinGW/w64devkit/include/_bsd_types.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/tsxldtrkintrin.h:
+
+../external/glm/detail/type_mat4x2.inl:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/avx512vnnivlintrin.h:
 
@@ -2170,9 +2596,13 @@ D:/Program\ Files/MinGW/w64devkit/include/rpcsal.h:
 
 D:/Program\ Files/MinGW/w64devkit/include/datetimeapi.h:
 
+../external/glm/ext/matrix_double4x2_precision.hpp:
+
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/xsavecintrin.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/avx512vpopcntdqvlintrin.h:
+
+../external/glm/ext/matrix_double2x4_precision.hpp:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/xsaveoptintrin.h:
 
@@ -2185,6 +2615,8 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/immi
 D:/Program\ Files/MinGW/w64devkit/include/ddeml.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/alloc_traits.h:
+
+../external/glm/ext/matrix_double3x4.hpp:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/mmintrin.h:
 
@@ -2202,11 +2634,15 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/avx5
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/tmmintrin.h:
 
+../external/glm/ext/matrix_float3x4.hpp:
+
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/smmintrin.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/wmmintrin.h:
 
 D:/Program\ Files/MinGW/w64devkit/include/psdk_inc/_ip_mreq1.h:
+
+../external/glm/detail/func_common.inl:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/avxintrin.h:
 
@@ -2215,6 +2651,8 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/avxv
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/locale_facets.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/avxifmaintrin.h:
+
+../external/glm/ext/vector_float1.hpp:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/avxvnniint8intrin.h:
 
@@ -2226,7 +2664,11 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/avxv
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/cxxabi_forced.h:
 
+../external/glm/detail/type_mat2x3.inl:
+
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/avx2intrin.h:
+
+../external/glm/ext/matrix_double2x4.hpp:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/avx512fintrin.h:
 
@@ -2235,6 +2677,8 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/avx512cdintrin.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h:
+
+../external/glm/ext/matrix_double4x4_precision.hpp:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/avx512bwintrin.h:
 
@@ -2266,7 +2710,11 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/avx10_2-512minmaxintrin.h:
 
+../external/glm/ext/scalar_int_sized.hpp:
+
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/avx512vpopcntdqintrin.h:
+
+../external/glm/detail/func_packing.inl:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/avx512vbmi2vlintrin.h:
 
@@ -2278,6 +2726,8 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/avx5
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/avx512vp2intersectvlintrin.h:
 
+D:/Program\ Files/MinGW/w64devkit/include/float.h:
+
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/avx512fp16intrin.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/type_traits:
@@ -2285,6 +2735,8 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/avx512fp16vlintrin.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/thread:
+
+../external/glm/detail/type_mat2x3.hpp:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/pstl/pstl_config.h:
 
@@ -2299,6 +2751,8 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/sm4i
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/fmaintrin.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/gfniintrin.h:
+
+../external/glm/ext/scalar_uint_sized.hpp:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/basic_ios.h:
 
@@ -2318,6 +2772,8 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/amxt
 
 D:/Program\ Files/MinGW/w64devkit/include/bemapiset.h:
 
+../external/glm/ext/vector_int4_sized.hpp:
+
 ../external/glfw/glfw3.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/amxint8intrin.h:
@@ -2327,6 +2783,8 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/amxb
 D:/Program\ Files/MinGW/w64devkit/include/oaidl.h:
 
 D:/Program\ Files/MinGW/w64devkit/include/urlmon.h:
+
+../external/glm/gtc/type_ptr.inl:
 
 D:/Program\ Files/MinGW/w64devkit/include/psdk_inc/_fd_types.h:
 
@@ -2348,6 +2806,10 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/keyl
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/cxxabi_init_exception.h:
 
+../external/glm/detail/type_vec4.hpp:
+
+../external/glm/detail/compute_vector_relational.hpp:
+
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/avx10_2mediaintrin.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/avx10_2-512mediaintrin.h:
@@ -2364,6 +2826,8 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/avx1
 
 ../external/spdlog/fmt/bundled/format.h:
 
+../external/glm/ext/vector_double4.hpp:
+
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/avx10_2-512satcvtintrin.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/ios_base.h:
@@ -2376,9 +2840,13 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/amxm
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/requires_hosted.h:
 
+../external/glm/mat2x3.hpp:
+
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/mm3dnow.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/fma4intrin.h:
+
+../external/glm/ext/vector_double3_precision.hpp:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/ammintrin.h:
 
@@ -2405,6 +2873,8 @@ D:/Program\ Files/MinGW/w64devkit/include/minwinbase.h:
 D:/Program\ Files/MinGW/w64devkit/include/handleapi.h:
 
 D:/Program\ Files/MinGW/w64devkit/include/heapapi.h:
+
+../external/glm/mat2x4.hpp:
 
 D:/Program\ Files/MinGW/w64devkit/include/inaddr.h:
 
@@ -2442,6 +2912,8 @@ D:/Program\ Files/MinGW/w64devkit/include/systemtopologyapi.h:
 
 D:/Program\ Files/MinGW/w64devkit/include/wnnc.h:
 
+../external/glm/ext/vector_double3.hpp:
+
 D:/Program\ Files/MinGW/w64devkit/include/threadpoolapiset.h:
 
 D:/Program\ Files/MinGW/w64devkit/include/threadpoollegacyapiset.h:
@@ -2456,6 +2928,8 @@ D:/Program\ Files/MinGW/w64devkit/include/io.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/allocated_ptr.h:
 
+../external/glm/ext/matrix_float2x4_precision.hpp:
+
 D:/Program\ Files/MinGW/w64devkit/include/wow64apiset.h:
 
 D:/Program\ Files/MinGW/w64devkit/include/joystickapi.h:
@@ -2464,11 +2938,15 @@ D:/Program\ Files/MinGW/w64devkit/include/joystickapi.h:
 
 D:/Program\ Files/MinGW/w64devkit/include/winerror.h:
 
+../external/glm/integer.hpp:
+
 D:/Program\ Files/MinGW/w64devkit/include/fltwinerror.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/locale_classes.tcc:
 
 D:/Program\ Files/MinGW/w64devkit/include/timezoneapi.h:
+
+../external/glm/gtc/quaternion.inl:
 
 D:/Program\ Files/MinGW/w64devkit/include/wingdi.h:
 
@@ -2480,9 +2958,15 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/std_function.h:
 
+../external/glm/ext/matrix_double4x3_precision.hpp:
+
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/cassert:
 
 ../include/typedef.h:
+
+../external/glm/ext/matrix_double4x2.hpp:
+
+../external/glm/vec3.hpp:
 
 D:/Program\ Files/MinGW/w64devkit/include/winuser.h:
 
@@ -2510,7 +2994,11 @@ D:/Program\ Files/MinGW/w64devkit/include/cderr.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/chrono:
 
+../external/glm/detail/func_geometric.inl:
+
 D:/Program\ Files/MinGW/w64devkit/include/dde.h:
+
+../external/glm/ext/quaternion_common.hpp:
 
 D:/Program\ Files/MinGW/w64devkit/include/dlgs.h:
 
@@ -2527,6 +3015,8 @@ D:/Program\ Files/MinGW/w64devkit/include/mciapi.h:
 D:/Program\ Files/MinGW/w64devkit/include/mmiscapi2.h:
 
 D:/Program\ Files/MinGW/w64devkit/include/playsoundapi.h:
+
+../external/glm/ext/matrix_float4x3.hpp:
 
 ../external/spdlog/sinks/sink.h:
 
@@ -2568,9 +3058,13 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/
 
 D:/Program\ Files/MinGW/w64devkit/include/psdk_inc/_socket_types.h:
 
+../external/glm/ext/matrix_float4x4.hpp:
+
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_tempbuf.h:
 
 D:/Program\ Files/MinGW/w64devkit/include/psdk_inc/_ip_types.h:
+
+../external/glm/ext/vector_double4_precision.hpp:
 
 D:/Program\ Files/MinGW/w64devkit/include/psdk_inc/_wsadata.h:
 
@@ -2579,6 +3073,8 @@ D:/Program\ Files/MinGW/w64devkit/include/psdk_inc/_wsadata.h:
 D:/Program\ Files/MinGW/w64devkit/include/psdk_inc/_xmitfile.h:
 
 D:/Program\ Files/MinGW/w64devkit/include/psdk_inc/_wsa_errnos.h:
+
+../external/glm/ext/matrix_float3x3.hpp:
 
 D:/Program\ Files/MinGW/w64devkit/include/wincrypt.h:
 
@@ -2598,17 +3094,23 @@ D:/Program\ Files/MinGW/w64devkit/include/winefs.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/cpp_type_traits.h:
 
+../external/glm/ext/matrix_double3x3.hpp:
+
 D:/Program\ Files/MinGW/w64devkit/include/winscard.h:
 
 D:/Program\ Files/MinGW/w64devkit/include/wtypes.h:
 
 D:/Program\ Files/MinGW/w64devkit/include/rpcndr.h:
 
+../external/glm/ext/matrix_float3x4_precision.hpp:
+
 D:/Program\ Files/MinGW/w64devkit/include/ole2.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/concept_check.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/atomic_base.h:
+
+../external/glm/detail/type_mat2x2.inl:
 
 D:/Program\ Files/MinGW/w64devkit/include/combaseapi.h:
 
@@ -2617,6 +3119,8 @@ D:/Program\ Files/MinGW/w64devkit/include/wtypesbase.h:
 D:/Program\ Files/MinGW/w64devkit/include/unknwnbase.h:
 
 ../external/spdlog/logger.h:
+
+../external/glm/ext/quaternion_float.hpp:
 
 D:/Program\ Files/MinGW/w64devkit/include/objidlbase.h:
 
@@ -2640,13 +3144,19 @@ D:/Program\ Files/MinGW/w64devkit/include/winsmcrd.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/tr1/riemann_zeta.tcc:
 
+../external/glm/detail/type_mat3x3.hpp:
+
 D:/Program\ Files/MinGW/w64devkit/include/winspool.h:
 
 D:/Program\ Files/MinGW/w64devkit/include/commdlg.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/localefwd.h:
 
+../external/glm/gtc/vec1.hpp:
+
 D:/Program\ Files/MinGW/w64devkit/include/stralign.h:
+
+../external/glm/ext/matrix_projection.hpp:
 
 D:/Program\ Files/MinGW/w64devkit/include/sec_api/stralign_s.h:
 
@@ -2656,9 +3166,13 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/
 
 ../external/spdlog/common.h:
 
+../external/glm/gtc/epsilon.hpp:
+
 ../external/spdlog/details/null_mutex.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/memory_resource.h:
+
+../external/glm/detail/type_mat4x2.hpp:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/atomic:
 
@@ -2670,7 +3184,11 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h:
 
+../external/glm/ext/quaternion_transform.inl:
+
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h:
+
+../external/glm/ext/vector_double2_precision.hpp:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/new:
 
@@ -2711,6 +3229,8 @@ D:/Program\ Files/MinGW/w64devkit/include/time.h:
 ../external/spdlog/fmt/bundled/base.h:
 
 D:/Program\ Files/MinGW/w64devkit/include/sys/timeb.h:
+
+../external/glm/detail/type_mat3x3.inl:
 
 ../external/spdlog/details/backtracer-inl.h:
 
@@ -2756,6 +3276,8 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/stdexcept:
 
+../external/glm/gtc/constants.hpp:
+
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/hashtable_policy.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/ptr_traits.h:
@@ -2763,6 +3285,8 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/
 ../external/spdlog/details/log_msg_buffer.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/debug/debug.h:
+
+../external/glm/ext/matrix_float2x3_precision.hpp:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/predefined_ops.h:
 
@@ -2806,6 +3330,8 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/
 
 D:/Program\ Files/MinGW/w64devkit/include/process.h:
 
+../external/glm/detail/type_mat4x3.hpp:
+
 D:/Program\ Files/MinGW/w64devkit/include/signal.h:
 
 D:/Program\ Files/MinGW/w64devkit/include/pthread_signal.h:
@@ -2824,6 +3350,8 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/ostream_insert.h:
 
+../external/glm/ext/matrix_double3x3_precision.hpp:
+
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/string_view.tcc:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/stdlib.h:
@@ -2837,6 +3365,8 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/ostream.h:
 
 ../external/spdlog/fmt/fmt.h:
+
+../external/glm/gtc/epsilon.inl:
 
 D:/Program\ Files/MinGW/w64devkit/include/math.h:
 
@@ -2861,6 +3391,8 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h:
 
 ../external/spdlog/fmt/bundled/format-inl.h:
+
+../external/glm/ext/vector_uint3.hpp:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/std_thread.h:
 
@@ -2900,6 +3432,8 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/std_mutex.h:
 
+../external/glm/ext/matrix_float4x2_precision.hpp:
+
 ../external/spdlog/sinks/wincolor_sink-inl.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/mutex:
@@ -2914,21 +3448,31 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/
 
 D:/Program\ Files/MinGW/w64devkit/include/sys/stat.h:
 
+../external/glm/packing.hpp:
+
 D:/Program\ Files/MinGW/w64devkit/include/direct.h:
 
 ../external/spdlog/details/log_msg_buffer-inl.h:
 
 ../external/spdlog/logger-inl.h:
 
+../external/glm/ext/vector_float2.hpp:
+
 ../external/spdlog/pattern_formatter.h:
 
+../external/glm/ext/quaternion_relational.inl:
+
 ../external/spdlog/formatter.h:
+
+../external/glm/ext/matrix_clip_space.inl:
 
 ../external/spdlog/details/fmt_helper.h:
 
 ../external/spdlog/mdc.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/map:
+
+../external/glm/detail/type_vec3.inl:
 
 ../external/spdlog/version.h:
 
@@ -2946,6 +3490,8 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/istream:
 
+../external/glm/ext/vector_bool2_precision.hpp:
+
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/ios:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/ostream:
@@ -2953,6 +3499,208 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/fstream.tcc:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/sstream:
+
+../external/glm/detail/_fixes.hpp:
+
+../external/glm/ext/vector_int2.hpp:
+
+../external/glm/simd/platform.h:
+
+../external/glm/detail/type_half.inl:
+
+D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/cfloat:
+
+D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/float.h:
+
+../external/glm/ext/quaternion_transform.hpp:
+
+../external/glm/fwd.hpp:
+
+../external/glm/detail/qualifier.hpp:
+
+D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h:
+
+../external/glm/detail/type_vec2.inl:
+
+../external/glm/ext/vector_float2_precision.hpp:
+
+../external/glm/ext/vector_double2.hpp:
+
+../external/glm/ext/vector_int2_sized.hpp:
+
+../external/glm/ext/vector_uint2.hpp:
+
+../external/glm/ext/vector_uint2_sized.hpp:
+
+../external/glm/ext/vector_bool3.hpp:
+
+../external/glm/detail/type_vec3.hpp:
+
+../external/glm/detail/compute_vector_decl.hpp:
+
+../external/glm/detail/_vectorize.hpp:
+
+../external/glm/detail/func_vector_relational.inl:
+
+../external/glm/ext/vector_float3.hpp:
+
+../external/glm/ext/vector_float3_precision.hpp:
+
+../external/glm/ext/vector_int3.hpp:
+
+../external/glm/ext/vector_int3_sized.hpp:
+
+../external/glm/ext/vector_uint3_sized.hpp:
+
+../external/glm/vec4.hpp:
+
+../external/glm/ext/vector_bool4.hpp:
+
+../external/glm/ext/vector_bool4_precision.hpp:
+
+../external/glm/ext/vector_bool1_precision.hpp:
+
+../external/glm/ext/vector_float4.hpp:
+
+../external/glm/ext/vector_int4.hpp:
+
+../external/glm/ext/vector_uint4.hpp:
+
+../external/glm/ext/vector_uint4_sized.hpp:
+
+../external/glm/mat2x2.hpp:
+
+../external/glm/detail/type_mat2x2.hpp:
+
+../external/glm/matrix.hpp:
+
+../external/glm/ext/matrix_double2x3.hpp:
+
+../external/glm/ext/matrix_double2x3_precision.hpp:
+
+../external/glm/ext/matrix_float2x3.hpp:
+
+../external/glm/detail/type_mat2x4.hpp:
+
+../external/glm/detail/type_mat2x4.inl:
+
+../external/glm/ext/matrix_float2x4.hpp:
+
+../external/glm/mat3x2.hpp:
+
+../external/glm/ext/matrix_double3x2.hpp:
+
+../external/glm/detail/type_mat3x2.hpp:
+
+../external/glm/mat3x4.hpp:
+
+../external/glm/detail/type_mat3x2.inl:
+
+../external/glm/ext/matrix_double3x2_precision.hpp:
+
+../external/glm/ext/matrix_float3x3_precision.hpp:
+
+../external/glm/ext/matrix_float3x2.hpp:
+
+../external/glm/ext/matrix_float3x2_precision.hpp:
+
+../external/glm/mat3x3.hpp:
+
+../external/glm/common.hpp:
+
+../external/glm/vector_relational.hpp:
+
+../external/glm/detail/compute_common.hpp:
+
+../external/glm/detail/type_vec1.hpp:
+
+../external/glm/detail/type_vec1.inl:
+
+../external/glm/detail/type_mat3x4.hpp:
+
+../external/glm/detail/type_mat3x4.inl:
+
+../external/glm/gtc/matrix_transform.hpp:
+
+../external/glm/ext/matrix_double3x4_precision.hpp:
+
+../external/glm/mat4x2.hpp:
+
+../external/glm/ext/matrix_float4x2.hpp:
+
+../external/glm/mat4x4.hpp:
+
+../external/glm/ext/matrix_double4x4.hpp:
+
+../external/glm/detail/type_mat4x4.hpp:
+
+../external/glm/detail/type_mat4x4.inl:
+
+../external/glm/geometric.hpp:
+
+../external/glm/exponential.hpp:
+
+../external/glm/detail/func_exponential.inl:
+
+../external/glm/ext/matrix_float4x4_precision.hpp:
+
+../external/glm/ext/matrix_double2x2_precision.hpp:
+
+../external/glm/ext/matrix_float2x2.hpp:
+
+../external/glm/ext/matrix_float2x2_precision.hpp:
+
+../external/glm/trigonometric.hpp:
+
+../external/glm/detail/type_half.hpp:
+
+../external/glm/gtc/matrix_transform.inl:
+
+../external/glm/ext/scalar_constants.hpp:
+
+../external/glm/gtc/constants.inl:
+
+../external/glm/ext/matrix_projection.inl:
+
+../external/glm/ext/matrix_transform.hpp:
+
+../external/glm/gtc/quaternion.hpp:
+
+../external/glm/ext/vector_relational.hpp:
+
+../external/glm/detail/type_float.hpp:
+
+../external/glm/ext/quaternion_geometric.hpp:
+
+../external/glm/ext/quaternion_geometric.inl:
+
+../external/glm/detail/type_quat.hpp:
+
+../external/glm/ext/quaternion_relational.hpp:
+
+../external/glm/ext/quaternion_double.hpp:
+
+../external/glm/ext/quaternion_double_precision.hpp:
+
+../external/glm/ext/quaternion_trigonometric.hpp:
+
+../external/glm/ext/quaternion_trigonometric.inl:
+
+../external/glm/ext/vector_bool1.hpp:
+
+../external/glm/ext/vector_float1_precision.hpp:
+
+../external/glm/ext/vector_double1.hpp:
+
+../external/glm/ext/vector_double1_precision.hpp:
+
+../external/glm/ext/vector_int1_sized.hpp:
+
+../external/glm/ext/vector_int1.hpp:
+
+../external/glm/ext/vector_uint1.hpp:
+
+../external/glm/ext/vector_uint1_sized.hpp:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_numeric.h:
 
@@ -2963,8 +3711,6 @@ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/random:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/random.h:
-
-D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h:
 
 D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/numeric:
 

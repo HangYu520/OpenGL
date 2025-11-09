@@ -94,6 +94,7 @@ int main()
     shader.setInt("texture0", 0); // 设置纹理单元
     shader.setInt("texture1", 1);
 
+    
     // * 主循环
     while(!glfwWindowShouldClose(window)) 
     {
@@ -102,6 +103,12 @@ int main()
         // TODO 渲染
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f); // 指定清屏颜色 
         glClear(GL_COLOR_BUFFER_BIT); // 清屏, 否则一直绘制的上一帧
+        
+        // 矩阵变换
+        glm::mat4 trans = glm::mat4(1.0f);
+        trans = glm::rotate(trans, (float) glfwGetTime(), glm::vec3(0.0, 0.0, 1.0));
+        trans = glm::scale(trans, glm::vec3(0.5, 0.5, 0.5)); 
+        shader.setMat4("transform", trans);
         
         // 设置着色器全局变量
         shader.use(); // 使用着色器程序
