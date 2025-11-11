@@ -35,18 +35,6 @@ int main()
     // 从文件中创建着色器
     Shader shader("shader/Shader.vs", "shader/Shader.fs");
 
-    float vertices[] = {
-        //  positions      // colors         // texCoord
-        -0.5f,  0.5f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f,  // 左上角
-        -0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f,  // 左下角
-        0.5f, -0.5f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f,  // 右下角
-        0.5f,  0.5f, 0.0f, 1.0f, 1.0f, 0.0f, 1.0f, 1.0f   // 右上角
-    }; // ! 自定义的顶点数据
-    unsigned int indices[] = {  // note that we start from 0!
-        0, 1, 2,   // first triangle
-        0, 2, 3    // second triangle
-    }; // ! 自定义的索引数据
-
     // 创建顶点属性和索引缓冲 VAO VBO EBO (GPU 缓存的数据内存)
     unsigned int VAO, VBO, EBO;
     glGenVertexArrays(1, &VAO); // 创建 VAO
@@ -56,13 +44,11 @@ int main()
     glBindBuffer(GL_ARRAY_BUFFER, VBO); // 绑定 VBO
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO); // 绑定 EBO
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW); // 传入顶点数据给 VBO
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW); // 传入索引数据给 EBO
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8*sizeof(float), (void*)0); // 创建顶点位置属性指针
+    // glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW); // 传入索引数据给 EBO
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5*sizeof(float), (void*)0); // 创建顶点位置属性指针
     glEnableVertexAttribArray(0); // 启用顶点位置属性
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8*sizeof(float), (void*)(3*sizeof(float))); // 创建顶点颜色属性指针
-    glEnableVertexAttribArray(1); // 启用顶点颜色属性
-    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8*sizeof(float), (void*)(6*sizeof(float))); // 创建顶点纹理属性指针
-    glEnableVertexAttribArray(2);   // 启用顶点纹理属性
+    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5*sizeof(float), (void*)(3*sizeof(float))); // 创建顶点纹理属性指针
+    glEnableVertexAttribArray(1); // 启用顶点纹理属性
 
     // 创建第一个纹理
     unsigned int texture0;
@@ -94,6 +80,18 @@ int main()
     shader.setInt("texture0", 0); // 设置纹理单元
     shader.setInt("texture1", 1);
 
+    // 矩阵变换
+    glm::mat4 model = glm::mat4(1.0f);
+    model = glm::rotate(model, glm::radians(-55.0f), glm::vec3(1.0f, 0.0f, 0.0f));
+    glm::mat4 view = glm::mat4(1.0f);
+    view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
+    glm::mat4 projection;
+    projection = glm::perspective(glm::radians(45.0f), 800.0f / 600.0f, 0.1f, 100.0f);
+    shader.setMat4("model", model);  
+    shader.setMat4("view", view);
+    shader.setMat4("projection", projection);
+
+    glEnable(GL_DEPTH_TEST); // 启用深度测试
     
     // * 主循环
     while(!glfwWindowShouldClose(window)) 
@@ -102,13 +100,7 @@ int main()
         
         // TODO 渲染
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f); // 指定清屏颜色 
-        glClear(GL_COLOR_BUFFER_BIT); // 清屏, 否则一直绘制的上一帧
-        
-        // 矩阵变换
-        glm::mat4 trans = glm::mat4(1.0f);
-        trans = glm::rotate(trans, (float) glfwGetTime(), glm::vec3(0.0, 0.0, 1.0));
-        trans = glm::scale(trans, glm::vec3(0.5, 0.5, 0.5)); 
-        shader.setMat4("transform", trans);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // 清屏, 否则一直绘制的上一帧
         
         // 设置着色器全局变量
         shader.use(); // 使用着色器程序
@@ -117,7 +109,18 @@ int main()
         glActiveTexture(GL_TEXTURE1);
         glBindTexture(GL_TEXTURE_2D, texture1);
         glBindVertexArray(VAO); // 绑定顶点数组对象
-        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0); // 绘制
+        // 平移立方体 10 次
+        for(unsigned int i = 0; i < 10; i++)
+        {
+            glm::mat4 model = glm::mat4(1.0f);
+            model = glm::translate(model, cubePositions[i]);
+            float angle = 20.f * i; 
+            model = glm::rotate(model, glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
+            shader.setMat4("model", model);
+
+            glDrawArrays(GL_TRIANGLES, 0, 36);
+        }
+        //glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0); // 绘制
         
         glfwSwapBuffers(window); // 交换缓冲
         glfwPollEvents(); // 检查事件
