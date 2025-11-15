@@ -15,7 +15,7 @@ int main()
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     // * 创建窗口
-    GLFWwindow* window = glfwCreateWindow(800, 600, "LearnOpenGL", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LearnOpenGL", NULL, NULL);
     if(!window) 
     {
         spdlog::error("Failed to create GLFW window");
@@ -24,6 +24,8 @@ int main()
     }
     glfwMakeContextCurrent(window); // 绑定窗口
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback); // 绑定窗口大小回调函数
+    glfwSetCursorPosCallback(window, mouse_callback); // 绑定鼠标回调函数
+    glfwSetScrollCallback(window, scroll_callback); // 绑定鼠标滚轮回调函数
 
     // 初始化 Glad
     if(!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) 
@@ -81,15 +83,7 @@ int main()
     shader.setInt("texture1", 1);
 
     // 矩阵变换
-    glm::mat4 model = glm::mat4(1.0f);
-    model = glm::rotate(model, glm::radians(-55.0f), glm::vec3(1.0f, 0.0f, 0.0f));
-    glm::mat4 view = glm::mat4(1.0f);
-    view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
-    glm::mat4 projection;
-    projection = glm::perspective(glm::radians(45.0f), 800.0f / 600.0f, 0.1f, 100.0f);
-    shader.setMat4("model", model);  
-    shader.setMat4("view", view);
-    shader.setMat4("projection", projection);
+    glm::mat4 model, view, projection;
 
     glEnable(GL_DEPTH_TEST); // 启用深度测试
     
@@ -101,6 +95,18 @@ int main()
         // TODO 渲染
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f); // 指定清屏颜色 
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // 清屏, 否则一直绘制的上一帧
+
+        float currentFrame = glfwGetTime();
+        deltaTime = currentFrame - lastFrame; // 计算当前帧与上一帧的时间差
+        lastFrame = currentFrame;  
+        
+        // 根据键盘鼠标更新变换矩阵
+        model = glm::rotate(glm::mat4(1.0f), glm::radians(rotation), glm::vec3(0.0f, 1.0f, 0.0f));
+        view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
+        projection = glm::perspective(glm::radians(fov), SCR_WIDTH / (float) SCR_HEIGHT, 0.1f, 100.0f);
+        shader.setMat4("model", model); // 创建模型矩阵
+        shader.setMat4("view", view); // 更新相机视角
+        shader.setMat4("projection", projection); // 更新投影矩阵
         
         // 设置着色器全局变量
         shader.use(); // 使用着色器程序
