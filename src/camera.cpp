@@ -1,7 +1,5 @@
 #include "camera.h"
 
-Camera Camera::initialCamera(glm::vec3(0.0f, 0.0f, 0.0f)); // 初始化静态变量
-
 void Camera::adjustCameraPos(Movement direction, float offset)
 {
     switch (direction)

@@ -22,6 +22,7 @@ float lastFrame = 0.0f; // 上一帧的时间
 float rotation = 0.0f; // 物体旋转角度
 float fov = 45.0f; // 视锥体的 FOV
 Camera camera(glm::vec3(0.0f, 0.0f, 3.0f)); // 定义摄像机对象
+Camera initialCamera = camera; // 创建一个副本保存初始状态
 glm::vec3 lightPos(1.2f, 1.0f, 2.0f); // 光源位置
 
 // 立方体顶点数据
@@ -109,7 +110,7 @@ inline void processInput(GLFWwindow* window)
         rotation += cameraSpeed * 10.0f;
     if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS)
     {   
-        camera.resetCamera();
+        camera = initialCamera;
         firstMouse = true;
         lastX =  SCR_WIDTH / 2.0;
         lastY =  SCR_HEIGHT / 2.0;
