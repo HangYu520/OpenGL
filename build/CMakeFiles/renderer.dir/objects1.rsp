@@ -1,1 +1,1 @@
-CMakeFiles/renderer.dir/main.cpp.obj CMakeFiles/renderer.dir/src/external_impl.cpp.obj CMakeFiles/renderer.dir/src/shader.cpp.obj CMakeFiles/renderer.dir/src/typedef.cpp.obj CMakeFiles/renderer.dir/external/glad/src/glad.c.obj
+CMakeFiles/renderer.dir/main.cpp.obj CMakeFiles/renderer.dir/src/camera.cpp.obj CMakeFiles/renderer.dir/src/external_impl.cpp.obj CMakeFiles/renderer.dir/src/shader.cpp.obj CMakeFiles/renderer.dir/src/typedef.cpp.obj CMakeFiles/renderer.dir/external/glad/src/glad.c.obj

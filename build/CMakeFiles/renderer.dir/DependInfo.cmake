@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glad/src/glad.c" "CMakeFiles/renderer.dir/external/glad/src/glad.c.obj" "gcc" "CMakeFiles/renderer.dir/external/glad/src/glad.c.obj.d"
   "C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/main.cpp" "CMakeFiles/renderer.dir/main.cpp.obj" "gcc" "CMakeFiles/renderer.dir/main.cpp.obj.d"
+  "C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/src/camera.cpp" "CMakeFiles/renderer.dir/src/camera.cpp.obj" "gcc" "CMakeFiles/renderer.dir/src/camera.cpp.obj.d"
   "C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/src/external_impl.cpp" "CMakeFiles/renderer.dir/src/external_impl.cpp.obj" "gcc" "CMakeFiles/renderer.dir/src/external_impl.cpp.obj.d"
   "C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/src/shader.cpp" "CMakeFiles/renderer.dir/src/shader.cpp.obj" "gcc" "CMakeFiles/renderer.dir/src/shader.cpp.obj.d"
   "C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/src/typedef.cpp" "CMakeFiles/renderer.dir/src/typedef.cpp.obj" "gcc" "CMakeFiles/renderer.dir/src/typedef.cpp.obj.d"
