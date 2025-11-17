@@ -15,7 +15,7 @@ int main()
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     // * 创建窗口
-    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LearnOpenGL", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "OpenGL", NULL, NULL);
     if(!window) 
     {
         spdlog::error("Failed to create GLFW window");
@@ -35,7 +35,8 @@ int main()
     }
     
     // 从文件中创建着色器
-    Shader shader("shader/Shader.vs", "shader/Shader.fs");
+    Shader lightingShader("shader/LightingShader.vs", "shader/LightingShader.fs"); // 创建物体着色器
+    Shader lightcubeShader("shader/LightcubeShader.vs", "shader/LightcubeShader.fs"); // 创建光照立方体
 
     // 创建顶点属性和索引缓冲 VAO VBO EBO (GPU 缓存的数据内存)
     unsigned int VAO, VBO, EBO;
@@ -45,13 +46,24 @@ int main()
     glBindVertexArray(VAO); // 绑定 VAO
     glBindBuffer(GL_ARRAY_BUFFER, VBO); // 绑定 VBO
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO); // 绑定 EBO
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW); // 传入顶点数据给 VBO
+    glBufferData(GL_ARRAY_BUFFER, sizeof(cubeVertices), cubeVertices, GL_STATIC_DRAW); // 传入顶点数据给 VBO
     // glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW); // 传入索引数据给 EBO
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5*sizeof(float), (void*)0); // 创建顶点位置属性指针
     glEnableVertexAttribArray(0); // 启用顶点位置属性
     glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5*sizeof(float), (void*)(3*sizeof(float))); // 创建顶点纹理属性指针
     glEnableVertexAttribArray(1); // 启用顶点纹理属性
+    glBindVertexArray(0); // 解绑 VAO
 
+    unsigned int VBOlight, VAOlight;
+    glGenVertexArrays(1, &VAOlight);
+    glGenBuffers(1, &VBOlight);
+    glBindVertexArray(VAOlight);
+    glBindBuffer(GL_ARRAY_BUFFER, VBOlight);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(cubeVertices), cubeVertices, GL_STATIC_DRAW);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5*sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
+    glBindVertexArray(0); // 解绑 VAO
+    #if false
     // 创建第一个纹理
     unsigned int texture0;
     glGenTextures(1, &texture0); // 创建纹理对象
@@ -78,12 +90,16 @@ int main()
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, image1.width, image1.height, 0, GL_RGBA, GL_UNSIGNED_BYTE, image1.image_buffer); // 纹理图片数据
     glGenerateMipmap(GL_TEXTURE_2D); // 生成MipMap
 
-    shader.use();
-    shader.setInt("texture0", 0); // 设置纹理单元
-    shader.setInt("texture1", 1);
-
+    lightingShader.use();
+    lightingShader.setInt("texture0", 0); // 设置纹理单元
+    lightingShader.setInt("texture1", 1);
+    #endif
     // 矩阵变换
     glm::mat4 model, view, projection;
+
+    glm::mat4 lightmodel = glm::mat4(1.0f);
+    lightmodel = glm::translate(lightmodel, lightPos);
+    lightmodel = glm::scale(lightmodel, glm::vec3(0.2f));
 
     glEnable(GL_DEPTH_TEST); // 启用深度测试
     
@@ -93,7 +109,7 @@ int main()
         processInput(window); // 处理键盘输入
         
         // TODO 渲染
-        glClearColor(0.2f, 0.3f, 0.3f, 1.0f); // 指定清屏颜色 
+        glClearColor(0.f, 0.f, 0.f, 1.0f); // 指定清屏颜色 
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // 清屏, 否则一直绘制的上一帧
 
         float currentFrame = glfwGetTime();
@@ -104,29 +120,27 @@ int main()
         model = glm::rotate(glm::mat4(1.0f), glm::radians(rotation), glm::vec3(0.0f, 1.0f, 0.0f));
         view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
         projection = glm::perspective(glm::radians(fov), SCR_WIDTH / (float) SCR_HEIGHT, 0.1f, 100.0f);
-        shader.setMat4("model", model); // 创建模型矩阵
-        shader.setMat4("view", view); // 更新相机视角
-        shader.setMat4("projection", projection); // 更新投影矩阵
         
         // 设置着色器全局变量
-        shader.use(); // 使用着色器程序
+        lightingShader.use(); // 使用着色器程序
+        lightingShader.setMVP(model, view, projection);
+        lightingShader.setVec3("objColor", 1.0f, 0.5f, 0.31f);
+        lightingShader.setVec3("lightColor", 1.0f, 1.0f, 1.0f);
+        #if false
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, texture0);
         glActiveTexture(GL_TEXTURE1);
         glBindTexture(GL_TEXTURE_2D, texture1);
-        glBindVertexArray(VAO); // 绑定顶点数组对象
-        // 平移立方体 10 次
-        for(unsigned int i = 0; i < 10; i++)
-        {
-            glm::mat4 model = glm::mat4(1.0f);
-            model = glm::translate(model, cubePositions[i]);
-            float angle = 20.f * i; 
-            model = glm::rotate(model, glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
-            shader.setMat4("model", model);
-
-            glDrawArrays(GL_TRIANGLES, 0, 36);
-        }
-        //glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0); // 绘制
+        #endif
+        glBindVertexArray(VAO); // 绑定物体数组对象
+        glDrawArrays(GL_TRIANGLES, 0, 36);
+        glBindVertexArray(0);
+        
+        lightcubeShader.use(); // 光源立方体
+        lightcubeShader.setMVP(lightmodel, view, projection);
+        glBindVertexArray(VAOlight); // 绑定光源数组对象
+        glDrawArrays(GL_TRIANGLES, 0, 36);
+        glBindVertexArray(0);
         
         glfwSwapBuffers(window); // 交换缓冲
         glfwPollEvents(); // 检查事件
