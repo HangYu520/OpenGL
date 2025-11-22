@@ -55,6 +55,8 @@ public:
     {
         return glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
     }
+
+    glm::vec3 getCameraPos() const { return cameraPos; }
     
     // 设置摄像机初始参数
     void setCameraPos(const glm::vec3& pos) { cameraPos = pos; }

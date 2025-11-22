@@ -35,7 +35,7 @@ int main()
     }
     
     // 从文件中创建着色器
-    Shader lightingShader("shader/LightingShader.vs", "shader/LightingShader.fs"); // 创建物体着色器
+    Shader lightingShader("shader/PhongShader.vs", "shader/PhongShader.fs"); // 创建物体着色器
     Shader lightcubeShader("shader/LightcubeShader.vs", "shader/LightcubeShader.fs"); // 创建光照立方体
 
     // 创建顶点属性和索引缓冲 VAO VBO EBO (GPU 缓存的数据内存)
@@ -48,10 +48,12 @@ int main()
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO); // 绑定 EBO
     glBufferData(GL_ARRAY_BUFFER, sizeof(cubeVertices), cubeVertices, GL_STATIC_DRAW); // 传入顶点数据给 VBO
     // glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW); // 传入索引数据给 EBO
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5*sizeof(float), (void*)0); // 创建顶点位置属性指针
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8*sizeof(float), (void*)0); // 创建顶点位置属性指针
     glEnableVertexAttribArray(0); // 启用顶点位置属性
-    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5*sizeof(float), (void*)(3*sizeof(float))); // 创建顶点纹理属性指针
-    glEnableVertexAttribArray(1); // 启用顶点纹理属性
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8*sizeof(float), (void*)(3*sizeof(float))); // 创建顶点法向属性指针
+    glEnableVertexAttribArray(1); // 启用顶点法向属性
+    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8*sizeof(float), (void*)(6*sizeof(float))); // 创建顶点纹理属性指针
+    glEnableVertexAttribArray(2); // 启用顶点纹理属性
     glBindVertexArray(0); // 解绑 VAO
 
     unsigned int VBOlight, VAOlight;
@@ -60,7 +62,7 @@ int main()
     glBindVertexArray(VAOlight);
     glBindBuffer(GL_ARRAY_BUFFER, VBOlight);
     glBufferData(GL_ARRAY_BUFFER, sizeof(cubeVertices), cubeVertices, GL_STATIC_DRAW);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5*sizeof(float), (void*)0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8*sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
     glBindVertexArray(0); // 解绑 VAO
     #if false
@@ -101,6 +103,8 @@ int main()
     lightmodel = glm::translate(lightmodel, lightPos);
     lightmodel = glm::scale(lightmodel, glm::vec3(0.2f));
 
+    glm::vec3 cameraPos = camera.getCameraPos();
+
     glEnable(GL_DEPTH_TEST); // 启用深度测试
     
     // * 主循环
@@ -126,6 +130,11 @@ int main()
         lightingShader.setMVP(model, view, projection);
         lightingShader.setVec3("objColor", 1.0f, 0.5f, 0.31f);
         lightingShader.setVec3("lightColor", 1.0f, 1.0f, 1.0f);
+        lightingShader.setVec3("lightPos", lightPos.x, lightPos.y, lightPos.z);
+        lightingShader.setVec3("cameraPos", cameraPos.x, cameraPos.y, cameraPos.z);
+        lightingShader.setFloat("ambientStrength", 0.1f);
+        lightingShader.setFloat("diffStrength", 1.0f);
+        lightingShader.setFloat("specStrength", 0.5f);
         #if false
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, texture0);
