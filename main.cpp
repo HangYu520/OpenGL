@@ -1,5 +1,4 @@
 #include "maincallback.h"
-#include "typedef.h"
 
 /*
 * ---------------------
@@ -100,10 +99,8 @@ int main()
     glm::mat4 model, view, projection;
 
     glm::mat4 lightmodel = glm::mat4(1.0f);
-    lightmodel = glm::translate(lightmodel, lightPos);
-    lightmodel = glm::scale(lightmodel, glm::vec3(0.2f));
-
-    glm::vec3 cameraPos = camera.getCameraPos();
+    lightmodel = glm::translate(lightmodel, light.position);
+    lightmodel = glm::scale(lightmodel, glm::vec3(0.1f));
 
     glEnable(GL_DEPTH_TEST); // 启用深度测试
     
@@ -124,17 +121,15 @@ int main()
         model = glm::rotate(glm::mat4(1.0f), glm::radians(rotation), glm::vec3(0.0f, 1.0f, 0.0f));
         view = camera.getViewMatrix();
         projection = glm::perspective(glm::radians(fov), SCR_WIDTH / (float) SCR_HEIGHT, 0.1f, 100.0f);
+
+        glm::vec3 cameraPos = camera.getCameraPos();
         
         // 设置着色器全局变量
         lightingShader.use(); // 使用着色器程序
         lightingShader.setMVP(model, view, projection);
-        lightingShader.setVec3("objColor", 1.0f, 0.5f, 0.31f);
-        lightingShader.setVec3("lightColor", 1.0f, 1.0f, 1.0f);
-        lightingShader.setVec3("lightPos", lightPos.x, lightPos.y, lightPos.z);
+        lightingShader.setMaterial(material);
+        lightingShader.setLight(light);
         lightingShader.setVec3("cameraPos", cameraPos.x, cameraPos.y, cameraPos.z);
-        lightingShader.setFloat("ambientStrength", 0.1f);
-        lightingShader.setFloat("diffStrength", 1.0f);
-        lightingShader.setFloat("specStrength", 0.5f);
         #if false
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, texture0);

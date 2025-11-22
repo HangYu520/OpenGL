@@ -487,6 +487,16 @@ CMakeFiles/renderer.dir/main.cpp.obj: \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/fstream.tcc \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/sstream \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/sstream.tcc \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/include/typedef.h \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/stb/stb_image.h \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/stb/stb_image_write.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/random \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/random.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/random.tcc \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/numeric \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_numeric.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/pstl/glue_numeric_defs.h \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glm/glm.hpp \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glm/detail/_fixes.hpp \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glm/detail/setup.hpp \
@@ -675,14 +685,4 @@ CMakeFiles/renderer.dir/main.cpp.obj: \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glm/ext/vector_uint1.hpp \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glm/ext/vector_uint1_sized.hpp \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glm/gtc/type_ptr.inl \
- C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/include/camera.h \
- C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/include/typedef.h \
- C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/stb/stb_image.h \
- C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/stb/stb_image_write.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/random \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/random.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/random.tcc \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/numeric \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_numeric.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/pstl/glue_numeric_defs.h
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/include/camera.h

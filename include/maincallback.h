@@ -24,7 +24,20 @@ float fov = 45.0f; // 视锥体的 FOV
 
 Camera camera(glm::vec3(0.0f, 0.0f, 3.0f)); // 定义摄像机对象
 Camera initialCamera = camera; // 创建一个副本保存初始状态
-glm::vec3 lightPos(1.2f, 1.0f, 2.0f); // 光源位置
+
+Material material = {
+        glm::vec3(1.0f, 0.5f, 0.31f), // ambient
+        glm::vec3(1.0f, 0.5f, 0.31f), // diffuse
+        glm::vec3(0.5f, 0.5f, 0.5f), // specular
+        32.0f // shininess
+    };
+
+Light light = {
+    glm::vec3(1.2f, 0.5f, 2.0f), // position
+    glm::vec3(0.2f, 0.2f, 0.2f), // ambient
+    glm::vec3(0.5f, 0.5f, 0.5f), // diffuse
+    glm::vec3(1.0f, 1.0f, 1.0f)  // specular
+};
 
 // 立方体顶点数据
 float cubeVertices[] = {

@@ -3,6 +3,10 @@
 #include <stb/stb_image_write.h>
 #include <spdlog/spdlog.h>
 #include <random>
+#define GLM_ENABLE_EXPERIMENTAL
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 // * 自定义数据类型头文件
 
@@ -80,4 +84,30 @@ struct Image
     * ------------------------------------------
     */
     void save(const char* filename); // 写入图像文件
+};
+
+/*
+* -----------------------------
+* 2. 材质结构体
+* -----------------------------
+*/
+struct Material
+{
+    glm::vec3 ambient; // 环境光颜色
+    glm::vec3 diffuse; // 漫反射颜色
+    glm::vec3 specular; // 镜面反射颜色
+    float shininess; // 镜面反射指数
+};
+
+/*
+* -----------------------------
+* 3. 光照结构体
+* -----------------------------
+*/
+struct Light
+{
+    glm::vec3 position; // 光源位置
+    glm::vec3 ambient; // 环境光强度
+    glm::vec3 diffuse; // 漫反射光强度
+    glm::vec3 specular; // 镜面反射光强度
 };
