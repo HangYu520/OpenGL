@@ -64,7 +64,7 @@ int main()
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8*sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
     glBindVertexArray(0); // 解绑 VAO
-    #if false
+    
     // 创建第一个纹理
     unsigned int texture0;
     glGenTextures(1, &texture0); // 创建纹理对象
@@ -73,11 +73,11 @@ int main()
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT); // 设置纹理坐标的T轴的纹理模式
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR); // 设置纹理的放大缩小模式
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); // 设置纹理的放大缩小模式
-
-    Image image0; image0.load("asset/wall.jpg"); // 加载纹理图片
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, image0.width, image0.height, 0, GL_RGB, GL_UNSIGNED_BYTE, image0.image_buffer); // 纹理图片数据
+    
+    Image image0; image0.load("asset/container2.png"); image0.flipVertical(); // 加载纹理图片
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, image0.width, image0.height, 0, GL_RGBA, GL_UNSIGNED_BYTE, image0.image_buffer); // 纹理图片数据
     glGenerateMipmap(GL_TEXTURE_2D); // 生成MipMap
-
+    
     // 创建第二个纹理
     unsigned int texture1;
     glGenTextures(1, &texture1); // 创建纹理对象
@@ -87,14 +87,14 @@ int main()
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR); // 设置纹理的放大缩小模式
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); // 设置纹理的放大缩小模式
 
-    Image image1; image1.load("asset/awesomeface.png"); image1.flipVertical(); // 加载纹理图片
+    Image image1; image1.load("asset/container2_specular.png"); image1.flipVertical(); // 加载纹理图片
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, image1.width, image1.height, 0, GL_RGBA, GL_UNSIGNED_BYTE, image1.image_buffer); // 纹理图片数据
     glGenerateMipmap(GL_TEXTURE_2D); // 生成MipMap
 
     lightingShader.use();
-    lightingShader.setInt("texture0", 0); // 设置纹理单元
-    lightingShader.setInt("texture1", 1);
-    #endif
+    lightingShader.setInt("material.diffuse", 0); // 设置纹理单元
+    lightingShader.setInt("material.specular", 1);
+    
     // 矩阵变换
     glm::mat4 model, view, projection;
 
@@ -127,15 +127,13 @@ int main()
         // 设置着色器全局变量
         lightingShader.use(); // 使用着色器程序
         lightingShader.setMVP(model, view, projection);
-        lightingShader.setMaterial(material);
+        lightingShader.setFloat("material.shininess", 32.0f);
         lightingShader.setLight(light);
         lightingShader.setVec3("cameraPos", cameraPos.x, cameraPos.y, cameraPos.z);
-        #if false
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, texture0);
         glActiveTexture(GL_TEXTURE1);
         glBindTexture(GL_TEXTURE_2D, texture1);
-        #endif
         glBindVertexArray(VAO); // 绑定物体数组对象
         glDrawArrays(GL_TRIANGLES, 0, 36);
         glBindVertexArray(0);

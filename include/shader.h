@@ -63,13 +63,6 @@ public:
         setMat4("view", viewtrans);
         setMat4("projection", projtrans);
     }
-    void setMaterial(const Material& material) const
-    {
-        setVec3("material.ambient", material.ambient.x, material.ambient.y, material.ambient.z);
-        setVec3("material.diffuse", material.diffuse.x, material.diffuse.y, material.diffuse.z);
-        setVec3("material.specular", material.specular.x, material.specular.y, material.specular.z);
-        setFloat("material.shininess", material.shininess);
-    }
     void setLight(const Light& light) const
     {
         setVec3("light.position", light.position.x, light.position.y, light.position.z);

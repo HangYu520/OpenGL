@@ -25,13 +25,6 @@ float fov = 45.0f; // 视锥体的 FOV
 Camera camera(glm::vec3(0.0f, 0.0f, 3.0f)); // 定义摄像机对象
 Camera initialCamera = camera; // 创建一个副本保存初始状态
 
-Material material = {
-        glm::vec3(1.0f, 0.5f, 0.31f), // ambient
-        glm::vec3(1.0f, 0.5f, 0.31f), // diffuse
-        glm::vec3(0.5f, 0.5f, 0.5f), // specular
-        32.0f // shininess
-    };
-
 Light light = {
     glm::vec3(1.2f, 0.5f, 2.0f), // position
     glm::vec3(0.2f, 0.2f, 0.2f), // ambient
