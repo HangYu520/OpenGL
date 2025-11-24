@@ -34,7 +34,7 @@ glm::vec3(0.5f, 0.5f, 0.5f), // diffuse
 glm::vec3(1.0f, 1.0f, 1.0f)  // specular
 };
 #elif defined(POINT_LIGHT)
-PointLight pointlight = {
+PointLight light = {
     glm::vec3(1.2f, 0.5f, 1.0f), // position
     glm::vec3(0.2f, 0.2f, 0.2f), // ambient
     glm::vec3(0.5f, 0.5f, 0.5f), // diffuse
@@ -45,8 +45,8 @@ PointLight pointlight = {
 };
 #elif defined(SPOT_LIGHT)
 SpotLight light = {
-    camera.cameraPos, // position
-    camera.cameraFront, // direction
+    glm::vec3(0.0f, 0.0f, 3.0f), // position
+    glm::vec3(0.0f, 0.0f, -1.0f), // direction
     glm::cos(glm::radians(3.5f)), // cutOff
     glm::cos(glm::radians(5.5f)), // outerCutOff
     glm::vec3(0.2f, 0.2f, 0.2f), // ambient

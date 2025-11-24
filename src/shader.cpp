@@ -77,3 +77,33 @@ Shader::Shader(const char* vertexShaderFile, const char* fragmentShaderFile)
     glDeleteShader(vertexShader); // 删除着色器
     glDeleteShader(fragmentShader);
 }
+
+void Shader::setLight(const DirectionLight& light) const
+{
+    setVec3("light.direction", light.direction.x, light.direction.y, light.direction.z);
+    setVec3("light.ambient", light.ambient.x, light.ambient.y, light.ambient.z);
+    setVec3("light.diffuse", light.diffuse.x, light.diffuse.y, light.diffuse.z);
+    setVec3("light.specular", light.specular.x, light.specular.y, light.specular.z);
+}
+
+void Shader::setLight(const PointLight& light) const
+{
+    setVec3("light.position", light.position.x, light.position.y, light.position.z);
+    setVec3("light.ambient", light.ambient.x, light.ambient.y, light.ambient.z);
+    setVec3("light.diffuse", light.diffuse.x, light.diffuse.y, light.diffuse.z);
+    setVec3("light.specular", light.specular.x, light.specular.y, light.specular.z);
+    setFloat("light.constant", light.constant);
+    setFloat("light.linear", light.linear);
+    setFloat("light.quadratic", light.quadratic);
+}
+
+void Shader::setLight(const SpotLight& light) const
+{
+    setVec3("light.position", light.position.x, light.position.y, light.position.z);
+    setVec3("light.direction", light.direction.x, light.direction.y, light.direction.z);
+    setFloat("light.cutOff", light.cutOff);
+    setFloat("light.outerCutOff", light.outerCutOff);
+    setVec3("light.ambient", light.ambient.x, light.ambient.y, light.ambient.z);
+    setVec3("light.diffuse", light.diffuse.x, light.diffuse.y, light.diffuse.z);
+    setVec3("light.specular", light.specular.x, light.specular.y, light.specular.z);
+}

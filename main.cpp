@@ -137,7 +137,7 @@ int main()
         glBindVertexArray(VAO); // 绑定物体数组对象
         glDrawArrays(GL_TRIANGLES, 0, 36);
         glBindVertexArray(0);
-        #if false
+        #if defined(POINT_LIGHT)
         lightcubeShader.use(); // 光源立方体
         lightcubeShader.setMVP(lightmodel, view, projection);
         glBindVertexArray(VAOlight); // 绑定光源数组对象
