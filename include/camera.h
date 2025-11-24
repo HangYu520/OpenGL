@@ -24,7 +24,7 @@ public:
         DOWN
     };
 
-private:
+public:
     glm::vec3 cameraPos; // 摄像机位置
     glm::vec3 cameraFront; // 摄像机朝向
     glm::vec3 cameraUp; // 摄像机上方向
@@ -55,8 +55,6 @@ public:
     {
         return glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
     }
-
-    glm::vec3 getCameraPos() const { return cameraPos; }
     
     // 设置摄像机初始参数
     void setCameraPos(const glm::vec3& pos) { cameraPos = pos; }

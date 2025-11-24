@@ -1,6 +1,7 @@
 #pragma once
 #include "shader.h"
 #include "camera.h"
+#define SPOT_LIGHT
 
 // * 主函数中需要用到的 全局变量与 callback 函数
 
@@ -22,15 +23,37 @@ float lastFrame = 0.0f; // 上一帧的时间
 float rotation = 0.0f; // 物体旋转角度
 float fov = 45.0f; // 视锥体的 FOV
 
-Camera camera(glm::vec3(0.0f, 0.0f, 3.0f)); // 定义摄像机对象
+Camera camera(glm::vec3(0.0f, 0.0f, 5.0f)); // 定义摄像机对象
 Camera initialCamera = camera; // 创建一个副本保存初始状态
 
-Light light = {
-    glm::vec3(1.2f, 0.5f, 2.0f), // position
+#if defined(DIRECTION_LIGHT)
+DirectionLight light = {
+glm::vec3(-0.2f, -1.0f, -0.3f), // direction
+glm::vec3(0.2f, 0.2f, 0.2f), // ambient
+glm::vec3(0.5f, 0.5f, 0.5f), // diffuse
+glm::vec3(1.0f, 1.0f, 1.0f)  // specular
+};
+#elif defined(POINT_LIGHT)
+PointLight pointlight = {
+    glm::vec3(1.2f, 0.5f, 1.0f), // position
     glm::vec3(0.2f, 0.2f, 0.2f), // ambient
     glm::vec3(0.5f, 0.5f, 0.5f), // diffuse
-    glm::vec3(1.0f, 1.0f, 1.0f)  // specular
+    glm::vec3(1.0f, 1.0f, 1.0f), // specular
+    1.0f, // constant
+    0.09f, // linear
+    0.032f // quadratic
 };
+#elif defined(SPOT_LIGHT)
+SpotLight light = {
+    camera.cameraPos, // position
+    camera.cameraFront, // direction
+    glm::cos(glm::radians(3.5f)), // cutOff
+    glm::cos(glm::radians(5.5f)), // outerCutOff
+    glm::vec3(0.2f, 0.2f, 0.2f), // ambient
+    glm::vec3(0.5f, 0.5f, 0.5f), // diffuse
+    glm::vec3(1.0f, 1.0f, 1.0f) // specular
+};
+#endif
 
 // 立方体顶点数据
 float cubeVertices[] = {

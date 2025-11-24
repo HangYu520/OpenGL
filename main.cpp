@@ -97,11 +97,11 @@ int main()
     
     // 矩阵变换
     glm::mat4 model, view, projection;
-
+    
     glm::mat4 lightmodel = glm::mat4(1.0f);
     lightmodel = glm::translate(lightmodel, light.position);
     lightmodel = glm::scale(lightmodel, glm::vec3(0.1f));
-
+    
     glEnable(GL_DEPTH_TEST); // 启用深度测试
     
     // * 主循环
@@ -122,7 +122,7 @@ int main()
         view = camera.getViewMatrix();
         projection = glm::perspective(glm::radians(fov), SCR_WIDTH / (float) SCR_HEIGHT, 0.1f, 100.0f);
 
-        glm::vec3 cameraPos = camera.getCameraPos();
+        glm::vec3 cameraPos = camera.cameraPos;
         
         // 设置着色器全局变量
         lightingShader.use(); // 使用着色器程序
@@ -137,13 +137,13 @@ int main()
         glBindVertexArray(VAO); // 绑定物体数组对象
         glDrawArrays(GL_TRIANGLES, 0, 36);
         glBindVertexArray(0);
-        
+        #if false
         lightcubeShader.use(); // 光源立方体
         lightcubeShader.setMVP(lightmodel, view, projection);
         glBindVertexArray(VAOlight); // 绑定光源数组对象
         glDrawArrays(GL_TRIANGLES, 0, 36);
         glBindVertexArray(0);
-        
+        #endif
         glfwSwapBuffers(window); // 交换缓冲
         glfwPollEvents(); // 检查事件
     }

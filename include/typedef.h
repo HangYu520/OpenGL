@@ -91,9 +91,31 @@ struct Image
 * 2. 光照结构体
 * -----------------------------
 */
-struct Light
+struct DirectionLight // 平行光
 {
-    glm::vec3 position; // 光源位置
+    glm::vec3 direction; // 光源方向
+    glm::vec3 ambient; // 环境光强度
+    glm::vec3 diffuse; // 漫反射光强度
+    glm::vec3 specular; // 镜面反射光强度
+};
+
+struct PointLight // 点光源
+{
+    glm::vec3 position; // 点光源位置
+    glm::vec3 ambient; // 环境光强度
+    glm::vec3 diffuse; // 漫反射光强度
+    glm::vec3 specular; // 镜面反射光强度
+    float constant; // 常数项
+    float linear; // 线性项
+    float quadratic; // 二次项
+};
+
+struct SpotLight // 聚光灯
+{
+    glm::vec3 position; // 聚光灯位置
+    glm::vec3 direction; // 聚光灯方向
+    float cutOff; // 聚光灯 cutoff
+    float outerCutOff; // 聚光灯 outerCutOff
     glm::vec3 ambient; // 环境光强度
     glm::vec3 diffuse; // 漫反射光强度
     glm::vec3 specular; // 镜面反射光强度
