@@ -1,7 +1,9 @@
 #pragma once
+#include "vertexarray.h"
 #include "shader.h"
+#include "texture.h"
 #include "camera.h"
-#define SPOT_LIGHT
+#define POINT_LIGHT
 
 // * 主函数中需要用到的 全局变量与 callback 函数
 

@@ -37,67 +37,21 @@ int main()
     Shader lightingShader("shader/PhongShader.vs", "shader/PhongShader.fs"); // 创建物体着色器
     Shader lightcubeShader("shader/LightcubeShader.vs", "shader/LightcubeShader.fs"); // 创建光照立方体
 
-    // 创建顶点属性和索引缓冲 VAO VBO EBO (GPU 缓存的数据内存)
-    unsigned int VAO, VBO, EBO;
-    glGenVertexArrays(1, &VAO); // 创建 VAO
-    glGenBuffers(1, &VBO); // 创建 VBO
-    glGenBuffers(1, &EBO);
-    glBindVertexArray(VAO); // 绑定 VAO
-    glBindBuffer(GL_ARRAY_BUFFER, VBO); // 绑定 VBO
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO); // 绑定 EBO
-    glBufferData(GL_ARRAY_BUFFER, sizeof(cubeVertices), cubeVertices, GL_STATIC_DRAW); // 传入顶点数据给 VBO
-    // glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW); // 传入索引数据给 EBO
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8*sizeof(float), (void*)0); // 创建顶点位置属性指针
-    glEnableVertexAttribArray(0); // 启用顶点位置属性
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8*sizeof(float), (void*)(3*sizeof(float))); // 创建顶点法向属性指针
-    glEnableVertexAttribArray(1); // 启用顶点法向属性
-    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8*sizeof(float), (void*)(6*sizeof(float))); // 创建顶点纹理属性指针
-    glEnableVertexAttribArray(2); // 启用顶点纹理属性
-    glBindVertexArray(0); // 解绑 VAO
-
-    unsigned int VBOlight, VAOlight;
-    glGenVertexArrays(1, &VAOlight);
-    glGenBuffers(1, &VBOlight);
-    glBindVertexArray(VAOlight);
-    glBindBuffer(GL_ARRAY_BUFFER, VBOlight);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(cubeVertices), cubeVertices, GL_STATIC_DRAW);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8*sizeof(float), (void*)0);
-    glEnableVertexAttribArray(0);
-    glBindVertexArray(0); // 解绑 VAO
+    // 创建 VAO
+    VertexArray vaoObj(cubeVertices, 36, 8, { 3, 3, 2 }); // 创建顶点数组对象
+    VertexArray vaoLight(cubeVertices, 36, 8, { 3 }); // 创建光源数组对象
     
-    // 创建第一个纹理
-    unsigned int texture0;
-    glGenTextures(1, &texture0); // 创建纹理对象
-    glBindTexture(GL_TEXTURE_2D, texture0); // 绑定纹理对象
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT); // 设置纹理坐标的S轴的纹理模式	
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT); // 设置纹理坐标的T轴的纹理模式
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR); // 设置纹理的放大缩小模式
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); // 设置纹理的放大缩小模式
-    
-    Image image0; image0.load("asset/container2.png"); image0.flipVertical(); // 加载纹理图片
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, image0.width, image0.height, 0, GL_RGBA, GL_UNSIGNED_BYTE, image0.image_buffer); // 纹理图片数据
-    glGenerateMipmap(GL_TEXTURE_2D); // 生成MipMap
-    
-    // 创建第二个纹理
-    unsigned int texture1;
-    glGenTextures(1, &texture1); // 创建纹理对象
-    glBindTexture(GL_TEXTURE_2D, texture1); // 绑定纹理对象
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT); // 设置纹理坐标的S轴的纹理模式	
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT); // 设置纹理坐标的T轴的纹理模式
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR); // 设置纹理的放大缩小模式
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); // 设置纹理的放大缩小模式
+    // 创建纹理
+    Texture diffuse_map("asset/container2.png");
+    Texture specular_map("asset/container2_specular.png");
 
-    Image image1; image1.load("asset/container2_specular.png"); image1.flipVertical(); // 加载纹理图片
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, image1.width, image1.height, 0, GL_RGBA, GL_UNSIGNED_BYTE, image1.image_buffer); // 纹理图片数据
-    glGenerateMipmap(GL_TEXTURE_2D); // 生成MipMap
-
+    // 设置纹理单元
     lightingShader.use();
-    lightingShader.setInt("material.diffuse", 0); // 设置纹理单元
+    lightingShader.setInt("material.diffuse", 0);
     lightingShader.setInt("material.specular", 1);
     
     // 矩阵变换
     glm::mat4 model, view, projection;
-    
     glm::mat4 lightmodel = glm::mat4(1.0f);
     lightmodel = glm::translate(lightmodel, light.position);
     lightmodel = glm::scale(lightmodel, glm::vec3(0.1f));
@@ -124,33 +78,26 @@ int main()
 
         glm::vec3 cameraPos = camera.cameraPos;
         
-        // 设置着色器全局变量
+        // 绘制物体
         lightingShader.use(); // 使用着色器程序
         lightingShader.setMVP(model, view, projection);
         lightingShader.setFloat("material.shininess", 32.0f);
         lightingShader.setLight(light);
         lightingShader.setVec3("cameraPos", cameraPos.x, cameraPos.y, cameraPos.z);
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, texture0);
-        glActiveTexture(GL_TEXTURE1);
-        glBindTexture(GL_TEXTURE_2D, texture1);
-        glBindVertexArray(VAO); // 绑定物体数组对象
-        glDrawArrays(GL_TRIANGLES, 0, 36);
-        glBindVertexArray(0);
+        glActiveTexture(GL_TEXTURE0); diffuse_map.bind();
+        glActiveTexture(GL_TEXTURE1); specular_map.bind();
+        vaoObj.bind(); glDrawArrays(GL_TRIANGLES, 0, 36); vaoObj.unbind();
+        
         #if defined(POINT_LIGHT)
-        lightcubeShader.use(); // 光源立方体
+        // 绘制光源
+        lightcubeShader.use();
         lightcubeShader.setMVP(lightmodel, view, projection);
-        glBindVertexArray(VAOlight); // 绑定光源数组对象
-        glDrawArrays(GL_TRIANGLES, 0, 36);
-        glBindVertexArray(0);
+        vaoLight.bind(); glDrawArrays(GL_TRIANGLES, 0, 36); vaoLight.unbind();
         #endif
+        
         glfwSwapBuffers(window); // 交换缓冲
         glfwPollEvents(); // 检查事件
     }
 
-    // 清除顶点数据缓存
-    glDeleteVertexArrays(1, &VAO);
-    glDeleteBuffers(1, &VBO);
-    glDeleteBuffers(1, &EBO);
     glfwTerminate();
 }

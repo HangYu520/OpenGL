@@ -247,9 +247,6 @@ OpenGL_SOURCE_DIR:STATIC=C:/Users/yeyuanyuan/Documents/GitHub/OpenGL
 //Path to a library.
 glfw:FILEPATH=C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/lib/libglfw3.a
 
-//Path to a library.
-glfw3:FILEPATH=glfw3-NOTFOUND
-
 
 ########################
 # INTERNAL cache entries

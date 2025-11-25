@@ -13,8 +13,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/renderer.dir/src/external_impl.cpp.obj.d"
   "CMakeFiles/renderer.dir/src/shader.cpp.obj"
   "CMakeFiles/renderer.dir/src/shader.cpp.obj.d"
+  "CMakeFiles/renderer.dir/src/texture.cpp.obj"
+  "CMakeFiles/renderer.dir/src/texture.cpp.obj.d"
   "CMakeFiles/renderer.dir/src/typedef.cpp.obj"
   "CMakeFiles/renderer.dir/src/typedef.cpp.obj.d"
+  "CMakeFiles/renderer.dir/src/vertexarray.cpp.obj"
+  "CMakeFiles/renderer.dir/src/vertexarray.cpp.obj.d"
 )
 
 # Per-language clean rules from dependency scanning.

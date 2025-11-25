@@ -248,6 +248,30 @@ src/shader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/shader.cpp.s
 .PHONY : src/shader.cpp.s
 
+src/texture.obj: src/texture.cpp.obj
+.PHONY : src/texture.obj
+
+# target to build an object file
+src/texture.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/texture.cpp.obj
+.PHONY : src/texture.cpp.obj
+
+src/texture.i: src/texture.cpp.i
+.PHONY : src/texture.i
+
+# target to preprocess a source file
+src/texture.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/texture.cpp.i
+.PHONY : src/texture.cpp.i
+
+src/texture.s: src/texture.cpp.s
+.PHONY : src/texture.s
+
+# target to generate assembly for a file
+src/texture.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/texture.cpp.s
+.PHONY : src/texture.cpp.s
+
 src/typedef.obj: src/typedef.cpp.obj
 .PHONY : src/typedef.obj
 
@@ -271,6 +295,30 @@ src/typedef.s: src/typedef.cpp.s
 src/typedef.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/typedef.cpp.s
 .PHONY : src/typedef.cpp.s
+
+src/vertexarray.obj: src/vertexarray.cpp.obj
+.PHONY : src/vertexarray.obj
+
+# target to build an object file
+src/vertexarray.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/vertexarray.cpp.obj
+.PHONY : src/vertexarray.cpp.obj
+
+src/vertexarray.i: src/vertexarray.cpp.i
+.PHONY : src/vertexarray.i
+
+# target to preprocess a source file
+src/vertexarray.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/vertexarray.cpp.i
+.PHONY : src/vertexarray.cpp.i
+
+src/vertexarray.s: src/vertexarray.cpp.s
+.PHONY : src/vertexarray.s
+
+# target to generate assembly for a file
+src/vertexarray.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/vertexarray.cpp.s
+.PHONY : src/vertexarray.cpp.s
 
 # Help Target
 help:
@@ -296,9 +344,15 @@ help:
 	@echo ... src/shader.obj
 	@echo ... src/shader.i
 	@echo ... src/shader.s
+	@echo ... src/texture.obj
+	@echo ... src/texture.i
+	@echo ... src/texture.s
 	@echo ... src/typedef.obj
 	@echo ... src/typedef.i
 	@echo ... src/typedef.s
+	@echo ... src/vertexarray.obj
+	@echo ... src/vertexarray.i
+	@echo ... src/vertexarray.s
 .PHONY : help
 
 

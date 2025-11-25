@@ -1,7 +1,7 @@
 CMakeFiles/renderer.dir/main.cpp.obj: \
  C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\main.cpp \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/include/maincallback.h \
- C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/include/shader.h \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/include/vertexarray.h \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glad/include/glad/glad.h \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glad/include/KHR/khrplatform.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stdint.h \
@@ -16,15 +16,17 @@ CMakeFiles/renderer.dir/main.cpp.obj: \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stddef.h \
  D:/Program\ Files/MinGW/w64devkit/include/stddef.h \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/GLFW/glfw3.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/initializer_list \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/pstl/pstl_config.h \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/include/shader.h \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/spdlog.h \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/common.h \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/details/null_mutex.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/atomic \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/version.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/pstl/pstl_config.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/atomic_base.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/new \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/exception.h \
@@ -36,7 +38,6 @@ CMakeFiles/renderer.dir/main.cpp.obj: \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_relops.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_pair.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/utility.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/initializer_list \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/tweakme.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/chrono \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/chrono.h \
@@ -685,4 +686,5 @@ CMakeFiles/renderer.dir/main.cpp.obj: \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glm/ext/vector_uint1.hpp \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glm/ext/vector_uint1_sized.hpp \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glm/gtc/type_ptr.inl \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/include/texture.h \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/include/camera.h
