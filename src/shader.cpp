@@ -78,32 +78,32 @@ Shader::Shader(const char* vertexShaderFile, const char* fragmentShaderFile)
     glDeleteShader(fragmentShader);
 }
 
-void Shader::setLight(const DirectionLight& light) const
+void Shader::setLight(const std::string& name, const DirectionLight& light) const
 {
-    setVec3("light.direction", light.direction.x, light.direction.y, light.direction.z);
-    setVec3("light.ambient", light.ambient.x, light.ambient.y, light.ambient.z);
-    setVec3("light.diffuse", light.diffuse.x, light.diffuse.y, light.diffuse.z);
-    setVec3("light.specular", light.specular.x, light.specular.y, light.specular.z);
+    setVec3(name + ".direction", light.direction.x, light.direction.y, light.direction.z);
+    setVec3(name + ".lightColor.ambient", light.ambient.x, light.ambient.y, light.ambient.z);
+    setVec3(name + ".lightColor.diffuse", light.diffuse.x, light.diffuse.y, light.diffuse.z);
+    setVec3(name + ".lightColor.specular", light.specular.x, light.specular.y, light.specular.z);
 }
 
-void Shader::setLight(const PointLight& light) const
+void Shader::setLight(const std::string& name, const PointLight& light) const
 {
-    setVec3("light.position", light.position.x, light.position.y, light.position.z);
-    setVec3("light.ambient", light.ambient.x, light.ambient.y, light.ambient.z);
-    setVec3("light.diffuse", light.diffuse.x, light.diffuse.y, light.diffuse.z);
-    setVec3("light.specular", light.specular.x, light.specular.y, light.specular.z);
-    setFloat("light.constant", light.constant);
-    setFloat("light.linear", light.linear);
-    setFloat("light.quadratic", light.quadratic);
+    setVec3(name + ".position", light.position.x, light.position.y, light.position.z);
+    setVec3(name + ".lightColor.ambient", light.ambient.x, light.ambient.y, light.ambient.z);
+    setVec3(name + ".lightColor.diffuse", light.diffuse.x, light.diffuse.y, light.diffuse.z);
+    setVec3(name + ".lightColor.specular", light.specular.x, light.specular.y, light.specular.z);
+    setFloat(name + ".constant", light.constant);
+    setFloat(name + ".linear", light.linear);
+    setFloat(name + ".quadratic", light.quadratic);
 }
 
-void Shader::setLight(const SpotLight& light) const
+void Shader::setLight(const std::string& name, const SpotLight& light) const
 {
-    setVec3("light.position", light.position.x, light.position.y, light.position.z);
-    setVec3("light.direction", light.direction.x, light.direction.y, light.direction.z);
-    setFloat("light.cutOff", light.cutOff);
-    setFloat("light.outerCutOff", light.outerCutOff);
-    setVec3("light.ambient", light.ambient.x, light.ambient.y, light.ambient.z);
-    setVec3("light.diffuse", light.diffuse.x, light.diffuse.y, light.diffuse.z);
-    setVec3("light.specular", light.specular.x, light.specular.y, light.specular.z);
+    setVec3(name + ".position", light.position.x, light.position.y, light.position.z);
+    setVec3(name + ".direction", light.direction.x, light.direction.y, light.direction.z);
+    setFloat(name + ".cutOff", light.cutOff);
+    setFloat(name + ".outerCutOff", light.outerCutOff);
+    setVec3(name + ".lightColor.ambient", light.ambient.x, light.ambient.y, light.ambient.z);
+    setVec3(name + ".lightColor.diffuse", light.diffuse.x, light.diffuse.y, light.diffuse.z);
+    setVec3(name + ".lightColor.specular", light.specular.x, light.specular.y, light.specular.z);
 }

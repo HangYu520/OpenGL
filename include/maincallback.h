@@ -3,7 +3,6 @@
 #include "shader.h"
 #include "texture.h"
 #include "camera.h"
-#define POINT_LIGHT
 
 // * 主函数中需要用到的 全局变量与 callback 函数
 
@@ -28,34 +27,7 @@ float fov = 45.0f; // 视锥体的 FOV
 Camera camera(glm::vec3(0.0f, 0.0f, 5.0f)); // 定义摄像机对象
 Camera initialCamera = camera; // 创建一个副本保存初始状态
 
-#if defined(DIRECTION_LIGHT)
-DirectionLight light = {
-glm::vec3(-0.2f, -1.0f, -0.3f), // direction
-glm::vec3(0.2f, 0.2f, 0.2f), // ambient
-glm::vec3(0.5f, 0.5f, 0.5f), // diffuse
-glm::vec3(1.0f, 1.0f, 1.0f)  // specular
-};
-#elif defined(POINT_LIGHT)
-PointLight light = {
-    glm::vec3(1.2f, 0.5f, 1.0f), // position
-    glm::vec3(0.2f, 0.2f, 0.2f), // ambient
-    glm::vec3(0.5f, 0.5f, 0.5f), // diffuse
-    glm::vec3(1.0f, 1.0f, 1.0f), // specular
-    1.0f, // constant
-    0.09f, // linear
-    0.032f // quadratic
-};
-#elif defined(SPOT_LIGHT)
-SpotLight light = {
-    glm::vec3(0.0f, 0.0f, 3.0f), // position
-    glm::vec3(0.0f, 0.0f, -1.0f), // direction
-    glm::cos(glm::radians(3.5f)), // cutOff
-    glm::cos(glm::radians(5.5f)), // outerCutOff
-    glm::vec3(0.2f, 0.2f, 0.2f), // ambient
-    glm::vec3(0.5f, 0.5f, 0.5f), // diffuse
-    glm::vec3(1.0f, 1.0f, 1.0f) // specular
-};
-#endif
+LightMode lightMode = LightMode::DIRECTION;
 
 // 立方体顶点数据
 float cubeVertices[] = {
@@ -103,6 +75,20 @@ float cubeVertices[] = {
     -0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,  0.0f, 1.0f
 };
 
+// 立方体位置
+glm::vec3 cubePositions[] = {
+    glm::vec3( 0.0f,  0.0f,  0.0f),
+    glm::vec3( 2.0f,  5.0f, -15.0f),
+    glm::vec3(-1.5f, -2.2f, -2.5f),
+    glm::vec3(-3.8f, -2.0f, -12.3f),
+    glm::vec3( 2.4f, -0.4f, -3.5f),
+    glm::vec3(-1.7f,  3.0f, -7.5f),
+    glm::vec3( 1.3f, -2.0f, -2.5f),
+    glm::vec3( 1.5f,  2.0f, -2.5f),
+    glm::vec3( 1.5f,  0.2f, -1.5f),
+    glm::vec3(-1.3f,  1.0f, -1.5f)
+};
+
 /*
 * ---------------------
 * 视口变换处理
@@ -124,6 +110,7 @@ inline void processInput(GLFWwindow* window)
         glfwSetWindowShouldClose(window, true);
 
     const float cameraSpeed = 1.f * deltaTime;
+    // 控制相机
     if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
         camera.adjustCameraPos(Camera::Movement::FORWARD, cameraSpeed);
     if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
@@ -136,10 +123,12 @@ inline void processInput(GLFWwindow* window)
         camera.adjustCameraPos(Camera::Movement::UP, cameraSpeed);
     if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS)
         camera.adjustCameraPos(Camera::Movement::DOWN, cameraSpeed);
+    // 控制物体旋转
     if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS)
         rotation -= cameraSpeed * 10.0f;
     if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS)
         rotation += cameraSpeed * 10.0f;
+    // 重置相机
     if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS)
     {   
         camera = initialCamera;
@@ -149,6 +138,13 @@ inline void processInput(GLFWwindow* window)
         rotation = 0.0f;
         fov = 45.0f;
     }
+    // 控制灯光
+    if (glfwGetKey(window, GLFW_KEY_1) == GLFW_PRESS)
+        lightMode = LightMode::DIRECTION;
+    if (glfwGetKey(window, GLFW_KEY_2) == GLFW_PRESS)
+        lightMode = LightMode::POINT;
+    if (glfwGetKey(window, GLFW_KEY_3) == GLFW_PRESS)
+        lightMode = LightMode::SPOT;
 }
 
 /*

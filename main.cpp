@@ -52,9 +52,6 @@ int main()
     
     // 矩阵变换
     glm::mat4 model, view, projection;
-    glm::mat4 lightmodel = glm::mat4(1.0f);
-    lightmodel = glm::translate(lightmodel, light.position);
-    lightmodel = glm::scale(lightmodel, glm::vec3(0.1f));
     
     glEnable(GL_DEPTH_TEST); // 启用深度测试
     
@@ -89,18 +86,43 @@ int main()
         lightingShader.use(); // 使用着色器程序
         lightingShader.setMVP(model, view, projection);
         lightingShader.setFloat("material.shininess", 32.0f);
-        lightingShader.setLight(light);
         lightingShader.setVec3("cameraPos", cameraPos.x, cameraPos.y, cameraPos.z);
+        
+        lightingShader.setInt("lightMode", (int) lightMode);
+        if (lightMode == LightMode::DIRECTION) lightingShader.setLight("dirLight", DirectionLight::getCase());
+        if (lightMode == LightMode::POINT) lightingShader.setLight("pointLight", PointLight::getCase());
+        if (lightMode == LightMode::SPOT) lightingShader.setLight("spotLight", SpotLight::getCase());
+        
         glActiveTexture(GL_TEXTURE0); diffuse_map.bind();
         glActiveTexture(GL_TEXTURE1); specular_map.bind();
-        vaoObj.bind(); glDrawArrays(GL_TRIANGLES, 0, 36); vaoObj.unbind();
         
-        #if defined(POINT_LIGHT)
+        vaoObj.bind(); 
+        for (unsigned int i = 0; i < 10; i++)
+        {
+            glm::mat4 model = glm::mat4(1.0f);
+            model = glm::translate(model, cubePositions[i]);
+            float angle = 20.0f * i;
+            model = glm::rotate(model, glm::radians(rotation + angle), glm::vec3(1.0f, 0.3f, 0.5f));
+            lightingShader.setMat4("model", model);
+
+            glDrawArrays(GL_TRIANGLES, 0, 36);
+        }
+        vaoObj.unbind();
+        
         // 绘制光源
-        lightcubeShader.use();
-        lightcubeShader.setMVP(lightmodel, view, projection);
-        vaoLight.bind(); glDrawArrays(GL_TRIANGLES, 0, 36); vaoLight.unbind();
-        #endif
+        if (lightMode == LightMode::POINT)
+        {
+            lightcubeShader.use();
+            vaoLight.bind();
+            glm::mat4 model = glm::mat4(1.0f);
+            model = glm::translate(model, PointLight::getCase().position);
+            model = glm::scale(model, glm::vec3(0.2f));
+            lightcubeShader.setMVP(model, view, projection);
+            glm::vec3 lightColor = PointLight::getCase().lightColor;
+            lightcubeShader.setVec3("color", lightColor.x, lightColor.y, lightColor.z);
+            glDrawArrays(GL_TRIANGLES, 0, 36);
+            vaoLight.unbind();
+        }
         
         glfwSwapBuffers(window); // 交换缓冲
         glfwPollEvents(); // 检查事件

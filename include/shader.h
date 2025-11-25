@@ -65,9 +65,9 @@ public:
     }
     
     // 设置着色器的光源
-    void setLight(const DirectionLight& light) const;
+    void setLight(const std::string& name, const DirectionLight& light) const;
     
-    void setLight(const PointLight& light) const;
+    void setLight(const std::string& name, const PointLight& light) const;
     
-    void setLight(const SpotLight& light) const;
+    void setLight(const std::string& name, const SpotLight& light) const;
 };
