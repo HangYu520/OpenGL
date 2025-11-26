@@ -284,28 +284,6 @@ Model::bounding_box_t Model::getBoundingBox() const // 获取模型的边界框
     );
 }
 
-void Model::translate(float x_offset, float y_offset, float z_offset) // 平移模型
-{
-    auto& vertices = attrib._vertices;
-    for (auto& vertex : vertices)
-    {
-        vertex.x += x_offset;
-        vertex.y += y_offset;
-        vertex.z += z_offset;
-    }
-}
-
-void Model::resize(float x_scale, float y_scale, float z_scale) // 按比例缩放模型
-{
-    auto& vertices = attrib._vertices;
-    for (auto& vertex : vertices)
-    {
-        vertex.x *= x_scale;
-        vertex.y *= y_scale;
-        vertex.z *= z_scale;
-    }
-}
-
 std::vector<Model::Trifaces>  Model::getTrifaces()
 {
     std::vector<Trifaces> trifaces_list;
