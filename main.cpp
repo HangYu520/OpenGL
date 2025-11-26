@@ -89,8 +89,8 @@ int main()
         
         lightingShader.setInt("lightMode", (int) lightMode);
         if (lightMode == LightMode::DIRECTION) lightingShader.setLight("dirLight", DirectionLight::getCase());
-        if (lightMode == LightMode::POINT)     lightingShader.setLight("pointLight", PointLight::getCase());
-        if (lightMode == LightMode::SPOT)      lightingShader.setLight("spotLight", SpotLight::getCase());
+        if (lightMode == LightMode::POINT) lightingShader.setLight("pointLight", PointLight::getCase());
+        if (lightMode == LightMode::SPOT) lightingShader.setLight("spotLight", SpotLight::getCase());
         
         glActiveTexture(GL_TEXTURE0); diffuse_map.bind();
         glActiveTexture(GL_TEXTURE1); specular_map.bind();
