@@ -80,18 +80,17 @@ int main()
             0.1f, 100.0f
         );
         view = camera.getViewMatrix();
-        glm::vec3 cameraPos = camera.cameraPos;
         
         // 绘制物体
         lightingShader.use(); // 使用着色器程序
         lightingShader.setMVP(model, view, projection);
         lightingShader.setFloat("material.shininess", 32.0f);
-        lightingShader.setVec3("cameraPos", cameraPos.x, cameraPos.y, cameraPos.z);
+        lightingShader.setVec3("cameraPos", camera.cameraPos);
         
         lightingShader.setInt("lightMode", (int) lightMode);
         if (lightMode == LightMode::DIRECTION) lightingShader.setLight("dirLight", DirectionLight::getCase());
-        if (lightMode == LightMode::POINT) lightingShader.setLight("pointLight", PointLight::getCase());
-        if (lightMode == LightMode::SPOT) lightingShader.setLight("spotLight", SpotLight::getCase());
+        if (lightMode == LightMode::POINT)     lightingShader.setLight("pointLight", PointLight::getCase());
+        if (lightMode == LightMode::SPOT)      lightingShader.setLight("spotLight", SpotLight::getCase());
         
         glActiveTexture(GL_TEXTURE0); diffuse_map.bind();
         glActiveTexture(GL_TEXTURE1); specular_map.bind();
@@ -118,8 +117,7 @@ int main()
             model = glm::translate(model, PointLight::getCase().position);
             model = glm::scale(model, glm::vec3(0.2f));
             lightcubeShader.setMVP(model, view, projection);
-            glm::vec3 lightColor = PointLight::getCase().lightColor;
-            lightcubeShader.setVec3("color", lightColor.x, lightColor.y, lightColor.z);
+            lightcubeShader.setVec3("color", PointLight::getCase().lightColor);
             glDrawArrays(GL_TRIANGLES, 0, 36);
             vaoLight.unbind();
         }
