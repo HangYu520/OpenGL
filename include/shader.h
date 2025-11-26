@@ -49,6 +49,10 @@ public:
     {
         glUniform3f(glGetUniformLocation(m_shaderProgramID, name.c_str()), x, y, z);
     } 
+    void setVec3(const std::string& name, const glm::vec3& vec) const
+    {
+        setVec3(name, vec.x, vec.y, vec.z);
+    }
     void setVec4(const std::string& name, float x, float y, float z, float w) const
     {
         glUniform4f(glGetUniformLocation(m_shaderProgramID, name.c_str()), x, y, z, w);
@@ -59,9 +63,7 @@ public:
     }
     void setMVP(const glm::mat4& modeltrans, const glm::mat4& viewtrans, const glm::mat4& projtrans) const
     {
-        setMat4("model", modeltrans);
-        setMat4("view", viewtrans);
-        setMat4("projection", projtrans);
+        setMat4("model", modeltrans); setMat4("view", viewtrans); setMat4("projection", projtrans);
     }
     
     // 设置着色器的光源
