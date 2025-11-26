@@ -197,26 +197,6 @@ public:
     * ------------------------------------------
     */
     bounding_box_t getBoundingBox() const; // 获取模型包围盒 (最小点, 最大点)
-    /*
-    * ------------------------------------------
-    * 平移模型
-    * ------------------------------------------
-    * /inType: float x_offset x 方向偏移量
-    * /inType: float y_offset y 方向偏移量
-    * /inType: float z_offset z 方向偏移量
-    * ------------------------------------------
-    */
-    void translate(float x_offset, float y_offset, float z_offset); // 平移模型
-    /*
-    * ------------------------------------------
-    * 按比例缩放模型
-    * ------------------------------------------
-    * /inType: float x_scale x 缩放比例
-    * /inType: float y_scale y 缩放比例
-    * /inType: float z_scale z 缩放比例
-    * ------------------------------------------
-    */
-    void resize(float x_scale, float y_scale, float z_scale); // 按比例缩放模型
 
     // 获取顶点属性
     Attrib& getAttrib() { return attrib; }
