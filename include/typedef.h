@@ -201,9 +201,6 @@ public:
     // 获取顶点属性
     Attrib& getAttrib() { return attrib; }
 
-    // 获取所有形状中的三角形面列表
-    std::vector<Trifaces>  getTrifaces(); 
-
     // 保存 OBJ 文件
     void saveOBJ(const char* filename, const std::vector<attrib_t::position>& vertices, const Trifaces& trifaces);
 
