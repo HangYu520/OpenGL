@@ -114,7 +114,7 @@ public:
     
     struct Attrib
     {
-        // 属性列表 （分开存储, 因为个数可能不同)
+        // 属性列表 （分开存储)
         std::vector<attrib_t::position>   _vertices; // 位置列表
         std::vector<attrib_t::normal>     _normals; // 法线列表
         std::vector<attrib_t::texcoord>   _texcoords; // 纹理坐标列表
