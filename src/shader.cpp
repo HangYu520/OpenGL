@@ -80,18 +80,18 @@ Shader::Shader(const char* vertexShaderFile, const char* fragmentShaderFile)
 
 void Shader::setLight(const std::string& name, const DirectionLight& light) const
 {
-    setVec3(name + ".direction", light.direction.x, light.direction.y, light.direction.z);
-    setVec3(name + ".lightColor.ambient", light.ambient.x, light.ambient.y, light.ambient.z);
-    setVec3(name + ".lightColor.diffuse", light.diffuse.x, light.diffuse.y, light.diffuse.z);
-    setVec3(name + ".lightColor.specular", light.specular.x, light.specular.y, light.specular.z);
+    setVec3(name + ".direction", light.direction);
+    setVec3(name + ".lightColor.ambient", light.ambient);
+    setVec3(name + ".lightColor.diffuse", light.diffuse);
+    setVec3(name + ".lightColor.specular", light.specular);
 }
 
 void Shader::setLight(const std::string& name, const PointLight& light) const
 {
-    setVec3(name + ".position", light.position.x, light.position.y, light.position.z);
-    setVec3(name + ".lightColor.ambient", light.ambient.x, light.ambient.y, light.ambient.z);
-    setVec3(name + ".lightColor.diffuse", light.diffuse.x, light.diffuse.y, light.diffuse.z);
-    setVec3(name + ".lightColor.specular", light.specular.x, light.specular.y, light.specular.z);
+    setVec3(name + ".position", light.position);
+    setVec3(name + ".lightColor.ambient", light.ambient);
+    setVec3(name + ".lightColor.diffuse", light.diffuse);
+    setVec3(name + ".lightColor.specular", light.specular);
     setFloat(name + ".constant", light.constant);
     setFloat(name + ".linear", light.linear);
     setFloat(name + ".quadratic", light.quadratic);
@@ -99,11 +99,11 @@ void Shader::setLight(const std::string& name, const PointLight& light) const
 
 void Shader::setLight(const std::string& name, const SpotLight& light) const
 {
-    setVec3(name + ".position", light.position.x, light.position.y, light.position.z);
-    setVec3(name + ".direction", light.direction.x, light.direction.y, light.direction.z);
+    setVec3(name + ".position", light.position);
+    setVec3(name + ".direction", light.direction);
     setFloat(name + ".cutOff", light.cutOff);
     setFloat(name + ".outerCutOff", light.outerCutOff);
-    setVec3(name + ".lightColor.ambient", light.ambient.x, light.ambient.y, light.ambient.z);
-    setVec3(name + ".lightColor.diffuse", light.diffuse.x, light.diffuse.y, light.diffuse.z);
-    setVec3(name + ".lightColor.specular", light.specular.x, light.specular.y, light.specular.z);
+    setVec3(name + ".lightColor.ambient", light.ambient);
+    setVec3(name + ".lightColor.diffuse", light.diffuse);
+    setVec3(name + ".lightColor.specular", light.specular);
 }
