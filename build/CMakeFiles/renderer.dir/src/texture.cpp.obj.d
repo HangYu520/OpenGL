@@ -16,85 +16,37 @@ CMakeFiles/renderer.dir/src/texture.cpp.obj: \
  D:/Program\ Files/MinGW/w64devkit/include/stddef.h \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/GLFW/glfw3.h \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/include/typedef.h \
- C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/stb/stb_image.h \
- D:/Program\ Files/MinGW/w64devkit/include/stdio.h \
- D:/Program\ Files/MinGW/w64devkit/include/corecrt_stdio_config.h \
- D:/Program\ Files/MinGW/w64devkit/include/_mingw_off_t.h \
- D:/Program\ Files/MinGW/w64devkit/include/swprintf.inl \
- D:/Program\ Files/MinGW/w64devkit/include/sec_api/stdio_s.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/stdlib.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/cstdlib \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/random \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/requires_hosted.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/pstl/pstl_config.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/cmath \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/cpp_type_traits.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/version.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/type_traits \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/ext/type_traits.h \
+ D:/Program\ Files/MinGW/w64devkit/include/math.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/std_abs.h \
  D:/Program\ Files/MinGW/w64devkit/include/stdlib.h \
  D:/Program\ Files/MinGW/w64devkit/include/corecrt_wstdlib.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/limits.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/syslimits.h \
  D:/Program\ Files/MinGW/w64devkit/include/limits.h \
  D:/Program\ Files/MinGW/w64devkit/include/sec_api/stdlib_s.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/stdlib.h \
  D:/Program\ Files/MinGW/w64devkit/include/malloc.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/mm_malloc.h \
  D:/Program\ Files/MinGW/w64devkit/include/errno.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/std_abs.h \
- C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/stb/stb_image_write.h \
- C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/spdlog.h \
- C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/common.h \
- C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/details/null_mutex.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/atomic \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/version.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/atomic_base.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/new \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/exception.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/atomic_lockfree_defines.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/move.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/type_traits \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/cstdint \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/utility \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_relops.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_pair.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/utility.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/initializer_list \
- C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/tweakme.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/chrono \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/chrono.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/ratio \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/limits \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/ctime \
- D:/Program\ Files/MinGW/w64devkit/include/time.h \
- D:/Program\ Files/MinGW/w64devkit/include/sys/timeb.h \
- D:/Program\ Files/MinGW/w64devkit/include/sec_api/sys/timeb_s.h \
- D:/Program\ Files/MinGW/w64devkit/include/_timeval.h \
- D:/Program\ Files/MinGW/w64devkit/include/pthread_time.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/parse_numbers.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/ext/numeric_traits.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/cpp_type_traits.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/ext/type_traits.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/cstdio \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/exception \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/exception_ptr.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/exception_defines.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/cxxabi_init_exception.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/typeinfo \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/hash_bytes.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/nested_exception.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/functional \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_function.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/backward/binders.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/tuple \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/uses_allocator.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/invoke.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/functional_hash.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/refwrap.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/std_function.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/functexcept.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/unordered_map \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/requires_hosted.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/unordered_map.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/hashtable.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/hashtable_policy.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/specfun.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_algobase.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/functexcept.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/exception_defines.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/ext/numeric_traits.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_pair.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/move.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/utility.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_iterator_base_types.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_iterator_base_funcs.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/concept_check.h \
@@ -105,86 +57,7 @@ CMakeFiles/renderer.dir/src/texture.cpp.obj: \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/predefined_ops.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bit \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/concepts \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/ext/aligned_buffer.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/ext/alloc_traits.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/alloc_traits.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_construct.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/memoryfwd.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/allocator.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/new_allocator.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/enable_special_members.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/node_handle.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/range_access.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/erase_if.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/memory_resource.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/cstddef \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/uses_allocator_args.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/vector \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_uninitialized.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_vector.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_bvector.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/vector.tcc \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/array \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/compare \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/memory \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_tempbuf.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_raw_storage_iter.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/align.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/unique_ptr.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/shared_ptr.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/iosfwd \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stringfwd.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/postypes.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/cwchar \
- D:/Program\ Files/MinGW/w64devkit/include/wchar.h \
- D:/Program\ Files/MinGW/w64devkit/include/_mingw_stat64.h \
- D:/Program\ Files/MinGW/w64devkit/include/sec_api/wchar_s.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/shared_ptr_base.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/allocated_ptr.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/ext/atomicity.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
- D:/Program\ Files/MinGW/w64devkit/include/pthread.h \
- D:/Program\ Files/MinGW/w64devkit/include/sys/types.h \
- D:/Program\ Files/MinGW/w64devkit/include/process.h \
- D:/Program\ Files/MinGW/w64devkit/include/corecrt_startup.h \
- D:/Program\ Files/MinGW/w64devkit/include/signal.h \
- D:/Program\ Files/MinGW/w64devkit/include/pthread_signal.h \
- D:/Program\ Files/MinGW/w64devkit/include/pthread_compat.h \
- D:/Program\ Files/MinGW/w64devkit/include/pthread_unistd.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/ext/concurrence.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/shared_ptr_atomic.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/backward/auto_ptr.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/pstl/glue_memory_defs.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/pstl/execution_defs.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/string \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/char_traits.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/localefwd.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/clocale \
- D:/Program\ Files/MinGW/w64devkit/include/locale.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/cctype \
- D:/Program\ Files/MinGW/w64devkit/include/ctype.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/ostream_insert.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/cxxabi_forced.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/basic_string.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/string_view \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/string_view.tcc \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/ext/string_conversions.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/cerrno \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/charconv.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/basic_string.tcc \
- C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/fmt/fmt.h \
- C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/fmt/bundled/format.h \
- C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/fmt/bundled/base.h \
- D:/Program\ Files/MinGW/w64devkit/include/string.h \
- D:/Program\ Files/MinGW/w64devkit/include/sec_api/string_s.h \
- C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/fmt/bundled/format.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/cmath \
- D:/Program\ Files/MinGW/w64devkit/include/math.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/specfun.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/limits \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/tr1/gamma.tcc \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/tr1/special_function_util.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/tr1/bessel_function.tcc \
@@ -197,36 +70,182 @@ CMakeFiles/renderer.dir/src/texture.cpp.obj: \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/tr1/poly_hermite.tcc \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/tr1/poly_laguerre.tcc \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/tr1/riemann_zeta.tcc \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/cstring \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/stdexcept \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/cstdint \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/cstdlib \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/string \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stringfwd.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/memoryfwd.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/char_traits.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/postypes.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/cwchar \
+ D:/Program\ Files/MinGW/w64devkit/include/wchar.h \
+ D:/Program\ Files/MinGW/w64devkit/include/corecrt_stdio_config.h \
+ D:/Program\ Files/MinGW/w64devkit/include/_mingw_off_t.h \
+ D:/Program\ Files/MinGW/w64devkit/include/_mingw_stat64.h \
+ D:/Program\ Files/MinGW/w64devkit/include/swprintf.inl \
+ D:/Program\ Files/MinGW/w64devkit/include/sec_api/wchar_s.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/allocator.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/new_allocator.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/new \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/exception.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/localefwd.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/clocale \
+ D:/Program\ Files/MinGW/w64devkit/include/locale.h \
+ D:/Program\ Files/MinGW/w64devkit/include/stdio.h \
+ D:/Program\ Files/MinGW/w64devkit/include/sec_api/stdio_s.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/iosfwd \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/cctype \
+ D:/Program\ Files/MinGW/w64devkit/include/ctype.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/ostream_insert.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/cxxabi_forced.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_function.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/backward/binders.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/refwrap.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/invoke.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/range_access.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/initializer_list \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/basic_string.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/ext/alloc_traits.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/alloc_traits.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_construct.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/string_view \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/functional_hash.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/hash_bytes.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/string_view.tcc \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/ext/string_conversions.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/cstdio \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/cerrno \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/charconv.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/basic_string.tcc \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/memory_resource.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/cstddef \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/uses_allocator.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/uses_allocator_args.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/tuple \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/random.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/vector \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_uninitialized.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_vector.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_bvector.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/vector.tcc \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/uniform_int_dist.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/random.tcc \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/numeric \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_numeric.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/pstl/glue_numeric_defs.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/pstl/execution_defs.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/fstream \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/istream \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/ios \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/exception \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/exception_ptr.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/cxxabi_init_exception.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/typeinfo \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/nested_exception.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/ios_base.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/ext/atomicity.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
+ D:/Program\ Files/MinGW/w64devkit/include/pthread.h \
+ D:/Program\ Files/MinGW/w64devkit/include/sys/types.h \
+ D:/Program\ Files/MinGW/w64devkit/include/process.h \
+ D:/Program\ Files/MinGW/w64devkit/include/corecrt_startup.h \
+ D:/Program\ Files/MinGW/w64devkit/include/signal.h \
+ D:/Program\ Files/MinGW/w64devkit/include/pthread_signal.h \
+ D:/Program\ Files/MinGW/w64devkit/include/time.h \
+ D:/Program\ Files/MinGW/w64devkit/include/sys/timeb.h \
+ D:/Program\ Files/MinGW/w64devkit/include/sec_api/sys/timeb_s.h \
+ D:/Program\ Files/MinGW/w64devkit/include/_timeval.h \
+ D:/Program\ Files/MinGW/w64devkit/include/pthread_time.h \
+ D:/Program\ Files/MinGW/w64devkit/include/pthread_compat.h \
+ D:/Program\ Files/MinGW/w64devkit/include/pthread_unistd.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/locale_classes.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/locale_classes.tcc \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/system_error \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/stdexcept \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/streambuf \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/streambuf.tcc \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/basic_ios.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/locale_facets.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/cwctype \
+ D:/Program\ Files/MinGW/w64devkit/include/wctype.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/streambuf_iterator.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_inline.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/locale_facets.tcc \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/basic_ios.tcc \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/ostream \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/ostream.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/ostream.tcc \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/istream.tcc \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/codecvt.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/fstream.tcc \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/stb/stb_image.h \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/stb/stb_image_write.h \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/spdlog.h \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/common.h \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/details/null_mutex.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/atomic \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/atomic_base.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/atomic_lockfree_defines.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/utility \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_relops.h \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/tweakme.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/chrono \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/chrono.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/ratio \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/ctime \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/parse_numbers.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/functional \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/std_function.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/unordered_map \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/unordered_map.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/hashtable.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/hashtable_policy.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/ext/aligned_buffer.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/enable_special_members.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/node_handle.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/erase_if.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/array \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/compare \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/memory \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_tempbuf.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_raw_storage_iter.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/align.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/unique_ptr.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/shared_ptr.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/shared_ptr_base.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/allocated_ptr.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/ext/concurrence.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/shared_ptr_atomic.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/backward/auto_ptr.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/pstl/glue_memory_defs.h \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/fmt/fmt.h \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/fmt/bundled/format.h \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/fmt/bundled/base.h \
+ D:/Program\ Files/MinGW/w64devkit/include/string.h \
+ D:/Program\ Files/MinGW/w64devkit/include/sec_api/string_s.h \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/fmt/bundled/format.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/cstring \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/fmt/bundled/format-inl.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/algorithm \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_algo.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/algorithmfwd.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_heap.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/uniform_int_dist.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/pstl/glue_algorithm_defs.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/climits \
  D:/Program\ Files/MinGW/w64devkit/include/io.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/locale \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/locale_classes.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/locale_classes.tcc \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/locale_facets.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/cwctype \
- D:/Program\ Files/MinGW/w64devkit/include/wctype.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/ios_base.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/streambuf \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/streambuf.tcc \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/streambuf_iterator.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_inline.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/locale_facets.tcc \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/locale_facets_nonio.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/time_members.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/codecvt.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/locale_facets_nonio.tcc \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/locale_conv.h \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/common-inl.h \
@@ -475,13 +494,7 @@ CMakeFiles/renderer.dir/src/texture.cpp.obj: \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/details/synchronous_factory.h \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/version.h \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/spdlog/spdlog-inl.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/random \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/random.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/random.tcc \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/numeric \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stl_numeric.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/pstl/glue_numeric_defs.h \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/tinyobj/tiny_obj_loader.h \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glm/glm.hpp \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glm/detail/_fixes.hpp \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glm/detail/setup.hpp \
