@@ -11,8 +11,8 @@
 * 全局变量定义
 * ---------------------
 */
-const unsigned int SCR_WIDTH = 800; // 窗口宽度
-const unsigned int SCR_HEIGHT = 600; // 窗口高度
+const unsigned int SCR_WIDTH = 1024; // 窗口宽度
+const unsigned int SCR_HEIGHT = 768; // 窗口高度
 
 bool firstMouse = true; // 是否第一次移动鼠标
 float lastX =  SCR_WIDTH / 2.0; // 鼠标上一帧的位置
