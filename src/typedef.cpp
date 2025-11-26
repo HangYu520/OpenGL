@@ -284,17 +284,6 @@ Model::bounding_box_t Model::getBoundingBox() const // 获取模型的边界框
     );
 }
 
-std::vector<Model::Trifaces>  Model::getTrifaces()
-{
-    std::vector<Trifaces> trifaces_list;
-    for (const auto& shape : shapes)
-    {
-        if (!shape.trimeshes.trifaces.empty())
-            trifaces_list.push_back(shape.trimeshes.trifaces);
-    }
-    return trifaces_list;
-}
-
 void Model::saveOBJ(const char* filename, const std::vector<attrib_t::position>& vertices, const Trifaces& trifaces)
 {
     if (vertices.empty())
