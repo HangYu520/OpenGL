@@ -52,11 +52,8 @@ int main()
         asset.model.getBuffer(vertices, indices);
         std::initializer_list<int> layout = {3, 3, 2};
         vaoArr.emplace_back(
-            vertices.data(),
-            vertices.size() / 8,
-            8, layout, indices.data(),
-            asset.model.num_faces(), 3 
-        );
+            vertices.data(), vertices.size() / 8, 8, 
+            layout, indices.data(), asset.model.num_faces(), 3);
     }
     
     // 创建纹理
