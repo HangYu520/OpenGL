@@ -1,7 +1,7 @@
 {
     "model" : [
         {
-            "load" : false,
+            "load" : true,
             "name" : "african_head",
             "obj" : "asset/african_head/african_head.obj",
             "diffuse" : "asset/african_head/african_head_diffuse.tga",
@@ -9,20 +9,27 @@
         },
         {
             "load" : true,
+            "name" : "african_head_eye_inner",
+            "obj" : "asset/african_head/african_head_eye_inner.obj",
+            "diffuse" : "asset/african_head/african_head_eye_inner_diffuse.tga",
+            "specular" : "asset/african_head/african_head_eye_inner_spec.tga"
+        },
+        {
+            "load" : false,
             "name" : "boggie_body",
             "obj" : "asset/boggie/body.obj",
             "diffuse" : "asset/boggie/body_diffuse.tga",
             "specular" : "asset/boggie/body_spec.tga"
         },
         {
-            "load" : true,
+            "load" : false,
             "name" : "boggie_eyes",
             "obj" : "asset/boggie/eyes.obj",
             "diffuse" : "asset/boggie/eyes_diffuse.tga",
             "specular" : "asset/boggie/eyes_spec.tga"
         },
         {
-            "load" : true,
+            "load" : false,
             "name" : "boggie_head",
             "obj" : "asset/boggie/head.obj",
             "diffuse" : "asset/boggie/head_diffuse.tga",
