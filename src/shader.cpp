@@ -1,4 +1,8 @@
 #include "shader.h"
+#include <spdlog/spdlog.h>
+#include <fstream>
+#include <string>
+#include <sstream>
 
 Shader::Shader(const char* vertexShaderFile, const char* fragmentShaderFile)
 {

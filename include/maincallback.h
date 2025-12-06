@@ -3,6 +3,7 @@
 #include "shader.h"
 #include "texture.h"
 #include "camera.h"
+#include "nlohmann/json.hpp"
 
 // * 主函数中需要用到的 全局变量与 callback 函数
 
@@ -152,7 +153,7 @@ inline void processInput(GLFWwindow* window)
 * 鼠标输入处理
 * ---------------------
 */
-void mouse_callback(GLFWwindow* window, double xpos, double ypos)
+static void mouse_callback(GLFWwindow* window, double xpos, double ypos)
 {
     if (firstMouse)
     {
@@ -185,9 +186,52 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos)
 * 鼠标滚轮处理
 * ---------------------
 */
-void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
+static void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
 {
     fov -= (float) yoffset;
     if (fov < 1.0f) fov = 1.0f;
-    else if (fov > 45.0f) fov = 45.0f;
+    else if (fov > 90.0f) fov = 90.0f;
+}
+
+/*
+* ------------------------------------------
+* 加载多个模型及对应的纹理、法向贴图
+* ------------------------------------------
+*/
+struct Asset
+{
+    Model model;
+    Image diffuse_map;
+    Image specular_map;
+};
+inline void loadAsset(const char* input_json, std::vector<Asset>& assets)
+{
+    // 使用 json 文件多个模型
+    using json = nlohmann::json;
+    json data = json::parse(std::ifstream(input_json));
+    for (auto& model: data["model"])
+    {
+        bool load = model.value("load", true);
+        if (load)
+        {
+            Model objmodel;
+            Image diffuse_map, specular_map;
+            const std::string name = model.value("name", "");
+            const std::string obj_file = model.value("obj", "");
+            const std::string diffuse_map_file = model.value("diffuse", "");
+            const std::string specular_map_file = model.value("specular", "");
+            objmodel.loadFrom(obj_file.c_str());
+            if (!diffuse_map_file.empty())
+            {
+                diffuse_map.load(diffuse_map_file.c_str());
+                diffuse_map.flipVertical();
+            }
+            if (!specular_map_file.empty())
+            {
+                specular_map.load(specular_map_file.c_str());
+                specular_map.flipVertical();
+            }
+            assets.push_back({objmodel, diffuse_map, specular_map});
+        }
+    }
 }

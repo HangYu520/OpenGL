@@ -82,7 +82,7 @@ void main()
    }
    else if (lightMode == 3)
    {
-      color = CalcSpotLight(spotLight, norm, FragPos, viewDir, materialColor);
+     color = CalcSpotLight(spotLight, norm, FragPos, viewDir, materialColor);
    }
    
    FragColor = vec4(color, 1.0);

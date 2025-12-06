@@ -1,6 +1,7 @@
 #pragma once
 #include <random>
 #include <fstream>
+#include <vector>
 #include <stb/stb_image.h>
 #include <stb/stb_image_write.h>
 #include <spdlog/spdlog.h>
@@ -9,6 +10,7 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
+#include "vertexarray.h"
 
 // * 自定义数据类型头文件
 
@@ -104,39 +106,25 @@ public:
         struct normal       { float nx, ny, nz;}; // 法线结构体
         struct texcoord     { float u, v; };// 纹理坐标结构体
         // TODO : 添加颜色等其他属性
-        position            _position;
-        normal              _normal;
-        texcoord            _texcoord;
+        position            position_;
+        normal              normal_;
+        texcoord            texcoord_;
     };
-    using line_attrib_t     = std::tuple<attrib_t, attrib_t>; // 线段属性类型定义
-    using triface_attrib_t  = std::tuple<attrib_t, attrib_t, attrib_t>; // 三角形面属性类型定义
-    using bounding_box_t    = std::tuple<attrib_t::position, attrib_t::position>; // 包围盒类型定义 (最小点, 最大点)
     
     struct Attrib
     {
         // 属性列表 （分开存储)
-        std::vector<attrib_t::position>   _vertices; // 位置列表
-        std::vector<attrib_t::normal>     _normals; // 法线列表
-        std::vector<attrib_t::texcoord>   _texcoords; // 纹理坐标列表
+        std::vector<attrib_t::position>   vertices; // 位置列表
+        std::vector<attrib_t::normal>     normals; // 法线列表
+        std::vector<attrib_t::texcoord>   texcoords; // 纹理坐标列表
     };
-    struct point_t // 顶点结构体
-    {
-        int                     vertex_index;
-        int                     normal_index;
-        int                     texcoord_index;
-        const attrib_t          Get(const Attrib& attrib) const; // 获取 attrib 中对应的顶点属性 (常量版本)
-    };
-    struct line_t // 线段结构体
-    {
-        point_t                 start;
-        point_t                 end;
-        const line_attrib_t     Get(const Attrib& attrib) const; // 获取 attrib 中对应的线段顶点属性 (常量版本)
-    };
-    struct triface_t // 三角形面结构体
-    {
-        point_t                 vertex[3]; // 三个顶点索引
-        const triface_attrib_t  Get(const Attrib& attrib) const; // 获取 attrib 中对应的三角形面顶点属性 (常量版本)
-    };
+    
+    struct point_t { int vertex_index, normal_index, texcoord_index; }; // 顶点结构体
+    
+    struct line_t { point_t start, end;}; // 线段结构体
+    
+    struct triface_t { point_t vertex[3]; }; // 三角形面结构体
+    
     // TODO : 添加四边形面等其他面类型
     
     using Points    =   std::vector<point_t>; // 点列表类型定义
@@ -148,25 +136,19 @@ public:
         Trifaces trifaces;
         std::vector<int> material_ids;  // 材质ID列表，对应每个三角形面
     };
-    struct shape_t // 形状结构体
-    {
-        std::string     name; // 形状名称
-        TriMeshes       trimeshes; // 形状包含的 mesh 列表
-        Lines           lines; // 形状包含的线段列表
-        Points          points; // 形状包含的点列表
-    };
 
     // * 私有变量
 private:
     tinyobj::ObjReaderConfig            readerConfig; // 读取配置
     Attrib                              attrib; // 模型属性
-    std::vector<shape_t>                shapes; // 模型形状列表
+    TriMeshes                           trimesh; // 三角形网格
     std::vector<tinyobj::material_t>    materials; // 材质列表
     
     // * 私有方法
-    void loadFrom(const tinyobj::attrib_t& tinyattrib, const std::vector<tinyobj::shape_t>& tinyshapes); // tinyobj 属性值展开存储, 在此处转换为封装存储
-    void loadFrom(const tinyobj::attrib_t& tinyattrib); // 从 tinyobjloader 加载属性
-    void loadFrom(const std::vector<tinyobj::shape_t>& tinyshapes); // 从 tinyobjloader 加载形状列表
+    void loadFrom(
+        const tinyobj::attrib_t& tinyattrib, 
+        const std::vector<tinyobj::shape_t>& tinyshapes
+    ); // tinyobj 属性值展开存储, 在此处转换为封装存储
 
     // * 公有方法
 public:
@@ -180,7 +162,13 @@ public:
     * /inType: std::string mtl_search_path 材质文件搜索路径
     * ------------------------------------------
     */
-    void setLoadConfig(bool triangulate = true, bool vertex_color = true, std::string triangulation_method = "Simple", std::string mtl_search_path = "");
+    void setLoadConfig(
+        bool triangulate = true, 
+        bool vertex_color = true, 
+        std::string triangulation_method = "Simple", 
+        std::string mtl_search_path = ""
+    );
+
     /*
     * ------------------------------------------
     * 从文件加载模型 (Load obj 文件)
@@ -189,23 +177,18 @@ public:
     * ------------------------------------------
     */
     void loadFrom(const std::string& filename); // 从文件加载模型
+
     /*
     * ------------------------------------------
-    * 获取模型包围盒 (最小点, 最大点)
+    * 获取模型数据
     * ------------------------------------------
-    * /outType: bounding_box_t 包围盒 (最小点, 最大点)
+    * /outType: std::vector<float>& vertices 顶点数据
+    * /outType: std::vector<unsigned int>& indices 索引数据
     * ------------------------------------------
     */
-    bounding_box_t getBoundingBox() const; // 获取模型包围盒 (最小点, 最大点)
+    void getBuffer(std::vector<float>& vertices, std::vector<unsigned int>& indices) const;
 
-    // 获取顶点属性
-    Attrib& getAttrib() { return attrib; }
-
-    // 保存 OBJ 文件
-    void saveOBJ(const char* filename, const std::vector<attrib_t::position>& vertices, const Trifaces& trifaces);
-
-    // 打印模型形状信息
-    void logShapes() const; 
+    int num_faces() const { return trimesh.trifaces.size(); }
 };
 
 /*

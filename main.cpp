@@ -37,15 +37,38 @@ int main()
     Shader lightingShader("shader/PhongShader.vs", "shader/PhongShader.fs"); // 创建物体着色器
     Shader lightcubeShader("shader/LightcubeShader.vs", "shader/LightcubeShader.fs"); // 创建光照立方体
 
+    // 载入模型
+    std::vector<Asset> assets;
+    loadAsset("asset/model.json", assets);
+
     // 创建 VAO
-    VertexArray vaoObj(cubeVertices, 36, 8, { 3, 3, 2 }); // 创建顶点数组对象
     VertexArray vaoLight(cubeVertices, 36, 8, { 3 }); // 创建光源数组对象
+    std::vector<VertexArray> vaoArr;
+    vaoArr.reserve(assets.size());
+    for (auto& asset : assets) 
+    {
+        std::vector<float> vertices;
+        std::vector<unsigned int> indices;
+        asset.model.getBuffer(vertices, indices);
+        std::initializer_list<int> layout = {3, 3, 2};
+        vaoArr.emplace_back(
+            vertices.data(),
+            vertices.size() / 8,
+            8, layout,
+            indices.data(),
+            asset.model.num_faces(),
+            3 
+        );
+    }
     
     // 创建纹理
-    Texture diffuse_map("asset/container2.png");
-    Texture specular_map("asset/container2_specular.png");
+    std::vector<Texture> diffuseArr, specularArr;
+    for (auto& asset : assets) 
+    {
+        diffuseArr.emplace_back(asset.diffuse_map);
+        specularArr.emplace_back(asset.specular_map);
+    }
 
-    // 设置纹理单元
     lightingShader.use();
     lightingShader.setInt("material.diffuse", 0);
     lightingShader.setInt("material.specular", 1);
@@ -91,22 +114,16 @@ int main()
         if (lightMode == LightMode::DIRECTION) lightingShader.setLight("dirLight", DirectionLight::getCase());
         if (lightMode == LightMode::POINT) lightingShader.setLight("pointLight", PointLight::getCase());
         if (lightMode == LightMode::SPOT) lightingShader.setLight("spotLight", SpotLight::getCase());
-        
-        glActiveTexture(GL_TEXTURE0); diffuse_map.bind();
-        glActiveTexture(GL_TEXTURE1); specular_map.bind();
-        
-        vaoObj.bind(); 
-        for (unsigned int i = 0; i < 10; i++)
-        {
-            glm::mat4 model = glm::mat4(1.0f);
-            model = glm::translate(model, cubePositions[i]);
-            float angle = 20.0f * i;
-            model = glm::rotate(model, glm::radians(rotation + angle), glm::vec3(1.0f, 0.3f, 0.5f));
-            lightingShader.setMat4("model", model);
 
-            glDrawArrays(GL_TRIANGLES, 0, 36);
+        for(int i = 0; i < vaoArr.size(); i++)
+        {
+            glActiveTexture(GL_TEXTURE0); diffuseArr[i].bind();
+            glActiveTexture(GL_TEXTURE1); specularArr[i].bind();
+
+            vaoArr[i].bind();
+            glDrawElements(GL_TRIANGLES, 3 * vaoArr[i].indexCount, GL_UNSIGNED_INT, 0);
+            vaoArr[i].unbind();
         }
-        vaoObj.unbind();
         
         // 绘制光源
         if (lightMode == LightMode::POINT)

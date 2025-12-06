@@ -16,6 +16,7 @@ include_directories(${PROJECT_SOURCE_DIR}/external)
 include_directories(${PROJECT_SOURCE_DIR}/include)
 include_directories(${PROJECT_SOURCE_DIR}/external/tinyobj)
 include_directories(${PROJECT_SOURCE_DIR}/external/glad/include)
+include_directories(${PROJECT_SOURCE_DIR}/external/json/include)
 
 find_library(glfw glfw3 ${PROJECT_SOURCE_DIR}/lib)
 

@@ -7,12 +7,12 @@
 */
 
 // 初始化预定义静态颜色常量
-const Image::Color Image::Color::BLACK    =   {0, 0, 0};
-const Image::Color Image::Color::RED      =   {255, 0, 0};
-const Image::Color Image::Color::GREEN    =   {0, 255, 0};
-const Image::Color Image::Color::BLUE     =   {0, 0, 255};
+const Image::Color Image::Color::BLACK    =   { 0,   0,   0};
+const Image::Color Image::Color::RED      =   {255,  0,   0};
+const Image::Color Image::Color::GREEN    =   { 0,  255,  0};
+const Image::Color Image::Color::BLUE     =   { 0,   0,  255};
 const Image::Color Image::Color::WHITE    =   {255, 255, 255};
-const Image::Color Image::Color::YELLOW   =   {255, 255, 0};
+const Image::Color Image::Color::YELLOW   =   {255, 255,  0};
 
 Image::Color Image::Color::randColor() // 生成随机颜色
 {
@@ -91,34 +91,6 @@ void Image::save(const char* filename)
 * ---------------------------------
 */
 
-const Model::attrib_t Model::point_t::Get(const Attrib& attrib) const // 获取 attrib 中对应的顶点属性 (常量版本)
-{
-    attrib_t point;
-    if (!attrib._vertices.empty())
-        point._position = attrib._vertices[vertex_index];
-    if (!attrib._normals.empty())
-        point._normal = attrib._normals[normal_index];
-    if (!attrib._texcoords.empty())
-        point._texcoord = attrib._texcoords[texcoord_index];
-    
-    return point;
-}
-
-const Model::line_attrib_t Model::line_t::Get(const Attrib& attrib) const // 获取 attrib 中对应的线段顶点属性 (常量版本)
-{
-    Model::attrib_t p0 = start.Get(attrib);
-    Model::attrib_t p1 = end.Get(attrib);
-    return std::make_tuple(p0, p1);
-}
-
-const Model::triface_attrib_t Model::triface_t::Get(const Attrib& attrib) const // 获取 attrib 中对应的三角形面顶点属性
-{
-    Model::attrib_t p0 = vertex[0].Get(attrib);
-    Model::attrib_t p1 = vertex[1].Get(attrib);
-    Model::attrib_t p2 = vertex[2].Get(attrib);
-    return std::make_tuple(p0, p1, p2);
-}
-
 void Model::setLoadConfig(bool triangulate, bool vertex_color, std::string triangulation_method, std::string mtl_search_path)
 {
     readerConfig.triangulate            =   triangulate;
@@ -127,11 +99,11 @@ void Model::setLoadConfig(bool triangulate, bool vertex_color, std::string trian
     readerConfig.mtl_search_path        =   mtl_search_path;
 }
 
-void Model::loadFrom(const tinyobj::attrib_t& tinyattrib) // 从 tinyobjloader 加载属性
+void Model::loadFrom(const tinyobj::attrib_t& tinyattrib, const std::vector<tinyobj::shape_t>& tinyshapes) // 从 tinyobjloader 属性加载自定义数据结构
 {
     for (size_t i = 0; i < tinyattrib.vertices.size(); i += 3)
     {
-        attrib._vertices.push_back({
+        attrib.vertices.push_back({
             tinyattrib.vertices[i + 0], // x
             tinyattrib.vertices[i + 1], // y
             tinyattrib.vertices[i + 2] // z
@@ -139,7 +111,7 @@ void Model::loadFrom(const tinyobj::attrib_t& tinyattrib) // 从 tinyobjloader �
     }
     for (size_t i = 0; i < tinyattrib.normals.size(); i += 3)
     {
-        attrib._normals.push_back({
+        attrib.normals.push_back({
             tinyattrib.normals[i + 0], // nx
             tinyattrib.normals[i + 1], // ny
             tinyattrib.normals[i + 2] // nz
@@ -147,65 +119,26 @@ void Model::loadFrom(const tinyobj::attrib_t& tinyattrib) // 从 tinyobjloader �
     }
     for (size_t i = 0; i < tinyattrib.texcoords.size(); i += 2)
     {
-        attrib._texcoords.push_back({
+        attrib.texcoords.push_back({
             tinyattrib.texcoords[i + 0], // u
             tinyattrib.texcoords[i + 1] // v
         });
     }
-}
 
-void Model::loadFrom(const std::vector<tinyobj::shape_t>& tinyshapes) // 从 tinyobjloader 加载形状列表
-{
-    for (size_t s = 0; s < tinyshapes.size(); s++) // 遍历每个形状
-    {
-        size_t index_offset = 0;
-        TriMeshes trimesh; // 当前形状的三角网格
-        for (size_t f = 0; f < tinyshapes[s].mesh.num_face_vertices.size(); f++) // 遍历每个面
-        { 
-            size_t fv = 3; // 三角面的顶点数
-            triface_t face;
-            for (size_t v = 0; v < fv; v++) // 遍历每个顶点
-            {
-                tinyobj::index_t idx = tinyshapes[s].mesh.indices[index_offset + v];
-                face.vertex[v] = {idx.vertex_index, idx.normal_index, idx.texcoord_index};
-            }
-            trimesh.trifaces.push_back(face);
-            trimesh.material_ids.push_back(tinyshapes[s].mesh.material_ids[f]);
-            index_offset += fv;
-        }
-
-        index_offset = 0;
-        Lines lines; // 当前形状的线段列表
-        for (size_t l = 0; l < tinyshapes[s].lines.num_line_vertices.size(); l++) // 遍历每个线段
+    size_t index_offset = 0, s = 0;
+    for (size_t f = 0; f < tinyshapes[s].mesh.num_face_vertices.size(); f++) // 遍历每个面
+    { 
+        size_t fv = 3; // 三角面的顶点数
+        triface_t face;
+        for (size_t v = 0; v < fv; v++) // 遍历每个顶点
         {
-            line_t line;
-            tinyobj::index_t idx0 = tinyshapes[s].lines.indices[index_offset + 0];
-            tinyobj::index_t idx1 = tinyshapes[s].lines.indices[index_offset + 1];
-            line.start = { idx0.vertex_index, idx0.normal_index, idx0.texcoord_index };
-            line.end = { idx1.vertex_index, idx1.normal_index, idx1.texcoord_index };
-            lines.push_back(line);
-            index_offset += 2;
+            tinyobj::index_t idx = tinyshapes[s].mesh.indices[index_offset + v];
+            face.vertex[v] = {idx.vertex_index, idx.normal_index, idx.texcoord_index};
         }
-
-        Points points; // 当前形状的点列表
-        for (size_t p = 0; p < tinyshapes[s].points.indices.size(); p++)
-        {
-            point_t point;
-            tinyobj::index_t idx = tinyshapes[s].points.indices[p];
-            point = { idx.vertex_index, idx.normal_index, idx.texcoord_index };
-            points.push_back(point);
-        }
-        shapes.push_back({ tinyshapes[s].name, trimesh, lines, points }); // 添加形状到模型中
+        trimesh.trifaces.push_back(face);
+        trimesh.material_ids.push_back(tinyshapes[s].mesh.material_ids[f]);
+        index_offset += fv;
     }
-}
-
-void Model::loadFrom(const tinyobj::attrib_t& tinyattrib, const std::vector<tinyobj::shape_t>& tinyshapes) // 从 tinyobjloader 属性加载自定义数据结构
-{
-    // 加载 tinyattrib 顶点数据到自定义顶点列表
-    loadFrom(tinyattrib);
-    
-    // 加载 tinyshapes 到自定义形状列表
-    loadFrom(tinyshapes);
 }
 
 void Model::loadFrom(const std::string& filename) // 从文件加载模型
@@ -235,93 +168,75 @@ void Model::loadFrom(const std::string& filename) // 从文件加载模型
     // 打印加载信息
     spdlog::info(
         "Loaded model from {}: "
-        "{} vertices, {} shapes, {} materials",
+        "{} vertices, {} faces, {} materials",
         filename,
-        attrib._vertices.size(),
-        shapes.size(),
+        attrib.vertices.size(),
+        trimesh.trifaces.size(),
         materials.size()
     );
-
-    logShapes(); // 打印模型形状信息
 }
 
-Model::bounding_box_t Model::getBoundingBox() const // 获取模型的边界框
+void Model::getBuffer(std::vector<float>& vertices, std::vector<unsigned int>& indices) const
 {
-    auto& vertices = attrib._vertices;
-    if (vertices.empty())
-    {
-        spdlog::error("Model::getBoundingBox(): no vertices");
-        exit(1);
-    }
-    
-    // 初始化最小值和最大值
-    float min_x = std::numeric_limits<float>::max();
-    float min_y = std::numeric_limits<float>::max();
-    float min_z = std::numeric_limits<float>::max();
-    float max_x = std::numeric_limits<float>::lowest();
-    float max_y = std::numeric_limits<float>::lowest();
-    float max_z = std::numeric_limits<float>::lowest();
-    
-    // 遍历所有顶点
-    for (const auto& vertex : vertices)
-    {
-        // 更新x的最小最大值
-        if (vertex.x < min_x) min_x = vertex.x;
-        if (vertex.x > max_x) max_x = vertex.x;
-        
-        // 更新y的最小最大值
-        if (vertex.y < min_y) min_y = vertex.y;
-        if (vertex.y > max_y) max_y = vertex.y;
-        
-        // 更新z的最小最大值
-        if (vertex.z < min_z) min_z = vertex.z;
-        if (vertex.z > max_z) max_z = vertex.z;
+    vertices.clear();
+    indices.clear();
+
+    // 使用映射来避免重复顶点
+    std::map<std::tuple<int, int, int>, unsigned int> vertexMap;
+    unsigned int currentIndex = 0;
+
+    std::vector<attrib_t> uniqueVertices;
+
+    // 处理每个三角形
+    for (const auto& triface : trimesh.trifaces) {
+        for (int i = 0; i < 3; i++) {
+            const point_t& point = triface.vertex[i];
+            
+            // 创建顶点键
+            auto vertexKey = std::make_tuple(
+                point.vertex_index,
+                point.normal_index,
+                point.texcoord_index
+            );
+            
+            // 检查顶点是否已存在
+            auto it = vertexMap.find(vertexKey);
+            if (it != vertexMap.end()) {
+                // 使用现有索引
+                indices.push_back(it->second);
+            } else {
+                // 创建新顶点
+                attrib_t vertexAttrib;
+                
+                // 位置
+                const auto& pos = attrib.vertices[point.vertex_index];
+                vertexAttrib.position_ = pos;
+                
+                // 法线
+                const auto& normal = attrib.normals[point.normal_index];
+                vertexAttrib.normal_ = normal;
+                
+                // 纹理坐标
+                const auto& texcoord = attrib.texcoords[point.texcoord_index];
+                vertexAttrib.texcoord_ = texcoord;
+                
+                // 添加到映射和数组
+                vertexMap[vertexKey] = currentIndex++;
+                uniqueVertices.push_back(vertexAttrib);
+                indices.push_back(vertexMap[vertexKey]);
+            }
+        }
     }
 
-    return std::make_tuple(
-        attrib_t::position{min_x, min_y, min_z}, // 最小点
-        attrib_t::position{max_x, max_y, max_z}  // 最大点
-    );
-}
-
-void Model::saveOBJ(const char* filename, const std::vector<attrib_t::position>& vertices, const Trifaces& trifaces)
-{
-    if (vertices.empty())
-    {
-        spdlog::error("Model::saveOBJ(): no vertices");
-        exit(1);
-    }
-    std::ofstream obj_file(filename, std::ios::out);
-    if (!obj_file.is_open())
-    {
-        spdlog::error("Model::saveOBJ(): failed to open file {}", filename);
-        exit(1);
-    }
-    for (size_t i = 0; i < vertices.size(); i++)
-    {
-        obj_file << "v " << vertices[i].x << " " << vertices[i].y << " " << vertices[i].z << std::endl;
-    }
-    for (auto &face : trifaces)
-    {
-        obj_file << "f " << (face.vertex[0].vertex_index + 1) << " " 
-             << (face.vertex[1].vertex_index + 1) << " " 
-             << (face.vertex[2].vertex_index + 1) << std::endl;
-    }
-    obj_file.close();
-}
-
-void Model::logShapes() const // 打印模型形状信息
-{
-    for (size_t i = 0; i < shapes.size(); i++)
-    {
-        const auto& shape = shapes[i];
-        spdlog::info(
-            "Shape [{}]: name = {}, "
-            "num_faces = {}, num_lines = {}, num_points = {}",
-            i+1, shape.name,
-            shape.trimeshes.trifaces.size(),
-            shape.lines.size(),
-            shape.points.size()
-        );
+    vertices.reserve(uniqueVertices.size() * 8);
+    for (const auto& vertex : uniqueVertices) {
+        vertices.push_back(vertex.position_.x);
+        vertices.push_back(vertex.position_.y);
+        vertices.push_back(vertex.position_.z);
+        vertices.push_back(vertex.normal_.nx);
+        vertices.push_back(vertex.normal_.ny);
+        vertices.push_back(vertex.normal_.nz);
+        vertices.push_back(vertex.texcoord_.u);
+        vertices.push_back(vertex.texcoord_.v);
     }
 }

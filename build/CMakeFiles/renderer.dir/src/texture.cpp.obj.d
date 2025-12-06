@@ -1,20 +1,6 @@
 CMakeFiles/renderer.dir/src/texture.cpp.obj: \
  C:\Users\yeyuanyuan\Documents\GitHub\OpenGL\src\texture.cpp \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/include/texture.h \
- C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glad/include/glad/glad.h \
- C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glad/include/KHR/khrplatform.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stdint.h \
- D:/Program\ Files/MinGW/w64devkit/include/stdint.h \
- D:/Program\ Files/MinGW/w64devkit/include/crtdefs.h \
- D:/Program\ Files/MinGW/w64devkit/include/corecrt.h \
- D:/Program\ Files/MinGW/w64devkit/include/_mingw.h \
- D:/Program\ Files/MinGW/w64devkit/include/_mingw_mac.h \
- D:/Program\ Files/MinGW/w64devkit/include/_mingw_secapi.h \
- D:/Program\ Files/MinGW/w64devkit/include/vadefs.h \
- D:/Program\ Files/MinGW/w64devkit/include/sdks/_mingw_ddk.h \
- D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stddef.h \
- D:/Program\ Files/MinGW/w64devkit/include/stddef.h \
- C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/GLFW/glfw3.h \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/include/typedef.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/random \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/requires_hosted.h \
@@ -28,6 +14,13 @@ CMakeFiles/renderer.dir/src/texture.cpp.obj: \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/type_traits \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/ext/type_traits.h \
  D:/Program\ Files/MinGW/w64devkit/include/math.h \
+ D:/Program\ Files/MinGW/w64devkit/include/crtdefs.h \
+ D:/Program\ Files/MinGW/w64devkit/include/corecrt.h \
+ D:/Program\ Files/MinGW/w64devkit/include/_mingw.h \
+ D:/Program\ Files/MinGW/w64devkit/include/_mingw_mac.h \
+ D:/Program\ Files/MinGW/w64devkit/include/_mingw_secapi.h \
+ D:/Program\ Files/MinGW/w64devkit/include/vadefs.h \
+ D:/Program\ Files/MinGW/w64devkit/include/sdks/_mingw_ddk.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/std_abs.h \
  D:/Program\ Files/MinGW/w64devkit/include/stdlib.h \
  D:/Program\ Files/MinGW/w64devkit/include/corecrt_wstdlib.h \
@@ -71,6 +64,10 @@ CMakeFiles/renderer.dir/src/texture.cpp.obj: \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/tr1/poly_laguerre.tcc \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/tr1/riemann_zeta.tcc \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/cstdint \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stdint.h \
+ D:/Program\ Files/MinGW/w64devkit/include/stdint.h \
+ D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stddef.h \
+ D:/Program\ Files/MinGW/w64devkit/include/stddef.h \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/cstdlib \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/string \
  D:/Program\ Files/MinGW/w64devkit/lib/gcc/x86_64-w64-mingw32/15.1.0/include/c++/bits/stringfwd.h \
@@ -682,4 +679,8 @@ CMakeFiles/renderer.dir/src/texture.cpp.obj: \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glm/ext/vector_int1_sized.hpp \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glm/ext/vector_uint1.hpp \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glm/ext/vector_uint1_sized.hpp \
- C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glm/gtc/type_ptr.inl
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glm/gtc/type_ptr.inl \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/include/vertexarray.h \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glad/include/glad/glad.h \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glad/include/KHR/khrplatform.h \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/GLFW/glfw3.h

@@ -4,9 +4,10 @@ VertexArray::VertexArray(const float* vertices,
                          int vertexCount, 
                          int vertexAttribDim, 
                          std::initializer_list<int> vertexAttribs, 
-                         const int* indices, 
+                         const unsigned int* indices, 
                          int indexCount, 
                          int indexDim)
+    : vertexCount(vertexCount), indexCount(indexCount)
 {
     // 创建和绑定VAO
     glGenVertexArrays(1, &VAO);
@@ -25,7 +26,7 @@ VertexArray::VertexArray(const float* vertices,
         glGenBuffers(1, &EBO);
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
         glBufferData(GL_ELEMENT_ARRAY_BUFFER, 
-                     indexCount * indexDim * sizeof(int), 
+                     indexCount * indexDim * sizeof(unsigned int), 
                      indices, GL_STATIC_DRAW);
     }
 

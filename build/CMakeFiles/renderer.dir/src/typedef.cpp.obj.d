@@ -678,4 +678,8 @@ CMakeFiles/renderer.dir/src/typedef.cpp.obj: \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glm/ext/vector_int1_sized.hpp \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glm/ext/vector_uint1.hpp \
  C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glm/ext/vector_uint1_sized.hpp \
- C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glm/gtc/type_ptr.inl
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glm/gtc/type_ptr.inl \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/include/vertexarray.h \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glad/include/glad/glad.h \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/glad/include/KHR/khrplatform.h \
+ C:/Users/yeyuanyuan/Documents/GitHub/OpenGL/external/GLFW/glfw3.h
