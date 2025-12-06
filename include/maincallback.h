@@ -28,7 +28,7 @@ float fov = 45.0f; // 视锥体的 FOV
 Camera camera(glm::vec3(0.0f, 0.0f, 5.0f)); // 定义摄像机对象
 Camera initialCamera = camera; // 创建一个副本保存初始状态
 
-LightMode lightMode = LightMode::DIRECTION;
+LightMode lightMode = LightMode::POINT;
 
 // 立方体顶点数据
 float cubeVertices[] = {
