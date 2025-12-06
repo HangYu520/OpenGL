@@ -54,10 +54,8 @@ int main()
         vaoArr.emplace_back(
             vertices.data(),
             vertices.size() / 8,
-            8, layout,
-            indices.data(),
-            asset.model.num_faces(),
-            3 
+            8, layout, indices.data(),
+            asset.model.num_faces(), 3 
         );
     }
     
