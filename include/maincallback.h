@@ -12,6 +12,7 @@
 * 全局变量定义
 * ---------------------
 */
+namespace {
 const unsigned int SCR_WIDTH = 1024; // 窗口宽度
 const unsigned int SCR_HEIGHT = 768; // 窗口高度
 
@@ -89,6 +90,7 @@ glm::vec3 cubePositions[] = {
     glm::vec3( 1.5f,  0.2f, -1.5f),
     glm::vec3(-1.3f,  1.0f, -1.5f)
 };
+}
 
 /*
 * ---------------------
