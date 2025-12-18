@@ -78,6 +78,15 @@ int main()
         );
         view = camera.getViewMatrix();
         
+        // 绘制地板
+        lightingShader.use();
+        glActiveTexture(GL_TEXTURE0); floorTexture.bind();
+        floorVAO.bind();
+        auto model_floor = glm::mat4(1.0f);
+        lightingShader.setMVP(model_floor, view, projection);
+        glDrawArrays(GL_TRIANGLES, 0, floorVAO.vertexCount);
+        floorVAO.unbind();
+
         // 绘制物体
         lightingShader.use();
         glActiveTexture(GL_TEXTURE0); cubeTexture.bind();
@@ -91,15 +100,6 @@ int main()
         lightingShader.setMVP(model_2, view, projection);
         glDrawArrays(GL_TRIANGLES, 0, cubeVAO.vertexCount);
         cubeVAO.unbind();
-
-        // 绘制地板
-        lightingShader.use();
-        glActiveTexture(GL_TEXTURE0); floorTexture.bind();
-        floorVAO.bind();
-        auto model_floor = glm::mat4(1.0f);
-        lightingShader.setMVP(model_floor, view, projection);
-        glDrawArrays(GL_TRIANGLES, 0, floorVAO.vertexCount);
-        floorVAO.unbind();
         
         glfwSwapBuffers(window); // 交换缓冲
         glfwPollEvents(); // 检查事件
