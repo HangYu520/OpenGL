@@ -20,10 +20,12 @@ include_directories(${PROJECT_SOURCE_DIR}/external/json/include)
 
 find_library(glfw glfw3 ${PROJECT_SOURCE_DIR}/lib)
 
-aux_source_directory(${PROJECT_SOURCE_DIR}/external/glad/src SRC_GLAD)
 aux_source_directory(${PROJECT_SOURCE_DIR}/src SRC_LIST)
+aux_source_directory(${PROJECT_SOURCE_DIR}/external/glad/src SRC_GLAD)
 
 add_executable(renderer main.cpp ${SRC_LIST} ${SRC_GLAD})
+add_executable(example example.cpp ${SRC_LIST} ${SRC_GLAD})
 
 #target_precompile_headers(renderer PRIVATE ${PROJECT_SOURCE_DIR}/include/preheader.h)
 target_link_libraries(renderer ${glfw})
+target_link_libraries(example ${glfw})
