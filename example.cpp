@@ -37,10 +37,15 @@ int main()
     Shader lightingShader("shader/SimpleShader.vs", "shader/SimpleShader.fs"); // 创建物体着色器
 
     // 创建 VAO
-    // TODO
+    VertexArray cubeVAO(cubeVertices, 36, 8, { 3, 3, 2 });
+    VertexArray floorVAO(planeVertices, 6, 8, { 3, 3, 2 });
     
     // 创建纹理
-    // TODO
+    Texture cubeTexture("asset/marble.jpg");
+    Texture floorTexture("asset/metal.png");
+
+    lightingShader.use();
+    lightingShader.setInt("texture1", 0);
     
     // 矩阵变换
     glm::mat4 model, view, projection;
@@ -74,7 +79,27 @@ int main()
         view = camera.getViewMatrix();
         
         // 绘制物体
-        // TODO
+        lightingShader.use();
+        glActiveTexture(GL_TEXTURE0); cubeTexture.bind();
+        cubeVAO.bind();
+        // 绘制第一个立方体
+        auto model_1 = glm::translate(model, glm::vec3(-1.0f, 0.0f, -1.0f)); 
+        lightingShader.setMVP(model_1, view, projection);
+        glDrawArrays(GL_TRIANGLES, 0, cubeVAO.vertexCount);
+        // 绘制第二个立方体
+        auto model_2 = glm::translate(model, glm::vec3(2.0f, 0.0f, 0.0f)); 
+        lightingShader.setMVP(model_2, view, projection);
+        glDrawArrays(GL_TRIANGLES, 0, cubeVAO.vertexCount);
+        cubeVAO.unbind();
+
+        // 绘制地板
+        lightingShader.use();
+        glActiveTexture(GL_TEXTURE0); floorTexture.bind();
+        floorVAO.bind();
+        auto model_floor = glm::mat4(1.0f);
+        lightingShader.setMVP(model_floor, view, projection);
+        glDrawArrays(GL_TRIANGLES, 0, floorVAO.vertexCount);
+        floorVAO.unbind();
         
         glfwSwapBuffers(window); // 交换缓冲
         glfwPollEvents(); // 检查事件

@@ -128,12 +128,50 @@ renderer/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/build
 .PHONY : renderer/fast
 
+#=============================================================================
+# Target rules for targets named example
+
+# Build rule for target.
+example: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 example
+.PHONY : example
+
+# fast build rule for target.
+example/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/build
+.PHONY : example/fast
+
+example.obj: example.cpp.obj
+.PHONY : example.obj
+
+# target to build an object file
+example.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/example.cpp.obj
+.PHONY : example.cpp.obj
+
+example.i: example.cpp.i
+.PHONY : example.i
+
+# target to preprocess a source file
+example.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/example.cpp.i
+.PHONY : example.cpp.i
+
+example.s: example.cpp.s
+.PHONY : example.s
+
+# target to generate assembly for a file
+example.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/example.cpp.s
+.PHONY : example.cpp.s
+
 external/glad/src/glad.obj: external/glad/src/glad.c.obj
 .PHONY : external/glad/src/glad.obj
 
 # target to build an object file
 external/glad/src/glad.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/external/glad/src/glad.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/external/glad/src/glad.c.obj
 .PHONY : external/glad/src/glad.c.obj
 
 external/glad/src/glad.i: external/glad/src/glad.c.i
@@ -142,6 +180,7 @@ external/glad/src/glad.i: external/glad/src/glad.c.i
 # target to preprocess a source file
 external/glad/src/glad.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/external/glad/src/glad.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/external/glad/src/glad.c.i
 .PHONY : external/glad/src/glad.c.i
 
 external/glad/src/glad.s: external/glad/src/glad.c.s
@@ -150,6 +189,7 @@ external/glad/src/glad.s: external/glad/src/glad.c.s
 # target to generate assembly for a file
 external/glad/src/glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/external/glad/src/glad.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/external/glad/src/glad.c.s
 .PHONY : external/glad/src/glad.c.s
 
 main.obj: main.cpp.obj
@@ -182,6 +222,7 @@ src/camera.obj: src/camera.cpp.obj
 # target to build an object file
 src/camera.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/camera.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/src/camera.cpp.obj
 .PHONY : src/camera.cpp.obj
 
 src/camera.i: src/camera.cpp.i
@@ -190,6 +231,7 @@ src/camera.i: src/camera.cpp.i
 # target to preprocess a source file
 src/camera.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/camera.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/src/camera.cpp.i
 .PHONY : src/camera.cpp.i
 
 src/camera.s: src/camera.cpp.s
@@ -198,6 +240,7 @@ src/camera.s: src/camera.cpp.s
 # target to generate assembly for a file
 src/camera.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/camera.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/src/camera.cpp.s
 .PHONY : src/camera.cpp.s
 
 src/external_impl.obj: src/external_impl.cpp.obj
@@ -206,6 +249,7 @@ src/external_impl.obj: src/external_impl.cpp.obj
 # target to build an object file
 src/external_impl.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/external_impl.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/src/external_impl.cpp.obj
 .PHONY : src/external_impl.cpp.obj
 
 src/external_impl.i: src/external_impl.cpp.i
@@ -214,6 +258,7 @@ src/external_impl.i: src/external_impl.cpp.i
 # target to preprocess a source file
 src/external_impl.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/external_impl.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/src/external_impl.cpp.i
 .PHONY : src/external_impl.cpp.i
 
 src/external_impl.s: src/external_impl.cpp.s
@@ -222,6 +267,7 @@ src/external_impl.s: src/external_impl.cpp.s
 # target to generate assembly for a file
 src/external_impl.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/external_impl.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/src/external_impl.cpp.s
 .PHONY : src/external_impl.cpp.s
 
 src/shader.obj: src/shader.cpp.obj
@@ -230,6 +276,7 @@ src/shader.obj: src/shader.cpp.obj
 # target to build an object file
 src/shader.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/shader.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/src/shader.cpp.obj
 .PHONY : src/shader.cpp.obj
 
 src/shader.i: src/shader.cpp.i
@@ -238,6 +285,7 @@ src/shader.i: src/shader.cpp.i
 # target to preprocess a source file
 src/shader.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/shader.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/src/shader.cpp.i
 .PHONY : src/shader.cpp.i
 
 src/shader.s: src/shader.cpp.s
@@ -246,6 +294,7 @@ src/shader.s: src/shader.cpp.s
 # target to generate assembly for a file
 src/shader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/shader.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/src/shader.cpp.s
 .PHONY : src/shader.cpp.s
 
 src/texture.obj: src/texture.cpp.obj
@@ -254,6 +303,7 @@ src/texture.obj: src/texture.cpp.obj
 # target to build an object file
 src/texture.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/texture.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/src/texture.cpp.obj
 .PHONY : src/texture.cpp.obj
 
 src/texture.i: src/texture.cpp.i
@@ -262,6 +312,7 @@ src/texture.i: src/texture.cpp.i
 # target to preprocess a source file
 src/texture.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/texture.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/src/texture.cpp.i
 .PHONY : src/texture.cpp.i
 
 src/texture.s: src/texture.cpp.s
@@ -270,6 +321,7 @@ src/texture.s: src/texture.cpp.s
 # target to generate assembly for a file
 src/texture.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/texture.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/src/texture.cpp.s
 .PHONY : src/texture.cpp.s
 
 src/typedef.obj: src/typedef.cpp.obj
@@ -278,6 +330,7 @@ src/typedef.obj: src/typedef.cpp.obj
 # target to build an object file
 src/typedef.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/typedef.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/src/typedef.cpp.obj
 .PHONY : src/typedef.cpp.obj
 
 src/typedef.i: src/typedef.cpp.i
@@ -286,6 +339,7 @@ src/typedef.i: src/typedef.cpp.i
 # target to preprocess a source file
 src/typedef.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/typedef.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/src/typedef.cpp.i
 .PHONY : src/typedef.cpp.i
 
 src/typedef.s: src/typedef.cpp.s
@@ -294,6 +348,7 @@ src/typedef.s: src/typedef.cpp.s
 # target to generate assembly for a file
 src/typedef.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/typedef.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/src/typedef.cpp.s
 .PHONY : src/typedef.cpp.s
 
 src/vertexarray.obj: src/vertexarray.cpp.obj
@@ -302,6 +357,7 @@ src/vertexarray.obj: src/vertexarray.cpp.obj
 # target to build an object file
 src/vertexarray.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/vertexarray.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/src/vertexarray.cpp.obj
 .PHONY : src/vertexarray.cpp.obj
 
 src/vertexarray.i: src/vertexarray.cpp.i
@@ -310,6 +366,7 @@ src/vertexarray.i: src/vertexarray.cpp.i
 # target to preprocess a source file
 src/vertexarray.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/vertexarray.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/src/vertexarray.cpp.i
 .PHONY : src/vertexarray.cpp.i
 
 src/vertexarray.s: src/vertexarray.cpp.s
@@ -318,6 +375,7 @@ src/vertexarray.s: src/vertexarray.cpp.s
 # target to generate assembly for a file
 src/vertexarray.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\renderer.dir\build.make CMakeFiles/renderer.dir/src/vertexarray.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\example.dir\build.make CMakeFiles/example.dir/src/vertexarray.cpp.s
 .PHONY : src/vertexarray.cpp.s
 
 # Help Target
@@ -328,7 +386,11 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... example
 	@echo ... renderer
+	@echo ... example.obj
+	@echo ... example.i
+	@echo ... example.s
 	@echo ... external/glad/src/glad.obj
 	@echo ... external/glad/src/glad.i
 	@echo ... external/glad/src/glad.s
