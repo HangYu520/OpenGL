@@ -83,11 +83,11 @@ int main()
         glActiveTexture(GL_TEXTURE0); cubeTexture.bind();
         cubeVAO.bind();
         // 绘制第一个立方体
-        auto model_1 = glm::translate(model, glm::vec3(-1.0f, 0.0f, -1.0f)); 
+        auto model_1 = glm::translate(model, glm::vec3(-1.0f, 1e-3f, -1.0f)); 
         lightingShader.setMVP(model_1, view, projection);
         glDrawArrays(GL_TRIANGLES, 0, cubeVAO.vertexCount);
         // 绘制第二个立方体
-        auto model_2 = glm::translate(model, glm::vec3(2.0f, 0.0f, 0.0f)); 
+        auto model_2 = glm::translate(model, glm::vec3(2.0f, 1e-3f, 0.0f)); 
         lightingShader.setMVP(model_2, view, projection);
         glDrawArrays(GL_TRIANGLES, 0, cubeVAO.vertexCount);
         cubeVAO.unbind();
