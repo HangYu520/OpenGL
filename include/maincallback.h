@@ -90,6 +90,17 @@ glm::vec3 cubePositions[] = {
     glm::vec3( 1.5f,  0.2f, -1.5f),
     glm::vec3(-1.3f,  1.0f, -1.5f)
 };
+
+// 平面顶点数据
+float planeVertices[] = {
+    // positions          // texture Coords
+     5.0f, -0.5f,  5.0f,  2.0f, 0.0f,
+    -5.0f, -0.5f,  5.0f,  0.0f, 0.0f,
+    -5.0f, -0.5f, -5.0f,  0.0f, 2.0f,
+     5.0f, -0.5f,  5.0f,  2.0f, 0.0f,
+    -5.0f, -0.5f, -5.0f,  0.0f, 2.0f,
+     5.0f, -0.5f, -5.0f,  2.0f, 2.0f								
+};
 }
 
 /*
